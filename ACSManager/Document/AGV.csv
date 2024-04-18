@@ -1,0 +1,3 @@
+agv_id,route_area,waiting_area,ip,port,available,agv_area
+218,ALL,ALL,10.225.34.188,55321,1,2
+226,ALL,ALL,10.225.34.204,55321,1,2

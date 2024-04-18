@@ -1,0 +1,43 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ACSManager.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Floor" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="SavedID" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="LoginID" Type="System.String" Scope="User">
+      <Value Profile="(Default)">admin</Value>
+    </Setting>
+    <Setting Name="Port_Count" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">8</Value>
+    </Setting>
+    <Setting Name="Station_Name" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Station</Value>
+    </Setting>
+    <Setting Name="Station_Count" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="LogSaveDay" Type="System.String" Scope="User">
+      <Value Profile="(Default)">365</Value>
+    </Setting>
+    <Setting Name="acsMSSqlConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=127.0.0.1;Initial Catalog=acs_SUNIL;User ID=agvcuser;Password=1234agvc&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=127.0.0.1;Initial Catalog=acs_SUNIL;User ID=agvcuser;Password=1234agvc</Value>
+    </Setting>
+    <Setting Name="sunildyfas_dbConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;User Id=sunil;Password=Sunilmes2021;Host=127.0.0.1;Database=sunildyfas_db&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;Devart.Data.MySql&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">User Id=sunil;Password=Sunilmes2021;Host=127.0.0.1;Database=sunildyfas_db</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

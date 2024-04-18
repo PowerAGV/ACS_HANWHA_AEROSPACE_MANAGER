@@ -1,0 +1,572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{014A2878-3B25-4C7D-B5B4-29233AB7E292}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ACSManager</RootNamespace>
+    <AssemblyName>ACSManager</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://10.161.0.22/clickonce/ACSManager/</InstallUrl>
+    <ProductName>ACS Manager</ProductName>
+    <PublisherName>LG</PublisherName>
+    <SuiteName>LGEMM</SuiteName>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>77</ApplicationRevision>
+    <ApplicationVersion>1.0.2.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>19ABC67B6D27E5C507849BCE3405509A4E2A42A8</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ACSManager_19_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ACS_Manager.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v16.2" />
+    <Reference Include="DevExpress.Charts.v16.2.Core, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v16.2" />
+    <Reference Include="DevExpress.DataAccess.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v16.2.UI, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Diagram.v16.2.Core, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Map.v16.2.Core, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v16.2.Core, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v16.2.Core, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Spreadsheet.v16.2.Core, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.2" />
+    <Reference Include="DevExpress.Utils.v16.2.UI, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v16.2" />
+    <Reference Include="DevExpress.Sparkline.v16.2.Core" />
+    <Reference Include="DevExpress.XtraCharts.v16.2.Wizard, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraDiagram.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v16.2" />
+    <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraMap.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v16.2.Reporting.Extensions, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v16.2.Core, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraSpreadsheet.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="ImVader, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ImvaderPackage.1.0.2\lib\ImVader.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Control\ACSConfigUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\ACSConfigUI.designer.cs">
+      <DependentUpon>ACSConfigUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ChargePointManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\ChargePointManage.Designer.cs">
+      <DependentUpon>ChargePointManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\OrderCreation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\OrderCreation.Designer.cs">
+      <DependentUpon>OrderCreation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\PeakRate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\PeakRate.Designer.cs">
+      <DependentUpon>PeakRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\PlcEvent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\PlcEvent.designer.cs">
+      <DependentUpon>PlcEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\PLCView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\PLCView.Designer.cs">
+      <DependentUpon>PLCView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomAlertControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\StationInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\StationInfo.Designer.cs">
+      <DependentUpon>StationInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetPLC.cs">
+      <DependentUpon>DataSetPLC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetPLC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPLC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\ACSConfigUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORM\ACSConfigUI.Designer.cs">
+      <DependentUpon>ACSConfigUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\ManualCommand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\ManualCommand.Designer.cs">
+      <DependentUpon>ManualCommand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\StationManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\StationManager.Designer.cs">
+      <DependentUpon>StationManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="data\MSSQL\MapDesign.cs">
+      <DependentUpon>MapDesign.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data\MSSQL\MapDesign.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MapDesign.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BassClass.cs" />
+    <Compile Include="Control\CarInfoList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CarInfoList.Designer.cs">
+      <DependentUpon>CarInfoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="classes.cs" />
+    <Compile Include="Control\AGVDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\AGVDetail.Designer.cs">
+      <DependentUpon>AGVDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\AGVEvents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\AGVEvents.Designer.cs">
+      <DependentUpon>AGVEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommunicationStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommunicationStatus.Designer.cs">
+      <DependentUpon>CommunicationStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\DriveInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\DriveInfo.Designer.cs">
+      <DependentUpon>DriveInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MapControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\MapControl.Designer.cs">
+      <DependentUpon>MapControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UseRate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\UseRate.Designer.cs">
+      <DependentUpon>UseRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UseRateCar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\UseRateCar.Designer.cs">
+      <DependentUpon>UseRateCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1M.cs">
+      <DependentUpon>DataSet1M.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1M.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1M.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\AGVStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\AGVStatus.Designer.cs">
+      <DependentUpon>AGVStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\CFGSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\CFGSystem.Designer.cs">
+      <DependentUpon>CFGSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\InsertAP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\InsertAP.Designer.cs">
+      <DependentUpon>InsertAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\CarInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\CarInfo.Designer.cs">
+      <DependentUpon>CarInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\splash.Designer.cs">
+      <DependentUpon>splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\UserControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\UserControl.Designer.cs">
+      <DependentUpon>UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IniControllor.cs" />
+    <Compile Include="MCSDB.cs" />
+    <Compile Include="Control\MCSInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\MCSInfo.designer.cs">
+      <DependentUpon>MCSInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setting.cs" />
+    <Compile Include="TraceManager.cs" />
+    <Compile Include="UserData.cs" />
+    <EmbeddedResource Include="Control\ACSConfigUI.resx">
+      <DependentUpon>ACSConfigUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\ChargePointManage.resx">
+      <DependentUpon>ChargePointManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\OrderCreation.resx">
+      <DependentUpon>OrderCreation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\PeakRate.resx">
+      <DependentUpon>PeakRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\PlcEvent.resx">
+      <DependentUpon>PlcEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\PLCView.lg.resx">
+      <DependentUpon>PLCView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\PLCView.resx">
+      <DependentUpon>PLCView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\StationInfo.resx">
+      <DependentUpon>StationInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\ACSConfigUI.resx">
+      <DependentUpon>ACSConfigUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\ManualCommand.resx">
+      <DependentUpon>ManualCommand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\StationManager.resx">
+      <DependentUpon>StationManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CarInfoList.resx">
+      <DependentUpon>CarInfoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\AGVDetail.resx">
+      <DependentUpon>AGVDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\AGVEvents.resx">
+      <DependentUpon>AGVEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommunicationStatus.resx">
+      <DependentUpon>CommunicationStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\DriveInfo.resx">
+      <DependentUpon>DriveInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\MapControl.resx">
+      <DependentUpon>MapControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\UseRate.resx">
+      <DependentUpon>UseRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\UseRateCar.resx">
+      <DependentUpon>UseRateCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\AGVStatus.resx">
+      <DependentUpon>AGVStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\CFGSystem.resx">
+      <DependentUpon>CFGSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\InsertAP.resx">
+      <DependentUpon>InsertAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\CarInfo.resx">
+      <DependentUpon>CarInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\splash.resx">
+      <DependentUpon>splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\UserControl.resx">
+      <DependentUpon>UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\MCSInfo.resx">
+      <DependentUpon>MCSInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ACSManager_10_TemporaryKey.pfx" />
+    <None Include="ACSManager_11_TemporaryKey.pfx" />
+    <None Include="ACSManager_12_TemporaryKey.pfx" />
+    <None Include="ACSManager_13_TemporaryKey.pfx" />
+    <None Include="ACSManager_14_TemporaryKey.pfx" />
+    <None Include="ACSManager_15_TemporaryKey.pfx" />
+    <None Include="ACSManager_16_TemporaryKey.pfx" />
+    <None Include="ACSManager_17_TemporaryKey.pfx" />
+    <None Include="ACSManager_18_TemporaryKey.pfx" />
+    <None Include="ACSManager_19_TemporaryKey.pfx" />
+    <None Include="ACSManager_1_TemporaryKey.pfx" />
+    <None Include="ACSManager_2_TemporaryKey.pfx" />
+    <None Include="ACSManager_3_TemporaryKey.pfx" />
+    <None Include="ACSManager_4_TemporaryKey.pfx" />
+    <None Include="ACSManager_5_TemporaryKey.pfx" />
+    <None Include="ACSManager_6_TemporaryKey.pfx" />
+    <None Include="ACSManager_7_TemporaryKey.pfx" />
+    <None Include="ACSManager_8_TemporaryKey.pfx" />
+    <None Include="ACSManager_9_TemporaryKey.pfx" />
+    <None Include="ACSManager_TemporaryKey.pfx" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1M.xsc">
+      <DependentUpon>DataSet1M.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1M.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1M.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1M.xss">
+      <DependentUpon>DataSet1M.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPLC.xsc">
+      <DependentUpon>DataSetPLC.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPLC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPLC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetPLC.xss">
+      <DependentUpon>DataSetPLC.xsd</DependentUpon>
+    </None>
+    <None Include="data\MSSQL\MapDesign.xsc">
+      <DependentUpon>MapDesign.xsd</DependentUpon>
+    </None>
+    <None Include="data\MSSQL\MapDesign.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MapDesign.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="data\MSSQL\MapDesign.xss">
+      <DependentUpon>MapDesign.xsd</DependentUpon>
+    </None>
+    <None Include="Document\AGV.csv" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2%28x86 및 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ACS_Manager.ico" />
+    <Content Include="car.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Mobis_CI.png" />
+    <None Include="Resources\ArrowRight.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

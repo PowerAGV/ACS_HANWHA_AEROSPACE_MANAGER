@@ -1,0 +1,3871 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="vGridControl1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="vGridControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>60, 5</value>
+  </data>
+  <data name="vGridControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>717, 628</value>
+  </data>
+  <data name="vGridControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;vGridControl1.Name" xml:space="preserve">
+    <value>vGridControl1</value>
+  </data>
+  <data name="&gt;&gt;vGridControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraVerticalGrid.VGridControl, DevExpress.XtraVerticalGrid.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="TAB_PANEL.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>255, 192, 255</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TAB_PANEL.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="PAGE_GUI.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="PAGE_GUI.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt, style=Bold</value>
+  </data>
+  <data name="PAGE_GUI.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="simpleButton5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>294, 16</value>
+  </data>
+  <data name="simpleButton5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="simpleButton5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 27</value>
+  </data>
+  <data name="simpleButton5.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="simpleButton5.Text" xml:space="preserve">
+    <value>컨베이어 뷰</value>
+  </data>
+  <data name="&gt;&gt;simpleButton5.Name" xml:space="preserve">
+    <value>simpleButton5</value>
+  </data>
+  <data name="&gt;&gt;simpleButton5.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;simpleButton5.Parent" xml:space="preserve">
+    <value>layoutControl2</value>
+  </data>
+  <data name="&gt;&gt;simpleButton5.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="simpleButton4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>156, 16</value>
+  </data>
+  <data name="simpleButton4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="simpleButton4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 27</value>
+  </data>
+  <data name="simpleButton4.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="simpleButton4.Text" xml:space="preserve">
+    <value>디스펜서 뷰</value>
+  </data>
+  <data name="&gt;&gt;simpleButton4.Name" xml:space="preserve">
+    <value>simpleButton4</value>
+  </data>
+  <data name="&gt;&gt;simpleButton4.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;simpleButton4.Parent" xml:space="preserve">
+    <value>layoutControl2</value>
+  </data>
+  <data name="&gt;&gt;simpleButton4.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="simpleButton3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1036, 16</value>
+  </data>
+  <data name="simpleButton3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="simpleButton3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 27</value>
+  </data>
+  <data name="simpleButton3.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="simpleButton3.Text" xml:space="preserve">
+    <value>AGV 4호 위치보기</value>
+  </data>
+  <data name="&gt;&gt;simpleButton3.Name" xml:space="preserve">
+    <value>simpleButton3</value>
+  </data>
+  <data name="&gt;&gt;simpleButton3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;simpleButton3.Parent" xml:space="preserve">
+    <value>layoutControl2</value>
+  </data>
+  <data name="&gt;&gt;simpleButton3.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="simpleButton2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>908, 16</value>
+  </data>
+  <data name="simpleButton2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="simpleButton2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 27</value>
+  </data>
+  <data name="simpleButton2.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="simpleButton2.Text" xml:space="preserve">
+    <value>AGV 3호 위치보기</value>
+  </data>
+  <data name="&gt;&gt;simpleButton2.Name" xml:space="preserve">
+    <value>simpleButton2</value>
+  </data>
+  <data name="&gt;&gt;simpleButton2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;simpleButton2.Parent" xml:space="preserve">
+    <value>layoutControl2</value>
+  </data>
+  <data name="&gt;&gt;simpleButton2.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="simpleButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>779, 16</value>
+  </data>
+  <data name="simpleButton1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="simpleButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 27</value>
+  </data>
+  <data name="simpleButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="simpleButton1.Text" xml:space="preserve">
+    <value>AGV 2호 위치보기</value>
+  </data>
+  <data name="&gt;&gt;simpleButton1.Name" xml:space="preserve">
+    <value>simpleButton1</value>
+  </data>
+  <data name="&gt;&gt;simpleButton1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;simpleButton1.Parent" xml:space="preserve">
+    <value>layoutControl2</value>
+  </data>
+  <data name="&gt;&gt;simpleButton1.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="checkButton2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>636, 16</value>
+  </data>
+  <data name="checkButton2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="checkButton2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 27</value>
+  </data>
+  <data name="checkButton2.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="checkButton2.Text" xml:space="preserve">
+    <value>AGV 1호 위치보기</value>
+  </data>
+  <data name="&gt;&gt;checkButton2.Name" xml:space="preserve">
+    <value>checkButton2</value>
+  </data>
+  <data name="&gt;&gt;checkButton2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckButton, DevExpress.XtraEditors.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;checkButton2.Parent" xml:space="preserve">
+    <value>layoutControl2</value>
+  </data>
+  <data name="&gt;&gt;checkButton2.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="checkButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 16</value>
+  </data>
+  <data name="checkButton1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="checkButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 27</value>
+  </data>
+  <data name="checkButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="checkButton1.Text" xml:space="preserve">
+    <value>전체화면</value>
+  </data>
+  <data name="&gt;&gt;checkButton1.Name" xml:space="preserve">
+    <value>checkButton1</value>
+  </data>
+  <data name="&gt;&gt;checkButton1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckButton, DevExpress.XtraEditors.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;checkButton1.Parent" xml:space="preserve">
+    <value>layoutControl2</value>
+  </data>
+  <data name="&gt;&gt;checkButton1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <metadata name="DIAGRAM_GUI.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="DIAGRAM_GUI.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 49</value>
+  </data>
+  <data name="DIAGRAM_GUI.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="DIAGRAM_GUI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1766, 913</value>
+  </data>
+  <data name="DIAGRAM_GUI.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="DIAGRAM_GUI.Text" xml:space="preserve">
+    <value>diagramControl1</value>
+  </data>
+  <data name="&gt;&gt;DIAGRAM_GUI.Name" xml:space="preserve">
+    <value>DIAGRAM_GUI</value>
+  </data>
+  <data name="&gt;&gt;DIAGRAM_GUI.Type" xml:space="preserve">
+    <value>DevExpress.XtraDiagram.DiagramControl, DevExpress.XtraDiagram.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;DIAGRAM_GUI.Parent" xml:space="preserve">
+    <value>layoutControl2</value>
+  </data>
+  <data name="&gt;&gt;DIAGRAM_GUI.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="layoutControl2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="layoutControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="layoutControl2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="layoutControlGroup2.AppearanceGroup.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>214, 219, 233</value>
+  </data>
+  <data name="layoutControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1798, 978</value>
+  </data>
+  <data name="layoutControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="layoutControl2.Text" xml:space="preserve">
+    <value>layoutControl2</value>
+  </data>
+  <data name="&gt;&gt;layoutControl2.Name" xml:space="preserve">
+    <value>layoutControl2</value>
+  </data>
+  <data name="&gt;&gt;layoutControl2.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl2.Parent" xml:space="preserve">
+    <value>PAGE_GUI</value>
+  </data>
+  <data name="&gt;&gt;layoutControl2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="PAGE_GUI.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 18pt</value>
+  </data>
+  <data name="PAGE_GUI.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="PAGE_GUI.Properties.AppearanceCaption.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 72pt, style=Bold</value>
+  </data>
+  <data name="PAGE_GUI.Properties.AppearanceCaption.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Bold</value>
+  </data>
+  <data name="PAGE_GUI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1798, 978</value>
+  </data>
+  <data name="&gt;&gt;PAGE_GUI.Name" xml:space="preserve">
+    <value>PAGE_GUI</value>
+  </data>
+  <data name="&gt;&gt;PAGE_GUI.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Navigation.TabNavigationPage, DevExpress.XtraBars.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;PAGE_GUI.Parent" xml:space="preserve">
+    <value>TAB_PANEL</value>
+  </data>
+  <data name="&gt;&gt;PAGE_GUI.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabNavigationPage2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="tabNavigationPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1811, 1017</value>
+  </data>
+  <data name="&gt;&gt;tabNavigationPage2.Name" xml:space="preserve">
+    <value>tabNavigationPage2</value>
+  </data>
+  <data name="&gt;&gt;tabNavigationPage2.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Navigation.TabNavigationPage, DevExpress.XtraBars.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;tabNavigationPage2.Parent" xml:space="preserve">
+    <value>TAB_PANEL</value>
+  </data>
+  <data name="&gt;&gt;tabNavigationPage2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="PAGE_TABLE.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Control</value>
+  </data>
+  <data name="PAGE_TABLE.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="PAGE_TABLE.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.249999pt</value>
+  </data>
+  <data name="label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 366</value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 35</value>
+  </data>
+  <data name="label9.TabIndex" type="System.Int32, mscorlib">
+    <value>149</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>공통</value>
+  </data>
+  <data name="label9.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label9.Name" xml:space="preserve">
+    <value>label9</value>
+  </data>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Device_Manual.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="Device_Manual.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Device_Manual.Location" type="System.Drawing.Point, System.Drawing">
+    <value>271, 366</value>
+  </data>
+  <data name="Device_Manual.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 35</value>
+  </data>
+  <data name="Device_Manual.TabIndex" type="System.Int32, mscorlib">
+    <value>148</value>
+  </data>
+  <data name="Device_Manual.Text" xml:space="preserve">
+    <value>수동</value>
+  </data>
+  <data name="Device_Manual.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Device_Manual.Name" xml:space="preserve">
+    <value>Device_Manual</value>
+  </data>
+  <data name="&gt;&gt;Device_Manual.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Device_Manual.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;Device_Manual.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Device_Auto.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="Device_Auto.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Device_Auto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 365</value>
+  </data>
+  <data name="Device_Auto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 35</value>
+  </data>
+  <data name="Device_Auto.TabIndex" type="System.Int32, mscorlib">
+    <value>147</value>
+  </data>
+  <data name="Device_Auto.Text" xml:space="preserve">
+    <value>자동</value>
+  </data>
+  <data name="Device_Auto.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Device_Auto.Name" xml:space="preserve">
+    <value>Device_Auto</value>
+  </data>
+  <data name="&gt;&gt;Device_Auto.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Device_Auto.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;Device_Auto.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Lack_Tree_GREEN.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="Lack_Tree_GREEN.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Lack_Tree_GREEN.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 608</value>
+  </data>
+  <data name="Lack_Tree_GREEN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 35</value>
+  </data>
+  <data name="Lack_Tree_GREEN.TabIndex" type="System.Int32, mscorlib">
+    <value>146</value>
+  </data>
+  <data name="Lack_Tree_GREEN.Text" xml:space="preserve">
+    <value>GREEN</value>
+  </data>
+  <data name="Lack_Tree_GREEN.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Lack_Tree_GREEN.Name" xml:space="preserve">
+    <value>Lack_Tree_GREEN</value>
+  </data>
+  <data name="&gt;&gt;Lack_Tree_GREEN.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Lack_Tree_GREEN.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;Lack_Tree_GREEN.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Lack_Tree_BLUE.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="Lack_Tree_BLUE.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Lack_Tree_BLUE.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 567</value>
+  </data>
+  <data name="Lack_Tree_BLUE.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 35</value>
+  </data>
+  <data name="Lack_Tree_BLUE.TabIndex" type="System.Int32, mscorlib">
+    <value>145</value>
+  </data>
+  <data name="Lack_Tree_BLUE.Text" xml:space="preserve">
+    <value>BLUE</value>
+  </data>
+  <data name="Lack_Tree_BLUE.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Lack_Tree_BLUE.Name" xml:space="preserve">
+    <value>Lack_Tree_BLUE</value>
+  </data>
+  <data name="&gt;&gt;Lack_Tree_BLUE.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Lack_Tree_BLUE.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;Lack_Tree_BLUE.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Lack_Tree_RED.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="Lack_Tree_RED.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Lack_Tree_RED.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 526</value>
+  </data>
+  <data name="Lack_Tree_RED.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 35</value>
+  </data>
+  <data name="Lack_Tree_RED.TabIndex" type="System.Int32, mscorlib">
+    <value>144</value>
+  </data>
+  <data name="Lack_Tree_RED.Text" xml:space="preserve">
+    <value>RED</value>
+  </data>
+  <data name="Lack_Tree_RED.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Lack_Tree_RED.Name" xml:space="preserve">
+    <value>Lack_Tree_RED</value>
+  </data>
+  <data name="&gt;&gt;Lack_Tree_RED.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Lack_Tree_RED.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;Lack_Tree_RED.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label106.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="label106.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label106.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 525</value>
+  </data>
+  <data name="label106.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 118</value>
+  </data>
+  <data name="label106.TabIndex" type="System.Int32, mscorlib">
+    <value>143</value>
+  </data>
+  <data name="label106.Text" xml:space="preserve">
+    <value>나무 투입랙
+경광등 색</value>
+  </data>
+  <data name="label106.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label106.Name" xml:space="preserve">
+    <value>label106</value>
+  </data>
+  <data name="&gt;&gt;label106.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label106.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;label106.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="Lack_Pla2_PLTON.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="Lack_Pla2_PLTON.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Lack_Pla2_PLTON.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 465</value>
+  </data>
+  <data name="Lack_Pla2_PLTON.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 51</value>
+  </data>
+  <data name="Lack_Pla2_PLTON.TabIndex" type="System.Int32, mscorlib">
+    <value>142</value>
+  </data>
+  <data name="Lack_Pla2_PLTON.Text" xml:space="preserve">
+    <value>팔레트ON</value>
+  </data>
+  <data name="Lack_Pla2_PLTON.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Lack_Pla2_PLTON.Name" xml:space="preserve">
+    <value>Lack_Pla2_PLTON</value>
+  </data>
+  <data name="&gt;&gt;Lack_Pla2_PLTON.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Lack_Pla2_PLTON.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;Lack_Pla2_PLTON.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="Lack_Pla_PLTON.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="Lack_Pla_PLTON.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Lack_Pla_PLTON.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 408</value>
+  </data>
+  <data name="Lack_Pla_PLTON.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 51</value>
+  </data>
+  <data name="Lack_Pla_PLTON.TabIndex" type="System.Int32, mscorlib">
+    <value>141</value>
+  </data>
+  <data name="Lack_Pla_PLTON.Text" xml:space="preserve">
+    <value>팔레트ON</value>
+  </data>
+  <data name="Lack_Pla_PLTON.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Lack_Pla_PLTON.Name" xml:space="preserve">
+    <value>Lack_Pla_PLTON</value>
+  </data>
+  <data name="&gt;&gt;Lack_Pla_PLTON.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Lack_Pla_PLTON.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;Lack_Pla_PLTON.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label102.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="label102.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label102.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 465</value>
+  </data>
+  <data name="label102.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 51</value>
+  </data>
+  <data name="label102.TabIndex" type="System.Int32, mscorlib">
+    <value>140</value>
+  </data>
+  <data name="label102.Text" xml:space="preserve">
+    <value>플라스틱 투입랙
+940 * 940</value>
+  </data>
+  <data name="label102.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label102.Name" xml:space="preserve">
+    <value>label102</value>
+  </data>
+  <data name="&gt;&gt;label102.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label102.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;label102.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="label94.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="label94.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label94.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 408</value>
+  </data>
+  <data name="label94.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 51</value>
+  </data>
+  <data name="label94.TabIndex" type="System.Int32, mscorlib">
+    <value>139</value>
+  </data>
+  <data name="label94.Text" xml:space="preserve">
+    <value>플라스틱 투입랙
+1100 * 900</value>
+  </data>
+  <data name="label94.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label94.Name" xml:space="preserve">
+    <value>label94</value>
+  </data>
+  <data name="&gt;&gt;label94.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label94.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;label94.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 14.25pt, style=Bold</value>
+  </data>
+  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 1</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 36</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>129</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>대기장 정보</value>
+  </data>
+  <data name="label6.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="label93.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.249999pt</value>
+  </data>
+  <data name="label93.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label93.Location" type="System.Drawing.Point, System.Drawing">
+    <value>414, 63</value>
+  </data>
+  <data name="label93.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 277</value>
+  </data>
+  <data name="label93.TabIndex" type="System.Int32, mscorlib">
+    <value>138</value>
+  </data>
+  <data name="label93.Text" xml:space="preserve">
+    <value>플라스틱
+디스펜서#2</value>
+  </data>
+  <data name="label93.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label93.Name" xml:space="preserve">
+    <value>label93</value>
+  </data>
+  <data name="&gt;&gt;label93.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label93.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;label93.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="label91.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.249999pt</value>
+  </data>
+  <data name="label91.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label91.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 63</value>
+  </data>
+  <data name="label91.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 277</value>
+  </data>
+  <data name="label91.TabIndex" type="System.Int32, mscorlib">
+    <value>101</value>
+  </data>
+  <data name="label91.Text" xml:space="preserve">
+    <value>플라스틱
+디스펜서#1</value>
+  </data>
+  <data name="label91.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label91.Name" xml:space="preserve">
+    <value>label91</value>
+  </data>
+  <data name="&gt;&gt;label91.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label91.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;label91.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="CV_Ins.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="CV_Ins.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="CV_Ins.Location" type="System.Drawing.Point, System.Drawing">
+    <value>554, 545</value>
+  </data>
+  <data name="CV_Ins.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 35</value>
+  </data>
+  <data name="CV_Ins.TabIndex" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="CV_Ins.Text" xml:space="preserve">
+    <value>투입 가능</value>
+  </data>
+  <data name="CV_Ins.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="CV_Ins.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;CV_Ins.Name" xml:space="preserve">
+    <value>CV_Ins</value>
+  </data>
+  <data name="&gt;&gt;CV_Ins.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CV_Ins.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;CV_Ins.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="CV_PLTON.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="CV_PLTON.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="CV_PLTON.Location" type="System.Drawing.Point, System.Drawing">
+    <value>554, 449</value>
+  </data>
+  <data name="CV_PLTON.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 35</value>
+  </data>
+  <data name="CV_PLTON.TabIndex" type="System.Int32, mscorlib">
+    <value>97</value>
+  </data>
+  <data name="CV_PLTON.Text" xml:space="preserve">
+    <value>팔레트ON</value>
+  </data>
+  <data name="CV_PLTON.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;CV_PLTON.Name" xml:space="preserve">
+    <value>CV_PLTON</value>
+  </data>
+  <data name="&gt;&gt;CV_PLTON.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CV_PLTON.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;CV_PLTON.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="CV_Eme.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="CV_Eme.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="CV_Eme.Location" type="System.Drawing.Point, System.Drawing">
+    <value>554, 406</value>
+  </data>
+  <data name="CV_Eme.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 35</value>
+  </data>
+  <data name="CV_Eme.TabIndex" type="System.Int32, mscorlib">
+    <value>96</value>
+  </data>
+  <data name="CV_Eme.Text" xml:space="preserve">
+    <value>비상</value>
+  </data>
+  <data name="CV_Eme.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;CV_Eme.Name" xml:space="preserve">
+    <value>CV_Eme</value>
+  </data>
+  <data name="&gt;&gt;CV_Eme.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CV_Eme.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;CV_Eme.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="CV_Manual.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="CV_Manual.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="CV_Manual.Location" type="System.Drawing.Point, System.Drawing">
+    <value>671, 365</value>
+  </data>
+  <data name="CV_Manual.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 35</value>
+  </data>
+  <data name="CV_Manual.TabIndex" type="System.Int32, mscorlib">
+    <value>95</value>
+  </data>
+  <data name="CV_Manual.Text" xml:space="preserve">
+    <value>수동</value>
+  </data>
+  <data name="CV_Manual.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;CV_Manual.Name" xml:space="preserve">
+    <value>CV_Manual</value>
+  </data>
+  <data name="&gt;&gt;CV_Manual.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CV_Manual.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;CV_Manual.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="CV_Auto.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="CV_Auto.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="CV_Auto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>554, 365</value>
+  </data>
+  <data name="CV_Auto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 35</value>
+  </data>
+  <data name="CV_Auto.TabIndex" type="System.Int32, mscorlib">
+    <value>94</value>
+  </data>
+  <data name="CV_Auto.Text" xml:space="preserve">
+    <value>자동</value>
+  </data>
+  <data name="CV_Auto.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;CV_Auto.Name" xml:space="preserve">
+    <value>CV_Auto</value>
+  </data>
+  <data name="&gt;&gt;CV_Auto.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CV_Auto.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;CV_Auto.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="label99.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12.749999pt</value>
+  </data>
+  <data name="label99.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label99.Location" type="System.Drawing.Point, System.Drawing">
+    <value>419, 365</value>
+  </data>
+  <data name="label99.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 119</value>
+  </data>
+  <data name="label99.TabIndex" type="System.Int32, mscorlib">
+    <value>93</value>
+  </data>
+  <data name="label99.Text" xml:space="preserve">
+    <value>버퍼 컨베이어</value>
+  </data>
+  <data name="label99.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label99.Name" xml:space="preserve">
+    <value>label99</value>
+  </data>
+  <data name="&gt;&gt;label99.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label99.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;label99.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="Dis2_Pla_Del.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="Dis2_Pla_Del.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Dis2_Pla_Del.Location" type="System.Drawing.Point, System.Drawing">
+    <value>554, 305</value>
+  </data>
+  <data name="Dis2_Pla_Del.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 35</value>
+  </data>
+  <data name="Dis2_Pla_Del.TabIndex" type="System.Int32, mscorlib">
+    <value>137</value>
+  </data>
+  <data name="Dis2_Pla_Del.Text" xml:space="preserve">
+    <value>취출 가능</value>
+  </data>
+  <data name="Dis2_Pla_Del.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_Del.Name" xml:space="preserve">
+    <value>Dis2_Pla_Del</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_Del.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_Del.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_Del.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="Dis2_Pla_Ins.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="Dis2_Pla_Ins.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Dis2_Pla_Ins.Location" type="System.Drawing.Point, System.Drawing">
+    <value>554, 262</value>
+  </data>
+  <data name="Dis2_Pla_Ins.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 35</value>
+  </data>
+  <data name="Dis2_Pla_Ins.TabIndex" type="System.Int32, mscorlib">
+    <value>136</value>
+  </data>
+  <data name="Dis2_Pla_Ins.Text" xml:space="preserve">
+    <value>투입 가능</value>
+  </data>
+  <data name="Dis2_Pla_Ins.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_Ins.Name" xml:space="preserve">
+    <value>Dis2_Pla_Ins</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_Ins.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_Ins.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_Ins.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="Dis2_Pla_CNT.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="Dis2_Pla_CNT.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Dis2_Pla_CNT.Location" type="System.Drawing.Point, System.Drawing">
+    <value>706, 188</value>
+  </data>
+  <data name="Dis2_Pla_CNT.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 66</value>
+  </data>
+  <data name="Dis2_Pla_CNT.TabIndex" type="System.Int32, mscorlib">
+    <value>135</value>
+  </data>
+  <data name="Dis2_Pla_CNT.Text" xml:space="preserve">
+    <value>CNT</value>
+  </data>
+  <data name="Dis2_Pla_CNT.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_CNT.Name" xml:space="preserve">
+    <value>Dis2_Pla_CNT</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_CNT.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_CNT.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_CNT.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="Dis2_Pla_Name.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="Dis2_Pla_Name.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Dis2_Pla_Name.Location" type="System.Drawing.Point, System.Drawing">
+    <value>554, 188</value>
+  </data>
+  <data name="Dis2_Pla_Name.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 66</value>
+  </data>
+  <data name="Dis2_Pla_Name.TabIndex" type="System.Int32, mscorlib">
+    <value>134</value>
+  </data>
+  <data name="Dis2_Pla_Name.Text" xml:space="preserve">
+    <value>팔레트
+갯수</value>
+  </data>
+  <data name="Dis2_Pla_Name.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_Name.Name" xml:space="preserve">
+    <value>Dis2_Pla_Name</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_Name.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_Name.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_Name.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="Dis2_Pla_PLTON.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="Dis2_Pla_PLTON.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Dis2_Pla_PLTON.Location" type="System.Drawing.Point, System.Drawing">
+    <value>554, 147</value>
+  </data>
+  <data name="Dis2_Pla_PLTON.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 35</value>
+  </data>
+  <data name="Dis2_Pla_PLTON.TabIndex" type="System.Int32, mscorlib">
+    <value>133</value>
+  </data>
+  <data name="Dis2_Pla_PLTON.Text" xml:space="preserve">
+    <value>팔레트ON</value>
+  </data>
+  <data name="Dis2_Pla_PLTON.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_PLTON.Name" xml:space="preserve">
+    <value>Dis2_Pla_PLTON</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_PLTON.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_PLTON.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_PLTON.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="Dis2_Pla_Eme.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="Dis2_Pla_Eme.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Dis2_Pla_Eme.Location" type="System.Drawing.Point, System.Drawing">
+    <value>554, 105</value>
+  </data>
+  <data name="Dis2_Pla_Eme.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 35</value>
+  </data>
+  <data name="Dis2_Pla_Eme.TabIndex" type="System.Int32, mscorlib">
+    <value>132</value>
+  </data>
+  <data name="Dis2_Pla_Eme.Text" xml:space="preserve">
+    <value>비상</value>
+  </data>
+  <data name="Dis2_Pla_Eme.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_Eme.Name" xml:space="preserve">
+    <value>Dis2_Pla_Eme</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_Eme.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_Eme.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_Eme.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="Dis2_Pla_Manual.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="Dis2_Pla_Manual.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Dis2_Pla_Manual.Location" type="System.Drawing.Point, System.Drawing">
+    <value>671, 63</value>
+  </data>
+  <data name="Dis2_Pla_Manual.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 35</value>
+  </data>
+  <data name="Dis2_Pla_Manual.TabIndex" type="System.Int32, mscorlib">
+    <value>131</value>
+  </data>
+  <data name="Dis2_Pla_Manual.Text" xml:space="preserve">
+    <value>수동</value>
+  </data>
+  <data name="Dis2_Pla_Manual.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_Manual.Name" xml:space="preserve">
+    <value>Dis2_Pla_Manual</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_Manual.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_Manual.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_Manual.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="Dis2_Pla_Auto.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="Dis2_Pla_Auto.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Dis2_Pla_Auto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>554, 63</value>
+  </data>
+  <data name="Dis2_Pla_Auto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 35</value>
+  </data>
+  <data name="Dis2_Pla_Auto.TabIndex" type="System.Int32, mscorlib">
+    <value>130</value>
+  </data>
+  <data name="Dis2_Pla_Auto.Text" xml:space="preserve">
+    <value>자동</value>
+  </data>
+  <data name="Dis2_Pla_Auto.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_Auto.Name" xml:space="preserve">
+    <value>Dis2_Pla_Auto</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_Auto.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_Auto.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;Dis2_Pla_Auto.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="Dis_Pla_Del.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="Dis_Pla_Del.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Dis_Pla_Del.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 305</value>
+  </data>
+  <data name="Dis_Pla_Del.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 35</value>
+  </data>
+  <data name="Dis_Pla_Del.TabIndex" type="System.Int32, mscorlib">
+    <value>83</value>
+  </data>
+  <data name="Dis_Pla_Del.Text" xml:space="preserve">
+    <value>취출 가능</value>
+  </data>
+  <data name="Dis_Pla_Del.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_Del.Name" xml:space="preserve">
+    <value>Dis_Pla_Del</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_Del.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_Del.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_Del.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="Dis_Pla_Ins.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="Dis_Pla_Ins.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Dis_Pla_Ins.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 262</value>
+  </data>
+  <data name="Dis_Pla_Ins.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 35</value>
+  </data>
+  <data name="Dis_Pla_Ins.TabIndex" type="System.Int32, mscorlib">
+    <value>82</value>
+  </data>
+  <data name="Dis_Pla_Ins.Text" xml:space="preserve">
+    <value>투입 가능</value>
+  </data>
+  <data name="Dis_Pla_Ins.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_Ins.Name" xml:space="preserve">
+    <value>Dis_Pla_Ins</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_Ins.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_Ins.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_Ins.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="Dis_Pla_CNT.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="Dis_Pla_CNT.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Dis_Pla_CNT.Location" type="System.Drawing.Point, System.Drawing">
+    <value>306, 188</value>
+  </data>
+  <data name="Dis_Pla_CNT.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 66</value>
+  </data>
+  <data name="Dis_Pla_CNT.TabIndex" type="System.Int32, mscorlib">
+    <value>81</value>
+  </data>
+  <data name="Dis_Pla_CNT.Text" xml:space="preserve">
+    <value>CNT</value>
+  </data>
+  <data name="Dis_Pla_CNT.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_CNT.Name" xml:space="preserve">
+    <value>Dis_Pla_CNT</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_CNT.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_CNT.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_CNT.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="Dis_Pla_Name.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="Dis_Pla_Name.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Dis_Pla_Name.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 188</value>
+  </data>
+  <data name="Dis_Pla_Name.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 66</value>
+  </data>
+  <data name="Dis_Pla_Name.TabIndex" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="Dis_Pla_Name.Text" xml:space="preserve">
+    <value>팔레트
+갯수</value>
+  </data>
+  <data name="Dis_Pla_Name.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_Name.Name" xml:space="preserve">
+    <value>Dis_Pla_Name</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_Name.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_Name.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_Name.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="Dis_Pla_PLTON.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="Dis_Pla_PLTON.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Dis_Pla_PLTON.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 147</value>
+  </data>
+  <data name="Dis_Pla_PLTON.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 35</value>
+  </data>
+  <data name="Dis_Pla_PLTON.TabIndex" type="System.Int32, mscorlib">
+    <value>79</value>
+  </data>
+  <data name="Dis_Pla_PLTON.Text" xml:space="preserve">
+    <value>팔레트ON</value>
+  </data>
+  <data name="Dis_Pla_PLTON.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_PLTON.Name" xml:space="preserve">
+    <value>Dis_Pla_PLTON</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_PLTON.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_PLTON.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_PLTON.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="Dis_Pla_Eme.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="Dis_Pla_Eme.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Dis_Pla_Eme.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 105</value>
+  </data>
+  <data name="Dis_Pla_Eme.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 35</value>
+  </data>
+  <data name="Dis_Pla_Eme.TabIndex" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <data name="Dis_Pla_Eme.Text" xml:space="preserve">
+    <value>비상</value>
+  </data>
+  <data name="Dis_Pla_Eme.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_Eme.Name" xml:space="preserve">
+    <value>Dis_Pla_Eme</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_Eme.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_Eme.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_Eme.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="Dis_Pla_Manual.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="Dis_Pla_Manual.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Dis_Pla_Manual.Location" type="System.Drawing.Point, System.Drawing">
+    <value>271, 63</value>
+  </data>
+  <data name="Dis_Pla_Manual.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 35</value>
+  </data>
+  <data name="Dis_Pla_Manual.TabIndex" type="System.Int32, mscorlib">
+    <value>77</value>
+  </data>
+  <data name="Dis_Pla_Manual.Text" xml:space="preserve">
+    <value>수동</value>
+  </data>
+  <data name="Dis_Pla_Manual.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_Manual.Name" xml:space="preserve">
+    <value>Dis_Pla_Manual</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_Manual.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_Manual.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_Manual.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="Dis_Pla_Auto.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="Dis_Pla_Auto.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Dis_Pla_Auto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 63</value>
+  </data>
+  <data name="Dis_Pla_Auto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 35</value>
+  </data>
+  <data name="Dis_Pla_Auto.TabIndex" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="Dis_Pla_Auto.Text" xml:space="preserve">
+    <value>자동</value>
+  </data>
+  <data name="Dis_Pla_Auto.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_Auto.Name" xml:space="preserve">
+    <value>Dis_Pla_Auto</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_Auto.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_Auto.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;Dis_Pla_Auto.ZOrder" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>760, 4</value>
+  </data>
+  <data name="panel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>801, 669</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>130</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>PAGE_TABLE</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>맑은 고딕, 14.25pt, style=Bold</value>
+  </data>
+  <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 1</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 36</value>
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>130</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>라인 정보</value>
+  </data>
+  <data name="label8.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="P29.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="P29.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P29.Location" type="System.Drawing.Point, System.Drawing">
+    <value>478, 613</value>
+  </data>
+  <data name="P29.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 35</value>
+  </data>
+  <data name="P29.TabIndex" type="System.Int32, mscorlib">
+    <value>73</value>
+  </data>
+  <data name="P29.Text" xml:space="preserve">
+    <value>팔레트 OFF</value>
+  </data>
+  <data name="P29.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;P29.Name" xml:space="preserve">
+    <value>P29</value>
+  </data>
+  <data name="&gt;&gt;P29.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P29.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;P29.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="L2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="L2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 118</value>
+  </data>
+  <data name="L2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 35</value>
+  </data>
+  <data name="L2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="L2.Text" xml:space="preserve">
+    <value>자동2호</value>
+  </data>
+  <data name="L2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;L2.Name" xml:space="preserve">
+    <value>L2</value>
+  </data>
+  <data name="&gt;&gt;L2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L2.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;L2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="P1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="P1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 77</value>
+  </data>
+  <data name="P1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 35</value>
+  </data>
+  <data name="P1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="P1.Text" xml:space="preserve">
+    <value>팔레트 OFF</value>
+  </data>
+  <data name="P1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;P1.Name" xml:space="preserve">
+    <value>P1</value>
+  </data>
+  <data name="&gt;&gt;P1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P1.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;P1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="P14.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="P14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 612</value>
+  </data>
+  <data name="P14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 35</value>
+  </data>
+  <data name="P14.TabIndex" type="System.Int32, mscorlib">
+    <value>124</value>
+  </data>
+  <data name="P14.Text" xml:space="preserve">
+    <value>팔레트 OFF</value>
+  </data>
+  <data name="P14.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;P14.Name" xml:space="preserve">
+    <value>P14</value>
+  </data>
+  <data name="&gt;&gt;P14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P14.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;P14.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="L3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="L3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 159</value>
+  </data>
+  <data name="L3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 35</value>
+  </data>
+  <data name="L3.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="L3.Text" xml:space="preserve">
+    <value>자동3호</value>
+  </data>
+  <data name="L3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;L3.Name" xml:space="preserve">
+    <value>L3</value>
+  </data>
+  <data name="&gt;&gt;L3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L3.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;L3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="P13.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="P13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 571</value>
+  </data>
+  <data name="P13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 35</value>
+  </data>
+  <data name="P13.TabIndex" type="System.Int32, mscorlib">
+    <value>122</value>
+  </data>
+  <data name="P13.Text" xml:space="preserve">
+    <value>팔레트 OFF</value>
+  </data>
+  <data name="P13.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;P13.Name" xml:space="preserve">
+    <value>P13</value>
+  </data>
+  <data name="&gt;&gt;P13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P13.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;P13.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="P2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="P2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 118</value>
+  </data>
+  <data name="P2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 35</value>
+  </data>
+  <data name="P2.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="P2.Text" xml:space="preserve">
+    <value>팔레트 OFF</value>
+  </data>
+  <data name="P2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;P2.Name" xml:space="preserve">
+    <value>P2</value>
+  </data>
+  <data name="&gt;&gt;P2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P2.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;P2.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="L14.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="L14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 612</value>
+  </data>
+  <data name="L14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 35</value>
+  </data>
+  <data name="L14.TabIndex" type="System.Int32, mscorlib">
+    <value>121</value>
+  </data>
+  <data name="L14.Text" xml:space="preserve">
+    <value>자동16호</value>
+  </data>
+  <data name="L14.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;L14.Name" xml:space="preserve">
+    <value>L14</value>
+  </data>
+  <data name="&gt;&gt;L14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L14.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;L14.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="L13.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="L13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 571</value>
+  </data>
+  <data name="L13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 35</value>
+  </data>
+  <data name="L13.TabIndex" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="L13.Text" xml:space="preserve">
+    <value>자동15호</value>
+  </data>
+  <data name="L13.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;L13.Name" xml:space="preserve">
+    <value>L13</value>
+  </data>
+  <data name="&gt;&gt;L13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L13.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;L13.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="P3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="P3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 159</value>
+  </data>
+  <data name="P3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 35</value>
+  </data>
+  <data name="P3.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="P3.Text" xml:space="preserve">
+    <value>팔레트 OFF</value>
+  </data>
+  <data name="P3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;P3.Name" xml:space="preserve">
+    <value>P3</value>
+  </data>
+  <data name="&gt;&gt;P3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P3.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;P3.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="P10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="P10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 447</value>
+  </data>
+  <data name="P10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 35</value>
+  </data>
+  <data name="P10.TabIndex" type="System.Int32, mscorlib">
+    <value>118</value>
+  </data>
+  <data name="P10.Text" xml:space="preserve">
+    <value>팔레트 OFF</value>
+  </data>
+  <data name="P10.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;P10.Name" xml:space="preserve">
+    <value>P10</value>
+  </data>
+  <data name="&gt;&gt;P10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P10.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;P10.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="L4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="L4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 201</value>
+  </data>
+  <data name="L4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 35</value>
+  </data>
+  <data name="L4.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="L4.Text" xml:space="preserve">
+    <value>자동4호</value>
+  </data>
+  <data name="L4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;L4.Name" xml:space="preserve">
+    <value>L4</value>
+  </data>
+  <data name="&gt;&gt;L4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L4.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;L4.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="L10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="L10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 447</value>
+  </data>
+  <data name="L10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 35</value>
+  </data>
+  <data name="L10.TabIndex" type="System.Int32, mscorlib">
+    <value>117</value>
+  </data>
+  <data name="L10.Text" xml:space="preserve">
+    <value>자동12호</value>
+  </data>
+  <data name="L10.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;L10.Name" xml:space="preserve">
+    <value>L10</value>
+  </data>
+  <data name="&gt;&gt;L10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L10.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;L10.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="P4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="P4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 201</value>
+  </data>
+  <data name="P4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 35</value>
+  </data>
+  <data name="P4.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="P4.Text" xml:space="preserve">
+    <value>팔레트 OFF</value>
+  </data>
+  <data name="P4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;P4.Name" xml:space="preserve">
+    <value>P4</value>
+  </data>
+  <data name="&gt;&gt;P4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P4.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;P4.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="P12.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="P12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 530</value>
+  </data>
+  <data name="P12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 35</value>
+  </data>
+  <data name="P12.TabIndex" type="System.Int32, mscorlib">
+    <value>115</value>
+  </data>
+  <data name="P12.Text" xml:space="preserve">
+    <value>팔레트 OFF</value>
+  </data>
+  <data name="P12.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;P12.Name" xml:space="preserve">
+    <value>P12</value>
+  </data>
+  <data name="&gt;&gt;P12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P12.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;P12.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="L5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="L5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 242</value>
+  </data>
+  <data name="L5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 35</value>
+  </data>
+  <data name="L5.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="L5.Text" xml:space="preserve">
+    <value>자동5호</value>
+  </data>
+  <data name="L5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;L5.Name" xml:space="preserve">
+    <value>L5</value>
+  </data>
+  <data name="&gt;&gt;L5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L5.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;L5.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="L12.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="L12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 530</value>
+  </data>
+  <data name="L12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 35</value>
+  </data>
+  <data name="L12.TabIndex" type="System.Int32, mscorlib">
+    <value>114</value>
+  </data>
+  <data name="L12.Text" xml:space="preserve">
+    <value>자동14호</value>
+  </data>
+  <data name="L12.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;L12.Name" xml:space="preserve">
+    <value>L12</value>
+  </data>
+  <data name="&gt;&gt;L12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L12.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;L12.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="P5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="P5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 242</value>
+  </data>
+  <data name="P5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 35</value>
+  </data>
+  <data name="P5.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="P5.Text" xml:space="preserve">
+    <value>팔레트 OFF</value>
+  </data>
+  <data name="P5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;P5.Name" xml:space="preserve">
+    <value>P5</value>
+  </data>
+  <data name="&gt;&gt;P5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P5.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;P5.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="L6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="L6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 283</value>
+  </data>
+  <data name="L6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 35</value>
+  </data>
+  <data name="L6.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="L6.Text" xml:space="preserve">
+    <value>자동6호</value>
+  </data>
+  <data name="L6.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;L6.Name" xml:space="preserve">
+    <value>L6</value>
+  </data>
+  <data name="&gt;&gt;L6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L6.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;L6.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="P6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="P6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 283</value>
+  </data>
+  <data name="P6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 35</value>
+  </data>
+  <data name="P6.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="P6.Text" xml:space="preserve">
+    <value>팔레트 OFF</value>
+  </data>
+  <data name="P6.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;P6.Name" xml:space="preserve">
+    <value>P6</value>
+  </data>
+  <data name="&gt;&gt;P6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P6.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;P6.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="L7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="L7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 324</value>
+  </data>
+  <data name="L7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 35</value>
+  </data>
+  <data name="L7.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="L7.Text" xml:space="preserve">
+    <value>자동9호</value>
+  </data>
+  <data name="L7.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;L7.Name" xml:space="preserve">
+    <value>L7</value>
+  </data>
+  <data name="&gt;&gt;L7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L7.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;L7.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="P7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="P7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 324</value>
+  </data>
+  <data name="P7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 35</value>
+  </data>
+  <data name="P7.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="P7.Text" xml:space="preserve">
+    <value>팔레트 OFF</value>
+  </data>
+  <data name="P7.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;P7.Name" xml:space="preserve">
+    <value>P7</value>
+  </data>
+  <data name="&gt;&gt;P7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P7.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;P7.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="L8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="L8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 365</value>
+  </data>
+  <data name="L8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 35</value>
+  </data>
+  <data name="L8.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="L8.Text" xml:space="preserve">
+    <value>자동10호</value>
+  </data>
+  <data name="L8.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;L8.Name" xml:space="preserve">
+    <value>L8</value>
+  </data>
+  <data name="&gt;&gt;L8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L8.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;L8.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="L1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="L1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 77</value>
+  </data>
+  <data name="L1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 35</value>
+  </data>
+  <data name="L1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="L1.Text" xml:space="preserve">
+    <value>자동1호</value>
+  </data>
+  <data name="L1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;L1.Name" xml:space="preserve">
+    <value>L1</value>
+  </data>
+  <data name="&gt;&gt;L1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L1.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;L1.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="P8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="P8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 365</value>
+  </data>
+  <data name="P8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 35</value>
+  </data>
+  <data name="P8.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="P8.Text" xml:space="preserve">
+    <value>팔레트 OFF</value>
+  </data>
+  <data name="P8.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;P8.Name" xml:space="preserve">
+    <value>P8</value>
+  </data>
+  <data name="&gt;&gt;P8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P8.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;P8.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="L9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="L9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 406</value>
+  </data>
+  <data name="L9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 35</value>
+  </data>
+  <data name="L9.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="L9.Text" xml:space="preserve">
+    <value>자동11호</value>
+  </data>
+  <data name="L9.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;L9.Name" xml:space="preserve">
+    <value>L9</value>
+  </data>
+  <data name="&gt;&gt;L9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L9.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;L9.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="P9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="P9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 406</value>
+  </data>
+  <data name="P9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 35</value>
+  </data>
+  <data name="P9.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="P9.Text" xml:space="preserve">
+    <value>팔레트 OFF</value>
+  </data>
+  <data name="P9.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;P9.Name" xml:space="preserve">
+    <value>P9</value>
+  </data>
+  <data name="&gt;&gt;P9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P9.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;P9.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="L11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="L11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 489</value>
+  </data>
+  <data name="L11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 35</value>
+  </data>
+  <data name="L11.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="L11.Text" xml:space="preserve">
+    <value>자동13호</value>
+  </data>
+  <data name="L11.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;L11.Name" xml:space="preserve">
+    <value>L11</value>
+  </data>
+  <data name="&gt;&gt;L11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L11.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;L11.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="P11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="P11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 489</value>
+  </data>
+  <data name="P11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 35</value>
+  </data>
+  <data name="P11.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="P11.Text" xml:space="preserve">
+    <value>팔레트 OFF</value>
+  </data>
+  <data name="P11.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;P11.Name" xml:space="preserve">
+    <value>P11</value>
+  </data>
+  <data name="&gt;&gt;P11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P11.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;P11.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="L15.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="L15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>374, 37</value>
+  </data>
+  <data name="L15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 35</value>
+  </data>
+  <data name="L15.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="L15.Text" xml:space="preserve">
+    <value>자동17호</value>
+  </data>
+  <data name="L15.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;L15.Name" xml:space="preserve">
+    <value>L15</value>
+  </data>
+  <data name="&gt;&gt;L15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L15.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;L15.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="P15.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="P15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>478, 37</value>
+  </data>
+  <data name="P15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 35</value>
+  </data>
+  <data name="P15.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="P15.Text" xml:space="preserve">
+    <value>팔레트 OFF</value>
+  </data>
+  <data name="P15.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;P15.Name" xml:space="preserve">
+    <value>P15</value>
+  </data>
+  <data name="&gt;&gt;P15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P15.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;P15.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="L16.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="L16.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>374, 78</value>
+  </data>
+  <data name="L16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 35</value>
+  </data>
+  <data name="L16.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="L16.Text" xml:space="preserve">
+    <value>자동18호</value>
+  </data>
+  <data name="L16.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;L16.Name" xml:space="preserve">
+    <value>L16</value>
+  </data>
+  <data name="&gt;&gt;L16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L16.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;L16.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="P16.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="P16.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>478, 78</value>
+  </data>
+  <data name="P16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 35</value>
+  </data>
+  <data name="P16.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="P16.Text" xml:space="preserve">
+    <value>팔레트 OFF</value>
+  </data>
+  <data name="P16.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;P16.Name" xml:space="preserve">
+    <value>P16</value>
+  </data>
+  <data name="&gt;&gt;P16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P16.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;P16.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="L17.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="L17.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>374, 120</value>
+  </data>
+  <data name="L17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 35</value>
+  </data>
+  <data name="L17.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="L17.Text" xml:space="preserve">
+    <value>자동19호</value>
+  </data>
+  <data name="L17.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;L17.Name" xml:space="preserve">
+    <value>L17</value>
+  </data>
+  <data name="&gt;&gt;L17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L17.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;L17.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="P17.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="P17.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>478, 120</value>
+  </data>
+  <data name="P17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 35</value>
+  </data>
+  <data name="P17.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="P17.Text" xml:space="preserve">
+    <value>팔레트 OFF</value>
+  </data>
+  <data name="P17.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;P17.Name" xml:space="preserve">
+    <value>P17</value>
+  </data>
+  <data name="&gt;&gt;P17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P17.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;P17.ZOrder" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="L18.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="L18.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>374, 161</value>
+  </data>
+  <data name="L18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 35</value>
+  </data>
+  <data name="L18.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="L18.Text" xml:space="preserve">
+    <value>자동20호</value>
+  </data>
+  <data name="L18.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;L18.Name" xml:space="preserve">
+    <value>L18</value>
+  </data>
+  <data name="&gt;&gt;L18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L18.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;L18.ZOrder" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="P18.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="P18.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>478, 161</value>
+  </data>
+  <data name="P18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 35</value>
+  </data>
+  <data name="P18.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="P18.Text" xml:space="preserve">
+    <value>팔레트 OFF</value>
+  </data>
+  <data name="P18.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;P18.Name" xml:space="preserve">
+    <value>P18</value>
+  </data>
+  <data name="&gt;&gt;P18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P18.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;P18.ZOrder" xml:space="preserve">
+    <value>37</value>
+  </data>
+  <data name="L19.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="L19.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L19.Location" type="System.Drawing.Point, System.Drawing">
+    <value>374, 202</value>
+  </data>
+  <data name="L19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 35</value>
+  </data>
+  <data name="L19.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="L19.Text" xml:space="preserve">
+    <value>자동21호</value>
+  </data>
+  <data name="L19.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;L19.Name" xml:space="preserve">
+    <value>L19</value>
+  </data>
+  <data name="&gt;&gt;L19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L19.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;L19.ZOrder" xml:space="preserve">
+    <value>38</value>
+  </data>
+  <data name="P19.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="P19.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P19.Location" type="System.Drawing.Point, System.Drawing">
+    <value>478, 202</value>
+  </data>
+  <data name="P19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 35</value>
+  </data>
+  <data name="P19.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="P19.Text" xml:space="preserve">
+    <value>팔레트 OFF</value>
+  </data>
+  <data name="P19.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;P19.Name" xml:space="preserve">
+    <value>P19</value>
+  </data>
+  <data name="&gt;&gt;P19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P19.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;P19.ZOrder" xml:space="preserve">
+    <value>39</value>
+  </data>
+  <data name="L20.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="L20.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L20.Location" type="System.Drawing.Point, System.Drawing">
+    <value>374, 243</value>
+  </data>
+  <data name="L20.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 35</value>
+  </data>
+  <data name="L20.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="L20.Text" xml:space="preserve">
+    <value>자동22호</value>
+  </data>
+  <data name="L20.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;L20.Name" xml:space="preserve">
+    <value>L20</value>
+  </data>
+  <data name="&gt;&gt;L20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L20.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;L20.ZOrder" xml:space="preserve">
+    <value>40</value>
+  </data>
+  <data name="L29.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="L29.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L29.Location" type="System.Drawing.Point, System.Drawing">
+    <value>374, 613</value>
+  </data>
+  <data name="L29.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 35</value>
+  </data>
+  <data name="L29.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="L29.Text" xml:space="preserve">
+    <value>포장 1호</value>
+  </data>
+  <data name="L29.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;L29.Name" xml:space="preserve">
+    <value>L29</value>
+  </data>
+  <data name="&gt;&gt;L29.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L29.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;L29.ZOrder" xml:space="preserve">
+    <value>41</value>
+  </data>
+  <data name="P20.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="P20.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P20.Location" type="System.Drawing.Point, System.Drawing">
+    <value>478, 243</value>
+  </data>
+  <data name="P20.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 35</value>
+  </data>
+  <data name="P20.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="P20.Text" xml:space="preserve">
+    <value>팔레트 OFF</value>
+  </data>
+  <data name="P20.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;P20.Name" xml:space="preserve">
+    <value>P20</value>
+  </data>
+  <data name="&gt;&gt;P20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P20.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;P20.ZOrder" xml:space="preserve">
+    <value>42</value>
+  </data>
+  <data name="P28.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="P28.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P28.Location" type="System.Drawing.Point, System.Drawing">
+    <value>478, 572</value>
+  </data>
+  <data name="P28.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 35</value>
+  </data>
+  <data name="P28.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="P28.Text" xml:space="preserve">
+    <value>팔레트 OFF</value>
+  </data>
+  <data name="P28.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;P28.Name" xml:space="preserve">
+    <value>P28</value>
+  </data>
+  <data name="&gt;&gt;P28.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P28.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;P28.ZOrder" xml:space="preserve">
+    <value>43</value>
+  </data>
+  <data name="L21.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="L21.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L21.Location" type="System.Drawing.Point, System.Drawing">
+    <value>374, 284</value>
+  </data>
+  <data name="L21.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 35</value>
+  </data>
+  <data name="L21.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="L21.Text" xml:space="preserve">
+    <value>자동23호</value>
+  </data>
+  <data name="L21.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;L21.Name" xml:space="preserve">
+    <value>L21</value>
+  </data>
+  <data name="&gt;&gt;L21.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L21.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;L21.ZOrder" xml:space="preserve">
+    <value>44</value>
+  </data>
+  <data name="L28.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="L28.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L28.Location" type="System.Drawing.Point, System.Drawing">
+    <value>374, 572</value>
+  </data>
+  <data name="L28.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 35</value>
+  </data>
+  <data name="L28.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="L28.Text" xml:space="preserve">
+    <value>수동 3호</value>
+  </data>
+  <data name="L28.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;L28.Name" xml:space="preserve">
+    <value>L28</value>
+  </data>
+  <data name="&gt;&gt;L28.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L28.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;L28.ZOrder" xml:space="preserve">
+    <value>45</value>
+  </data>
+  <data name="P21.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="P21.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P21.Location" type="System.Drawing.Point, System.Drawing">
+    <value>478, 284</value>
+  </data>
+  <data name="P21.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 35</value>
+  </data>
+  <data name="P21.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="P21.Text" xml:space="preserve">
+    <value>팔레트 OFF</value>
+  </data>
+  <data name="P21.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;P21.Name" xml:space="preserve">
+    <value>P21</value>
+  </data>
+  <data name="&gt;&gt;P21.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P21.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;P21.ZOrder" xml:space="preserve">
+    <value>46</value>
+  </data>
+  <data name="P27.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="P27.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P27.Location" type="System.Drawing.Point, System.Drawing">
+    <value>478, 531</value>
+  </data>
+  <data name="P27.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 35</value>
+  </data>
+  <data name="P27.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="P27.Text" xml:space="preserve">
+    <value>팔레트 OFF</value>
+  </data>
+  <data name="P27.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;P27.Name" xml:space="preserve">
+    <value>P27</value>
+  </data>
+  <data name="&gt;&gt;P27.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P27.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;P27.ZOrder" xml:space="preserve">
+    <value>47</value>
+  </data>
+  <data name="L22.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="L22.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L22.Location" type="System.Drawing.Point, System.Drawing">
+    <value>374, 325</value>
+  </data>
+  <data name="L22.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 35</value>
+  </data>
+  <data name="L22.TabIndex" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="L22.Text" xml:space="preserve">
+    <value>자동32호</value>
+  </data>
+  <data name="L22.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;L22.Name" xml:space="preserve">
+    <value>L22</value>
+  </data>
+  <data name="&gt;&gt;L22.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L22.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;L22.ZOrder" xml:space="preserve">
+    <value>48</value>
+  </data>
+  <data name="L27.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="L27.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L27.Location" type="System.Drawing.Point, System.Drawing">
+    <value>374, 531</value>
+  </data>
+  <data name="L27.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 35</value>
+  </data>
+  <data name="L27.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <data name="L27.Text" xml:space="preserve">
+    <value>수동 2호</value>
+  </data>
+  <data name="L27.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;L27.Name" xml:space="preserve">
+    <value>L27</value>
+  </data>
+  <data name="&gt;&gt;L27.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L27.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;L27.ZOrder" xml:space="preserve">
+    <value>49</value>
+  </data>
+  <data name="P22.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="P22.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P22.Location" type="System.Drawing.Point, System.Drawing">
+    <value>478, 325</value>
+  </data>
+  <data name="P22.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 35</value>
+  </data>
+  <data name="P22.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <data name="P22.Text" xml:space="preserve">
+    <value>팔레트 OFF</value>
+  </data>
+  <data name="P22.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;P22.Name" xml:space="preserve">
+    <value>P22</value>
+  </data>
+  <data name="&gt;&gt;P22.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P22.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;P22.ZOrder" xml:space="preserve">
+    <value>50</value>
+  </data>
+  <data name="P26.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="P26.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P26.Location" type="System.Drawing.Point, System.Drawing">
+    <value>478, 490</value>
+  </data>
+  <data name="P26.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 35</value>
+  </data>
+  <data name="P26.TabIndex" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="P26.Text" xml:space="preserve">
+    <value>팔레트 OFF</value>
+  </data>
+  <data name="P26.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;P26.Name" xml:space="preserve">
+    <value>P26</value>
+  </data>
+  <data name="&gt;&gt;P26.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P26.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;P26.ZOrder" xml:space="preserve">
+    <value>51</value>
+  </data>
+  <data name="L23.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="L23.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L23.Location" type="System.Drawing.Point, System.Drawing">
+    <value>374, 366</value>
+  </data>
+  <data name="L23.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 35</value>
+  </data>
+  <data name="L23.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="L23.Text" xml:space="preserve">
+    <value>자동33호</value>
+  </data>
+  <data name="L23.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;L23.Name" xml:space="preserve">
+    <value>L23</value>
+  </data>
+  <data name="&gt;&gt;L23.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L23.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;L23.ZOrder" xml:space="preserve">
+    <value>52</value>
+  </data>
+  <data name="L26.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="L26.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L26.Location" type="System.Drawing.Point, System.Drawing">
+    <value>374, 490</value>
+  </data>
+  <data name="L26.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 35</value>
+  </data>
+  <data name="L26.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="L26.Text" xml:space="preserve">
+    <value>수동 1호</value>
+  </data>
+  <data name="L26.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;L26.Name" xml:space="preserve">
+    <value>L26</value>
+  </data>
+  <data name="&gt;&gt;L26.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L26.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;L26.ZOrder" xml:space="preserve">
+    <value>53</value>
+  </data>
+  <data name="P23.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="P23.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P23.Location" type="System.Drawing.Point, System.Drawing">
+    <value>478, 366</value>
+  </data>
+  <data name="P23.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 35</value>
+  </data>
+  <data name="P23.TabIndex" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="P23.Text" xml:space="preserve">
+    <value>팔레트 OFF</value>
+  </data>
+  <data name="P23.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;P23.Name" xml:space="preserve">
+    <value>P23</value>
+  </data>
+  <data name="&gt;&gt;P23.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P23.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;P23.ZOrder" xml:space="preserve">
+    <value>54</value>
+  </data>
+  <data name="P25.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="P25.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P25.Location" type="System.Drawing.Point, System.Drawing">
+    <value>478, 449</value>
+  </data>
+  <data name="P25.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 35</value>
+  </data>
+  <data name="P25.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="P25.Text" xml:space="preserve">
+    <value>팔레트 OFF</value>
+  </data>
+  <data name="P25.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;P25.Name" xml:space="preserve">
+    <value>P25</value>
+  </data>
+  <data name="&gt;&gt;P25.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P25.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;P25.ZOrder" xml:space="preserve">
+    <value>55</value>
+  </data>
+  <data name="L24.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="L24.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L24.Location" type="System.Drawing.Point, System.Drawing">
+    <value>374, 408</value>
+  </data>
+  <data name="L24.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 35</value>
+  </data>
+  <data name="L24.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="L24.Text" xml:space="preserve">
+    <value>자동34호</value>
+  </data>
+  <data name="L24.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;L24.Name" xml:space="preserve">
+    <value>L24</value>
+  </data>
+  <data name="&gt;&gt;L24.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L24.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;L24.ZOrder" xml:space="preserve">
+    <value>56</value>
+  </data>
+  <data name="L25.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 11.25pt, style=Bold</value>
+  </data>
+  <data name="L25.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L25.Location" type="System.Drawing.Point, System.Drawing">
+    <value>374, 449</value>
+  </data>
+  <data name="L25.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 35</value>
+  </data>
+  <data name="L25.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="L25.Text" xml:space="preserve">
+    <value>자동35호</value>
+  </data>
+  <data name="L25.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;L25.Name" xml:space="preserve">
+    <value>L25</value>
+  </data>
+  <data name="&gt;&gt;L25.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L25.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;L25.ZOrder" xml:space="preserve">
+    <value>57</value>
+  </data>
+  <data name="P24.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="P24.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P24.Location" type="System.Drawing.Point, System.Drawing">
+    <value>478, 408</value>
+  </data>
+  <data name="P24.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 35</value>
+  </data>
+  <data name="P24.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="P24.Text" xml:space="preserve">
+    <value>팔레트 OFF</value>
+  </data>
+  <data name="P24.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;P24.Name" xml:space="preserve">
+    <value>P24</value>
+  </data>
+  <data name="&gt;&gt;P24.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P24.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;P24.ZOrder" xml:space="preserve">
+    <value>58</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 4</value>
+  </data>
+  <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>737, 669</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>129</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>PAGE_TABLE</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="PAGE_TABLE.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="PAGE_TABLE.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1811, 1004</value>
+  </data>
+  <data name="&gt;&gt;PAGE_TABLE.Name" xml:space="preserve">
+    <value>PAGE_TABLE</value>
+  </data>
+  <data name="&gt;&gt;PAGE_TABLE.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Navigation.TabNavigationPage, DevExpress.XtraBars.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;PAGE_TABLE.Parent" xml:space="preserve">
+    <value>TAB_PANEL</value>
+  </data>
+  <data name="&gt;&gt;PAGE_TABLE.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="TAB_PANEL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 16</value>
+  </data>
+  <data name="TAB_PANEL.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="TAB_PANEL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1827, 1088</value>
+  </data>
+  <data name="TAB_PANEL.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="TAB_PANEL.Text" xml:space="preserve">
+    <value>GUI</value>
+  </data>
+  <data name="&gt;&gt;TAB_PANEL.Name" xml:space="preserve">
+    <value>TAB_PANEL</value>
+  </data>
+  <data name="&gt;&gt;TAB_PANEL.Type" xml:space="preserve">
+    <value>ACSManager.Control.TabPane, ACSManager, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TAB_PANEL.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;TAB_PANEL.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ribbonPage2.Text" xml:space="preserve">
+    <value>ribbonPage2</value>
+  </data>
+  <data name="ribbonPageGroup2.Text" xml:space="preserve">
+    <value>ribbonPageGroup2</value>
+  </data>
+  <data name="layoutControlGroup1.AppearanceGroup.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>InactiveCaption</value>
+  </data>
+  <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="layoutControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="layoutControl1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1859, 1120</value>
+  </data>
+  <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="layoutControl1.Text" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Name" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>26</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 18</value>
+  </data>
+  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1859, 1120</value>
+  </data>
+  <data name="&gt;&gt;timer1.Name" xml:space="preserve">
+    <value>timer1</value>
+  </data>
+  <data name="&gt;&gt;timer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem2.Name" xml:space="preserve">
+    <value>layoutControlItem2</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem2.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup2.Name" xml:space="preserve">
+    <value>layoutControlGroup2</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup2.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem3.Name" xml:space="preserve">
+    <value>layoutControlItem3</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem3.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem1.Name" xml:space="preserve">
+    <value>emptySpaceItem1</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem4.Name" xml:space="preserve">
+    <value>layoutControlItem4</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem4.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem5.Name" xml:space="preserve">
+    <value>layoutControlItem5</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem5.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem3.Name" xml:space="preserve">
+    <value>emptySpaceItem3</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem3.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem6.Name" xml:space="preserve">
+    <value>layoutControlItem6</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem6.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem7.Name" xml:space="preserve">
+    <value>layoutControlItem7</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem7.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem8.Name" xml:space="preserve">
+    <value>layoutControlItem8</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem8.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem9.Name" xml:space="preserve">
+    <value>layoutControlItem9</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem9.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem10.Name" xml:space="preserve">
+    <value>layoutControlItem10</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem10.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem2.Name" xml:space="preserve">
+    <value>emptySpaceItem2</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem2.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage2.Name" xml:space="preserve">
+    <value>ribbonPage2</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage2.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup2.Name" xml:space="preserve">
+    <value>ribbonPageGroup2</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup2.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup1.Name" xml:space="preserve">
+    <value>layoutControlGroup1</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem1.Name" xml:space="preserve">
+    <value>layoutControlItem1</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>PLCView</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.XtraUserControl, DevExpress.Utils.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+</root>

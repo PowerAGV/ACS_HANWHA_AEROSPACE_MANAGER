@@ -1,0 +1,1137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="PAGE_GUI.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="PAGE_GUI.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="PAGE_GUI.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="PAGE_GUI.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="diagramShape1.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape1.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape2.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape2.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape3.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape3.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape4.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape4.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape5.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape5.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape6.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape6.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape7.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape7.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape8.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape8.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape9.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape9.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape10.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape10.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape11.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape11.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape12.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape12.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape13.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape13.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape14.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape14.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape15.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape15.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape16.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape16.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape17.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape17.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape18.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape18.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape19.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape19.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape20.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape20.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape21.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape21.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape22.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape22.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape23.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape23.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape24.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape24.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape25.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape25.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape26.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape26.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape27.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape27.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape28.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape28.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape29.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape29.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape30.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape30.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape31.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape31.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape32.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape32.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape33.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape33.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape34.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape34.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape35.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape35.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape36.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape36.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape37.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape37.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape38.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape38.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape39.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape39.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape40.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape40.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape41.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape41.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape42.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape42.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape43.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape43.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape44.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape44.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape45.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape45.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape46.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape46.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape47.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape47.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape48.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape48.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape49.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape49.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape50.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape50.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape51.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape51.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape52.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape52.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape53.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape53.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape54.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape54.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape55.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape55.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape56.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape56.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape57.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape57.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape58.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape58.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape59.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape59.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape60.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape60.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape61.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape61.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape62.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape62.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape63.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape63.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape64.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape64.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape65.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape65.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape66.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape66.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape67.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape67.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape68.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape68.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape69.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape69.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape70.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape70.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape71.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape71.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape72.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape72.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape73.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape73.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape74.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape74.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape75.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape75.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape76.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape76.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape77.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape77.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape78.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape78.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape79.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape79.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape80.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape80.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape81.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape81.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape82.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape82.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape83.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape83.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape84.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape84.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape85.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape85.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape86.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape86.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape87.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape87.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape88.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape88.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape89.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape89.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape90.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape90.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape91.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape91.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape92.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape92.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape93.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape93.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape94.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape94.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape95.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape95.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape96.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape96.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape97.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape97.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape98.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape98.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape99.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape99.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape100.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape100.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape101.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape101.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape102.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape102.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape103.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape103.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape104.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape104.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape105.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape105.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape106.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape106.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape107.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape107.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape108.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape108.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape109.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape109.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape110.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape110.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape111.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape111.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape112.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape112.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape113.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape113.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape114.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape114.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape115.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape115.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape116.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape116.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape117.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape117.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape118.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape118.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape119.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape119.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape120.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape120.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape121.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape121.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape122.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape122.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape123.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape123.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape124.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape124.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape125.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape125.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape126.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape126.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape127.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape127.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape128.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape128.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape129.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape129.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape130.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape130.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape131.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape131.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape132.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape132.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape133.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape133.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape134.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape134.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape135.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape135.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape136.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape136.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape137.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape137.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape138.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape138.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape139.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape139.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape140.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape140.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape141.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape141.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape142.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape142.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape143.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape143.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape144.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape144.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape145.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape145.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape146.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape146.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape147.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape147.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="diagramShape148.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diagramShape148.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="PAGE_GUI.Properties.AppearanceCaption.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="PAGE_GUI.Properties.AppearanceCaption.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="PAGE_GUI.Properties.AppearanceCaption.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="PAGE_TABLE.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="PAGE_TABLE.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="PAGE_TABLE.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="layoutControl2.Appearance.DisabledLayoutGroupCaption.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="layoutControl2.Appearance.DisabledLayoutGroupCaption.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="layoutControl2.Appearance.DisabledLayoutGroupCaption.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="layoutControl2.Appearance.DisabledLayoutGroupCaption.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="layoutControl2.Appearance.DisabledLayoutItem.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="layoutControl2.Appearance.DisabledLayoutItem.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="layoutControl2.Appearance.DisabledLayoutItem.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="layoutControl2.Appearance.DisabledLayoutItem.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="layoutControl2.OptionsPrint.AppearanceGroupCaption.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="layoutControl2.OptionsPrint.AppearanceGroupCaption.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="layoutControl2.OptionsPrint.AppearanceGroupCaption.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="layoutControl2.OptionsPrint.AppearanceGroupCaption.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="layoutControl2.OptionsPrint.AppearanceItemCaption.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="layoutControl2.OptionsPrint.AppearanceItemCaption.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="layoutControl2.OptionsPrint.AppearanceItemCaption.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="layoutControl2.OptionsPrint.AppearanceItemCaption.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="layoutControl1.Appearance.DisabledLayoutGroupCaption.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="layoutControl1.Appearance.DisabledLayoutGroupCaption.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="layoutControl1.Appearance.DisabledLayoutGroupCaption.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="layoutControl1.Appearance.DisabledLayoutGroupCaption.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="layoutControl1.Appearance.DisabledLayoutItem.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="layoutControl1.Appearance.DisabledLayoutItem.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="layoutControl1.Appearance.DisabledLayoutItem.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="layoutControl1.Appearance.DisabledLayoutItem.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="layoutControl1.OptionsPrint.AppearanceGroupCaption.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="layoutControl1.OptionsPrint.AppearanceGroupCaption.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="layoutControl1.OptionsPrint.AppearanceGroupCaption.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="layoutControl1.OptionsPrint.AppearanceGroupCaption.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="layoutControl1.OptionsPrint.AppearanceItemCaption.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="layoutControl1.OptionsPrint.AppearanceItemCaption.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="layoutControl1.OptionsPrint.AppearanceItemCaption.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="layoutControl1.OptionsPrint.AppearanceItemCaption.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+</root>
