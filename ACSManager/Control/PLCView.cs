@@ -49,79 +49,32 @@ namespace ACSManager.Control
     public partial class PLCView : XtraUserControl
     {
         public static PLCView plcView;
-        #region value
+        long map_id = 0;
+       
         private string select_agv = "";
         private string route_area = "ALL";
 
-        long map_id = 0;
+        
         bool isworking_AGV = false;
+
         List<agvInfo> m_agv = new List<agvInfo>();
 
-        MapDesign.Link_Node_JoinDataTable linkNodeJoinTbl = new MapDesign.Link_Node_JoinDataTable();
-        MakeGUI makeGUI = new MakeGUI();
-
-        List<DiagramShape> subLineComm = new List<DiagramShape>();
-        List<DiagramShape> subLineInfoA = new List<DiagramShape>();
-        List<DiagramShape> subLineInfoB = new List<DiagramShape>();
-        List<DiagramShape> mainLineComm = new List<DiagramShape>();
-        List<DiagramShape> mainLineInfoA = new List<DiagramShape>();
-        List<DiagramShape> mainLineInfoB = new List<DiagramShape>();
-
         public DiagramShape[] shape_AreaBox_parts = new DiagramShape[3];
-        public DiagramShape[] shape_HardeningRoom_parts = new DiagramShape[8];
 
-        DiagramShape shape_ChargeRoom_Box = new DiagramShape();
+        public DiagramShape[] shape_HardeningRoom_Door = new DiagramShape[8];
+        public DiagramShape[,] shape_HardeningRoom_Plt = new DiagramShape[8,3];
 
+        public DiagramShape[] shape_ChargeRoom_Door = new DiagramShape[1];
+        public DiagramShape[] shape_ChargeRoom_Plt = new DiagramShape[2];
 
-        DiagramShape shape_subline_Auto = new DiagramShape();
-        DiagramShape shape_subline_Manual = new DiagramShape();
-        DiagramShape shape_subline_Abnormal = new DiagramShape();
-        DiagramShape shape_subline_Emergency = new DiagramShape();
+        public DiagramShape[] shape_AGVChargeRoom_Doors = new DiagramShape[4];
 
-        DiagramShape shape_mainline_Auto = new DiagramShape();
-        DiagramShape shape_mainline_Manual = new DiagramShape(); 
-        DiagramShape shape_mainline_Abnormal = new DiagramShape(); 
-        DiagramShape shape_mainline_Emergency = new DiagramShape(); 
+        public DiagramShape[] shape_LeeHyungGongRoom_Door = new DiagramShape[1];
+        public DiagramShape[] shape_LeeHyungGongRoom_Plt = new DiagramShape[2];
 
-        DiagramShape shape_sublineA_pltOn = new DiagramShape(); 
-        DiagramShape shape_sublineA_CallAGV = new DiagramShape(); 
-        DiagramShape shape_sublineA_CarInfo = new DiagramShape(); 
-        DiagramShape shape_sublineA_pltPartOn = new DiagramShape(); 
-        DiagramShape shape_sublineA_pltPartCnt = new DiagramShape();
-        
-        DiagramShape shape_sublineB_pltOn = new DiagramShape(); 
-        DiagramShape shape_sublineB_CallAGV = new DiagramShape(); 
-        DiagramShape shape_sublineB_CarInfo = new DiagramShape(); 
-        DiagramShape shape_sublineB_pltPartOn = new DiagramShape(); 
-        DiagramShape shape_sublineB_pltPartCnt = new DiagramShape();
-
-        DiagramShape shape_mainlineA_pltOn = new DiagramShape();
-        DiagramShape shape_mainlineA_CallAGV = new DiagramShape();
-        DiagramShape shape_mainlineA_CarInfo = new DiagramShape();
-        DiagramShape shape_mainlineA_pltPartOn = new DiagramShape();
-        DiagramShape shape_mainlineA_pltPartCnt = new DiagramShape();
-
-        DiagramShape shape_mainlineB_pltOn = new DiagramShape();
-        DiagramShape shape_mainlineB_CallAGV = new DiagramShape();
-        DiagramShape shape_mainlineB_CarInfo = new DiagramShape();
-        DiagramShape shape_mainlineB_pltPartOn = new DiagramShape();
-        DiagramShape shape_mainlineB_pltPartCnt = new DiagramShape();
-
-        DiagramShape shape_blockingBar_R = new DiagramShape();
-        DiagramShape shape_blockingBar_L = new DiagramShape();
-        
-        DiagramShape shape_Aram_PltSitDown_SubA = new DiagramShape();
-        DiagramShape shape_Aram_PltSitDown_SubB = new DiagramShape();
-        DiagramShape shape_Aram_PltSitDown_MainA = new DiagramShape();
-        DiagramShape shape_Aram_PltSitDown_MainB = new DiagramShape();
-
-        public List<NodeInfo> m_listNodeDate = new List<NodeInfo>();
-        public List<LinkInfo> m_listLinkDate = new List<LinkInfo>();
-        
         public List<NodeInfo> m_listTempNodeDate = new List<NodeInfo>();
         public List<LinkInfo> m_listTempLinkDate = new List<LinkInfo>();
         
-        #endregion
 
         /// <summary>
         /// 생성자
@@ -152,11 +105,9 @@ namespace ACSManager.Control
                 Paint_Map_Node();
                 Paint_Map_Link();
 
-                //Rename_Shapes();
-
                 reloadAgvInfo();
-
-                DIAGRAM_GUI.FitToDrawing();
+                Vision_FullScreen();
+                
             }
             else
             {
@@ -177,10 +128,9 @@ namespace ACSManager.Control
             {
                 timer1.Enabled = false;
 
-                changeData_DiagramShape();
+                Change_Color_Shapes();
                 reloadAgvInfo();
                 displayAGV();
-
             }
             catch (Exception ee)
             {
@@ -357,7 +307,7 @@ namespace ACSManager.Control
                     {
                         DiagramShape ds = (DiagramShape)DIAGRAM_GUI.Items[idx];
 
-                        ds.Appearance.Font = new Font("Tahoma", 4);
+                        ds.Appearance.Font = new Font("Tahoma", 5);
                         ds.Appearance.ForeColor = Color.Black;
                         ds.Content = ds.Tag.ToString();
                     }
@@ -444,17 +394,173 @@ namespace ACSManager.Control
                     ds.Appearance.ForeColor = Color.Black;
 
                     if (ds.Tag.ToString().Contains("Auto")) ds.Content = "자동";
-                    //else ds.Content = ds.Tag.ToString();
                 }
             }
         }
 
 
-        #region Timer
-        void changeData_DiagramShape()
+        /// <summary>
+        /// DB데이터 매칭 도형 색변경
+        /// </summary>
+        void Change_Color_Shapes()
         {
             try
             {
+                bool AGV_Door1_Open = false;
+                bool AGV_Door1_Close = false; 
+                bool AGV_Door2_Open = false;
+                bool AGV_Door2_Close = false;
+                bool AGV_Door1_Send = false;
+                bool AGV_Door2_Send = false;
+
+                bool Charge_Door = false;
+                bool Charge_PLT1 = false;
+                bool Charge_PLT2 = false;
+
+                bool LeeHynungGong_Door = false;
+                bool LeeHynungGong_PLT1 = false;
+                bool LeeHynungGong_PLT2 = false;
+
+                bool[] Hardening_Door = new bool[8];
+                bool[,] Hardening_Plt = new bool[8,3];
+
+                TB_PLCTableAdapter PLCadpt = new TB_PLCTableAdapter();
+                foreach (DataSetPLC.TB_PLCRow Row in PLCadpt.GetData())
+                {
+                    if (Row.PLC_GROUP == 1)
+                    {
+                        if      (Row.PLC_ADDRESS.Contains("D104")) Charge_Door = Row.PLC_VALUE.Contains("true") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D101.0")) Charge_PLT1 = Row.PLC_VALUE.Contains("true") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D101.1")) Charge_PLT2 = Row.PLC_VALUE.Contains("true") ? true : false;
+                    }
+                    else if (Row.PLC_GROUP == 11)
+                    {
+                        if (Row.PLC_ADDRESS.Contains("D104.2")) Hardening_Door[0] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D101.4")) Hardening_Plt[0, 0] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D101.5")) Hardening_Plt[0, 1] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D101.6")) Hardening_Plt[0, 2] = Row.PLC_VALUE.Contains("true") ? true : false;
+                    }
+                    else if (Row.PLC_GROUP == 12)
+                    {
+                        if (Row.PLC_ADDRESS.Contains("D104.3")) Hardening_Door[1] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D101.8")) Hardening_Plt[1, 0] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D101.9")) Hardening_Plt[1, 1] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D101.A")) Hardening_Plt[1, 2] = Row.PLC_VALUE.Contains("true") ? true : false;
+                    }
+                    else if (Row.PLC_GROUP == 13)
+                    {
+                        if (Row.PLC_ADDRESS.Contains("D104.4")) Hardening_Door[2] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D101.C")) Hardening_Plt[2, 0] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D101.D")) Hardening_Plt[2, 1] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D101.E")) Hardening_Plt[2, 2] = Row.PLC_VALUE.Contains("true") ? true : false;
+                    }
+                    else if (Row.PLC_GROUP == 14)
+                    {
+                        if (Row.PLC_ADDRESS.Contains("D104.5")) Hardening_Door[3] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D102.0")) Hardening_Plt[3, 0] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D102.1")) Hardening_Plt[3, 1] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D102.2")) Hardening_Plt[3, 2] = Row.PLC_VALUE.Contains("true") ? true : false;
+                    }
+                    else if (Row.PLC_GROUP == 15)
+                    {
+                        if (Row.PLC_ADDRESS.Contains("D104.6")) Hardening_Door[4] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D102.4")) Hardening_Plt[4, 0] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D102.5")) Hardening_Plt[4, 1] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D102.6")) Hardening_Plt[4, 2] = Row.PLC_VALUE.Contains("true") ? true : false;
+                    }
+                    else if (Row.PLC_GROUP == 16)
+                    {
+                        if (Row.PLC_ADDRESS.Contains("D104.7")) Hardening_Door[5] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D102.8")) Hardening_Plt[5, 0] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D102.9")) Hardening_Plt[5, 1] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D102.A")) Hardening_Plt[5, 2] = Row.PLC_VALUE.Contains("true") ? true : false;
+                    }
+                    else if (Row.PLC_GROUP == 17)
+                    {
+                        if (Row.PLC_ADDRESS.Contains("D104.8")) Hardening_Door[6] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D102.C")) Hardening_Plt[6, 0] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D102.D")) Hardening_Plt[6, 1] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D102.E")) Hardening_Plt[6, 2] = Row.PLC_VALUE.Contains("true") ? true : false;
+                    }
+                    else if (Row.PLC_GROUP == 18)
+                    {
+                        if (Row.PLC_ADDRESS.Contains("D104.9")) Hardening_Door[7] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D103.0")) Hardening_Plt[7, 0] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D103.1")) Hardening_Plt[7, 1] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D103.2")) Hardening_Plt[7, 2] = Row.PLC_VALUE.Contains("true") ? true : false;
+                    }
+                    else if (Row.PLC_GROUP == 20)
+                    {
+                        if (Row.PLC_ADDRESS.Contains("D104.A")) LeeHynungGong_Door = Row.PLC_VALUE.Contains("true") ? true : false;
+                        if (Row.PLC_ADDRESS.Contains("D103.4")) LeeHynungGong_PLT1 = Row.PLC_VALUE.Contains("true") ? true : false;
+                        if (Row.PLC_ADDRESS.Contains("D103.5")) LeeHynungGong_PLT2 = Row.PLC_VALUE.Contains("true") ? true : false;
+                    }
+                    else if (Row.PLC_GROUP == 30)
+                    {
+                        if      (Row.PLC_ADDRESS.Contains("D700")) AGV_Door1_Open = Row.PLC_VALUE.Contains("1") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D702")) AGV_Door1_Close = Row.PLC_VALUE.Contains("1") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D701")) AGV_Door2_Open = Row.PLC_VALUE.Contains("1") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D703")) AGV_Door2_Close = Row.PLC_VALUE.Contains("1") ? true : false;
+                    }
+                    else if (Row.PLC_GROUP == 100)
+                    {
+                        if (Row.PLC_ADDRESS.Contains("D710")) AGV_Door1_Send = Row.PLC_VALUE.Contains("1") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D711")) AGV_Door2_Send = Row.PLC_VALUE.Contains("1") ? true : false;
+                    }
+                }
+                shape_ChargeRoom_Door[0].Appearance.BackColor = Charge_Door ? Color.Lime : Color.Red;
+                shape_ChargeRoom_Plt[0].Appearance.BackColor = Charge_PLT1 ? Color.Lime : Color.LightSlateGray;
+                shape_ChargeRoom_Plt[1].Appearance.BackColor = Charge_PLT2 ? Color.Lime : Color.LightSlateGray;
+
+                shape_HardeningRoom_Door[0].Appearance.BackColor = Hardening_Door[0] ? Color.Lime : Color.Red;
+                shape_HardeningRoom_Door[1].Appearance.BackColor = Hardening_Door[1] ? Color.Lime : Color.Red;
+                shape_HardeningRoom_Door[2].Appearance.BackColor = Hardening_Door[2] ? Color.Lime : Color.Red;
+                shape_HardeningRoom_Door[3].Appearance.BackColor = Hardening_Door[3] ? Color.Lime : Color.Red;
+                shape_HardeningRoom_Door[4].Appearance.BackColor = Hardening_Door[4] ? Color.Lime : Color.Red;
+                shape_HardeningRoom_Door[5].Appearance.BackColor = Hardening_Door[5] ? Color.Lime : Color.Red;
+                shape_HardeningRoom_Door[6].Appearance.BackColor = Hardening_Door[6] ? Color.Lime : Color.Red;
+                shape_HardeningRoom_Door[7].Appearance.BackColor = Hardening_Door[7] ? Color.Lime : Color.Red;
+
+                shape_HardeningRoom_Plt[0, 0].Appearance.BackColor = Hardening_Plt[0, 0] ? Color.Lime : Color.LightSlateGray;
+                shape_HardeningRoom_Plt[0, 1].Appearance.BackColor = Hardening_Plt[0, 1] ? Color.Lime : Color.LightSlateGray;
+                shape_HardeningRoom_Plt[0, 2].Appearance.BackColor = Hardening_Plt[0, 2] ? Color.Lime : Color.LightSlateGray;
+
+                shape_HardeningRoom_Plt[1, 0].Appearance.BackColor = Hardening_Plt[1, 0] ? Color.Lime : Color.LightSlateGray;
+                shape_HardeningRoom_Plt[1, 1].Appearance.BackColor = Hardening_Plt[1, 1] ? Color.Lime : Color.LightSlateGray;
+                shape_HardeningRoom_Plt[1, 2].Appearance.BackColor = Hardening_Plt[1, 2] ? Color.Lime : Color.LightSlateGray;
+
+                shape_HardeningRoom_Plt[2, 0].Appearance.BackColor = Hardening_Plt[2, 0] ? Color.Lime : Color.LightSlateGray;
+                shape_HardeningRoom_Plt[2, 1].Appearance.BackColor = Hardening_Plt[2, 1] ? Color.Lime : Color.LightSlateGray;
+                shape_HardeningRoom_Plt[2, 2].Appearance.BackColor = Hardening_Plt[2, 2] ? Color.Lime : Color.LightSlateGray;
+
+                shape_HardeningRoom_Plt[3, 0].Appearance.BackColor = Hardening_Plt[3, 0] ? Color.Lime : Color.LightSlateGray;
+                shape_HardeningRoom_Plt[3, 1].Appearance.BackColor = Hardening_Plt[3, 1] ? Color.Lime : Color.LightSlateGray;
+                shape_HardeningRoom_Plt[3, 2].Appearance.BackColor = Hardening_Plt[3, 2] ? Color.Lime : Color.LightSlateGray;
+
+                shape_HardeningRoom_Plt[4, 0].Appearance.BackColor = Hardening_Plt[4, 0] ? Color.Lime : Color.LightSlateGray;
+                shape_HardeningRoom_Plt[4, 1].Appearance.BackColor = Hardening_Plt[4, 1] ? Color.Lime : Color.LightSlateGray;
+                shape_HardeningRoom_Plt[4, 2].Appearance.BackColor = Hardening_Plt[4, 2] ? Color.Lime : Color.LightSlateGray;
+
+                shape_HardeningRoom_Plt[5, 0].Appearance.BackColor = Hardening_Plt[5, 0] ? Color.Lime : Color.LightSlateGray;
+                shape_HardeningRoom_Plt[5, 1].Appearance.BackColor = Hardening_Plt[5, 1] ? Color.Lime : Color.LightSlateGray;
+                shape_HardeningRoom_Plt[5, 2].Appearance.BackColor = Hardening_Plt[5, 2] ? Color.Lime : Color.LightSlateGray;
+
+                shape_HardeningRoom_Plt[6, 0].Appearance.BackColor = Hardening_Plt[6, 0] ? Color.Lime : Color.LightSlateGray;
+                shape_HardeningRoom_Plt[6, 1].Appearance.BackColor = Hardening_Plt[6, 1] ? Color.Lime : Color.LightSlateGray;
+                shape_HardeningRoom_Plt[6, 2].Appearance.BackColor = Hardening_Plt[6, 2] ? Color.Lime : Color.LightSlateGray;
+
+                shape_HardeningRoom_Plt[7, 0].Appearance.BackColor = Hardening_Plt[7, 0] ? Color.Lime : Color.LightSlateGray;
+                shape_HardeningRoom_Plt[7, 1].Appearance.BackColor = Hardening_Plt[7, 1] ? Color.Lime : Color.LightSlateGray;
+                shape_HardeningRoom_Plt[7, 2].Appearance.BackColor = Hardening_Plt[7, 2] ? Color.Lime : Color.LightSlateGray;
+
+                shape_LeeHyungGongRoom_Door[0].Appearance.BackColor = LeeHynungGong_Door ? Color.Lime : Color.Red;
+                shape_LeeHyungGongRoom_Plt[0].Appearance.BackColor = LeeHynungGong_PLT1 ? Color.Lime : Color.LightSlateGray;
+                shape_LeeHyungGongRoom_Plt[1].Appearance.BackColor = LeeHynungGong_PLT2 ? Color.Lime : Color.LightSlateGray;
+
+                shape_AGVChargeRoom_Doors[0].Appearance.BackColor = AGV_Door1_Open && !AGV_Door1_Close ? Color.Lime : Color.Red;
+                shape_AGVChargeRoom_Doors[1].Appearance.BackColor = AGV_Door2_Open && !AGV_Door2_Close ? Color.Lime : Color.Red;
+                shape_AGVChargeRoom_Doors[2].Appearance.BackColor = AGV_Door1_Send ? Color.Lime : Color.Red;
+                shape_AGVChargeRoom_Doors[3].Appearance.BackColor = AGV_Door2_Send ? Color.Lime : Color.Red;
             }
             catch (Exception ee)
             {
@@ -506,7 +612,6 @@ namespace ACSManager.Control
         }
 
         int agv_degree = 0;
-        private object changeDegree = new object();
         void displayAGV()
         {
             foreach (agvInfo item in m_agv)
@@ -525,7 +630,6 @@ namespace ACSManager.Control
              
             }
         }
-        #endregion
 
 
         //-------------------------------------------Method-----------------------------------------//
@@ -614,6 +718,219 @@ namespace ACSManager.Control
 
             return ptPos;
         }
+
+        void Vision_FullScreen()
+        {
+            DIAGRAM_GUI.FitToDrawing();
+        }
+
+
+        /// <summary>
+        /// 데이터 값에 따라 색 변경
+        /// </summary>
+        /// <param name="OnOff"> 데이터 값</param>
+        /// <param name="ds"> 다이어그램 객체</param>
+        void changeShapeColor(int OnOff, DiagramShape ds)
+        {
+            if (ds != null)
+            {
+                if (OnOff == 1) ds.Appearance.BackColor = Color.Lime;
+                else ds.Appearance.BackColor = SystemColors.ControlLight;
+
+                if (ds.Tag != null)
+                {
+                    if (ds.Tag.ToString().Contains("Emergency"))
+                    {
+                        if (OnOff == 1) ds.Appearance.BackColor = SystemColors.ControlLight;
+                        else ds.Appearance.BackColor = Color.Red;
+                    }
+
+                    if (ds.Tag.ToString().Contains("Abnormal"))
+                    {
+                        if (OnOff == 0)
+                        {
+                            ds.Appearance.BackColor = Color.Red;
+                            ds.Content = "이상";
+                        }
+                        else
+                        {
+                            ds.Appearance.BackColor = Color.Lime;
+                            ds.Content = "정상";
+                        }
+                    }
+
+                    if (ds.Tag.ToString().Contains("Manual"))
+                    {
+                        if (OnOff == 1) ds.Appearance.BackColor = Color.Red;
+                        else ds.Appearance.BackColor = SystemColors.ControlLight;
+                    }
+
+                    if (ds.Tag.ToString().Contains("blocking"))
+                    {
+                        if (OnOff == 0) //자동
+                        {
+                            // 명령이 남아 있는지 확인
+                            tb_mcs_commandTableAdapter cadtp = new tb_mcs_commandTableAdapter();
+                            int CntRemainOrder = 0;
+                            CntRemainOrder = (int)cadtp.GetRemainOrderCnt();
+
+                            if (CntRemainOrder > 0 || isworking_AGV) ds.Appearance.BackColor = Color.Red;
+                            else ds.Appearance.BackColor = SystemColors.ControlLight;
+                        }
+                        else if (OnOff == 1) ds.Appearance.BackColor = SystemColors.ControlLight; // 닫힘
+                        else if (OnOff == 2) ds.Appearance.BackColor = Color.Red; //열림
+                    }
+
+                    if (ds.Tag.ToString().Contains("SitDown"))
+                    {
+                        if (OnOff == 0) ds.Appearance.BackColor = SystemColors.ControlLight;
+                        else ds.Appearance.BackColor = Color.Red;
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// 전체화면 버튼
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FullScreen_Button_Click(object sender, EventArgs e)
+        {
+            Vision_FullScreen();
+        }
+
+        /// <summary>
+        /// 충전실 뷰 버튼
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ChargeScreen_Button_Click(object sender, EventArgs e)
+        {
+            Vision_FullScreen();
+            for (int cnt = 0; cnt < 4; cnt++)
+            {
+                DIAGRAM_GUI.ZoomIn();
+            }
+
+            DIAGRAM_GUI.ScrollToPoint(new PointFloat(2500, 3300), HorzAlignment.Center, VertAlignment.Center);
+        }
+
+        /// <summary>
+        /// 경화실 뷰 버튼
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void HardeningScreen_Button_Click(object sender, EventArgs e)
+        {
+            Vision_FullScreen();
+            for (int cnt = 0; cnt < 2; cnt++)
+            {
+                DIAGRAM_GUI.ZoomIn();
+            }
+
+            DIAGRAM_GUI.ScrollToPoint(new PointFloat(1800, 700), HorzAlignment.Center, VertAlignment.Center);
+        }
+
+        /// <summary>
+        /// 이형공실 뷰 버튼
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void LeeHyungGongScreen_Button_Click(object sender, EventArgs e)
+        {
+            Vision_FullScreen();
+            for (int cnt = 0; cnt < 5; cnt++)
+            {
+                DIAGRAM_GUI.ZoomIn();
+            }
+
+            DIAGRAM_GUI.ScrollToPoint(new PointFloat(500, 700), HorzAlignment.Center, VertAlignment.Center);
+        }
+
+        /// <summary>
+        /// AGV충전소 뷰 버튼
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AGVChargeScreen_Button_Click(object sender, EventArgs e)
+        {
+            Vision_FullScreen();
+            for (int cnt = 0; cnt < 5; cnt++)
+            {
+                DIAGRAM_GUI.ZoomIn();
+            }
+
+            DIAGRAM_GUI.ScrollToPoint(new PointFloat(3500, 400), HorzAlignment.Center, VertAlignment.Center);
+        }
+
+        /// <summary>
+        /// AGV 1호 위치보기 버튼 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AGV_View1_Button_Click(object sender, EventArgs e)
+        {
+            DIAGRAM_GUI.FitToDrawing();
+            foreach (agvInfo item in m_agv)
+            {
+                if (item.agv_id == "001")
+                {
+                    int fidx = DIAGRAM_GUI.Items.FindIndex(x => x.Tag.ToString() == item.agv_id);
+                    if (fidx != -1)
+                    {
+                        for (int cnt = 0; cnt < 9; cnt++)
+                        {
+                            DIAGRAM_GUI.ZoomIn();
+                        }
+                        DIAGRAM_GUI.ScrollToPoint(new PointFloat(DIAGRAM_GUI.Items[fidx].Position.X, DIAGRAM_GUI.Items[fidx].Position.Y), HorzAlignment.Center, VertAlignment.Center);
+                        return;
+                    }
+                    else
+                    {
+                        XtraMessageBox.Show("No exist AGV", "AGV Manager", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// AGV 2호 위치보기 버튼 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AGV_View2_Button_Click(object sender, EventArgs e)
+        {
+            DIAGRAM_GUI.FitToDrawing();
+            foreach (agvInfo item in m_agv)
+            {
+                if (item.agv_id == "002")
+                {
+                    int fidx = DIAGRAM_GUI.Items.FindIndex(x => x.Tag.ToString() == item.agv_id);
+                    if (fidx != -1)
+                    {
+                        for (int cnt = 0; cnt < 9; cnt++)
+                        {
+                            DIAGRAM_GUI.ZoomIn();
+                        }
+                        DIAGRAM_GUI.ScrollToPoint(new PointFloat(DIAGRAM_GUI.Items[fidx].Position.X, DIAGRAM_GUI.Items[fidx].Position.Y), HorzAlignment.Center, VertAlignment.Center);
+                        return;
+                    }
+                    else
+                    {
+                        XtraMessageBox.Show("No exist AGV", "AGV Manager", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
 
 
         public string GetNodeVisibleContent(string nNodeType)
@@ -773,117 +1090,10 @@ namespace ACSManager.Control
 
         
 
-        /// <summary>
-        /// 데이터 값에 따라 색 변경
-        /// </summary>
-        /// <param name="OnOff"> 데이터 값</param>
-        /// <param name="ds"> 다이어그램 객체</param>
-        void changeShapeColor(int OnOff, DiagramShape ds)
-        {
-            if (ds != null)
-            {
-                if (OnOff == 1) ds.Appearance.BackColor = Color.Lime;
-                else ds.Appearance.BackColor = SystemColors.ControlLight;
 
-                if (ds.Tag != null)
-                {
-                    if (ds.Tag.ToString().Contains("Emergency"))
-                    {
-                        if (OnOff == 1) ds.Appearance.BackColor = SystemColors.ControlLight;
-                        else ds.Appearance.BackColor = Color.Red;
-                    }
 
-                    if (ds.Tag.ToString().Contains("Abnormal"))
-                    {
-                        if (OnOff == 0)
-                        {
-                            ds.Appearance.BackColor = Color.Red;
-                            ds.Content = "이상";
-                        }
-                        else
-                        {
-                            ds.Appearance.BackColor = Color.Lime;
-                            ds.Content = "정상";
-                        }
-                    }
 
-                    if (ds.Tag.ToString().Contains("Manual"))
-                    {
-                        if (OnOff == 1) ds.Appearance.BackColor = Color.Red;
-                        else ds.Appearance.BackColor = SystemColors.ControlLight;
-                    }
 
-                    if (ds.Tag.ToString().Contains("blocking"))
-                    {
-                        if (OnOff == 0) //자동
-                        {
-                            // 명령이 남아 있는지 확인
-                            tb_mcs_commandTableAdapter cadtp = new tb_mcs_commandTableAdapter();
-                            int CntRemainOrder = 0;
-                            CntRemainOrder = (int)cadtp.GetRemainOrderCnt();
-
-                            if (CntRemainOrder > 0 || isworking_AGV) ds.Appearance.BackColor = Color.Red;
-                            else ds.Appearance.BackColor = SystemColors.ControlLight;
-                        }
-                        else if (OnOff == 1) ds.Appearance.BackColor = SystemColors.ControlLight; // 닫힘
-                        else if (OnOff == 2) ds.Appearance.BackColor = Color.Red; //열림
-                    }
-
-                    if (ds.Tag.ToString().Contains("SitDown"))
-                    {
-                        if (OnOff == 0) ds.Appearance.BackColor = SystemColors.ControlLight;
-                        else ds.Appearance.BackColor = Color.Red;
-                    }
-                }
-            }
-        }
-
-        void changeShapeText(string Text, DiagramShape ds)
-        {
-            ds.Content = Text;
-            ds.Appearance.BackColor = Color.LightGray;
-        }
-
-        /// <summary>
-        /// 전체화면 버튼
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void FullScreen_Button_Click(object sender, EventArgs e)
-        {
-            DIAGRAM_GUI.FitToDrawing();
-        }
-
-        /// <summary>
-        /// AGV 1호 위치보기 버튼 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void View1_Button_Click(object sender, EventArgs e)
-        {
-            DIAGRAM_GUI.FitToDrawing();
-            foreach (agvInfo item in m_agv)
-            {
-                if (item.agv_id == "001")
-                {
-                    int fidx = DIAGRAM_GUI.Items.FindIndex(x => x.Tag.ToString() == item.agv_id);
-                    if (fidx != -1)
-                    {
-                        for (int cnt = 0; cnt < 9; cnt++)
-                        {
-                            DIAGRAM_GUI.ZoomIn();
-                        }
-                        DIAGRAM_GUI.ScrollToPoint(new PointFloat(DIAGRAM_GUI.Items[fidx].Position.X, DIAGRAM_GUI.Items[fidx].Position.Y), HorzAlignment.Center, VertAlignment.Center);
-                        return;
-                    }
-                    else
-                    {
-                        XtraMessageBox.Show("No exist AGV", "AGV Manager", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-                }
-            }
-        }
 
         private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
@@ -935,9 +1145,7 @@ namespace ACSManager.Control
             }
         }
 
-
-
-
+        
     }
 
 

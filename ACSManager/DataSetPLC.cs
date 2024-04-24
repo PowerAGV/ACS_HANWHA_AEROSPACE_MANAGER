@@ -27,6 +27,10 @@
 
 namespace ACSManager.DataSetPLCTableAdapters
 {
+    partial class TB_PLCTableAdapter
+    {
+    }
+
     partial class tb_plc_subLine_InfoTableAdapter
     {
     }

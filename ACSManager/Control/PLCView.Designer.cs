@@ -69,7 +69,6 @@
             this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.diagramShape1 = new DevExpress.XtraDiagram.DiagramShape();
             ((System.ComponentModel.ISupportInitialize)(this.vGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
@@ -100,7 +99,7 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
+            this.timer1.Interval = 1500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // vGridControl1
@@ -171,8 +170,6 @@
             // DIAGRAM_GUI
             // 
             this.DIAGRAM_GUI.AllowDrop = true;
-            this.DIAGRAM_GUI.Items.AddRange(new DevExpress.XtraDiagram.DiagramItem[] {
-            this.diagramShape1});
             resources.ApplyResources(this.DIAGRAM_GUI, "DIAGRAM_GUI");
             this.DIAGRAM_GUI.Name = "DIAGRAM_GUI";
             this.DIAGRAM_GUI.OptionsBehavior.SelectedStencils = new DevExpress.Diagram.Core.StencilCollection(new string[] {
@@ -218,6 +215,7 @@
             resources.ApplyResources(this.simpleButton6, "simpleButton6");
             this.simpleButton6.Name = "simpleButton6";
             this.simpleButton6.StyleController = this.layoutControl1;
+            this.simpleButton6.Click += new System.EventHandler(this.AGV_View2_Button_Click);
             // 
             // simpleButton5
             // 
@@ -226,6 +224,7 @@
             resources.ApplyResources(this.simpleButton5, "simpleButton5");
             this.simpleButton5.Name = "simpleButton5";
             this.simpleButton5.StyleController = this.layoutControl1;
+            this.simpleButton5.Click += new System.EventHandler(this.AGV_View1_Button_Click);
             // 
             // simpleButton4
             // 
@@ -234,6 +233,7 @@
             resources.ApplyResources(this.simpleButton4, "simpleButton4");
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.StyleController = this.layoutControl1;
+            this.simpleButton4.Click += new System.EventHandler(this.AGVChargeScreen_Button_Click);
             // 
             // simpleButton3
             // 
@@ -242,6 +242,7 @@
             resources.ApplyResources(this.simpleButton3, "simpleButton3");
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.StyleController = this.layoutControl1;
+            this.simpleButton3.Click += new System.EventHandler(this.LeeHyungGongScreen_Button_Click);
             // 
             // simpleButton2
             // 
@@ -250,6 +251,7 @@
             resources.ApplyResources(this.simpleButton2, "simpleButton2");
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.StyleController = this.layoutControl1;
+            this.simpleButton2.Click += new System.EventHandler(this.HardeningScreen_Button_Click);
             // 
             // simpleButton1
             // 
@@ -258,6 +260,7 @@
             resources.ApplyResources(this.simpleButton1, "simpleButton1");
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.StyleController = this.layoutControl1;
+            this.simpleButton1.Click += new System.EventHandler(this.ChargeScreen_Button_Click);
             // 
             // gridControl1
             // 
@@ -510,11 +513,6 @@
             this.emptySpaceItem8.Size = new System.Drawing.Size(118, 29);
             this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // diagramShape1
-            // 
-            this.diagramShape1.Position = new DevExpress.Utils.PointFloat(130F, 180F);
-            resources.ApplyResources(this.diagramShape1, "diagramShape1");
-            // 
             // PLCView
             // 
             resources.ApplyResources(this, "$this");
@@ -592,6 +590,5 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton7;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem8;
-        private DevExpress.XtraDiagram.DiagramShape diagramShape1;
     }
 }

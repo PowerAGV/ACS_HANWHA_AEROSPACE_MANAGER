@@ -158,9 +158,6 @@
   <metadata name="DIAGRAM_GUI.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="diagramShape1.Size" type="System.Drawing.SizeF, System.Drawing">
-    <value>100, 75</value>
-  </data>
   <data name="DIAGRAM_GUI.Location" type="System.Drawing.Point, System.Drawing">
     <value>150, 12</value>
   </data>
@@ -686,12 +683,6 @@
   </data>
   <data name="&gt;&gt;emptySpaceItem8.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;diagramShape1.Name" xml:space="preserve">
-    <value>diagramShape1</value>
-  </data>
-  <data name="&gt;&gt;diagramShape1.Type" xml:space="preserve">
-    <value>DevExpress.XtraDiagram.DiagramShape, DevExpress.XtraDiagram.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>PLCView</value>
