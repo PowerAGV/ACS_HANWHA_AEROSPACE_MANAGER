@@ -135,7 +135,7 @@ namespace ACSManager
             this.repositoryItemComboBox2});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
             this.ribbonControl1.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonControl1.Size = new System.Drawing.Size(1550, 149);
+            this.ribbonControl1.Size = new System.Drawing.Size(1552, 149);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Above;
             // 
@@ -360,9 +360,10 @@ namespace ACSManager
             // 
             // barBtnMap
             // 
-            this.barBtnMap.Caption = "Map";
+            this.barBtnMap.Caption = "AGV 뷰";
             this.barBtnMap.Id = 25;
-            this.barBtnMap.ImageOptions.ImageUri.Uri = "MoreLayoutOptions";
+            this.barBtnMap.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barBtnMap.ImageOptions.Image")));
+            this.barBtnMap.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtnMap.ImageOptions.LargeImage")));
             this.barBtnMap.Name = "barBtnMap";
             this.barBtnMap.Tag = "ACSManager.Control.MapControl";
             this.barBtnMap.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
@@ -396,6 +397,7 @@ namespace ACSManager
             this.btnPlcEvent.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPlcEvent.ImageOptions.LargeImage")));
             this.btnPlcEvent.Name = "btnPlcEvent";
             this.btnPlcEvent.Tag = "ACSManager.Control.PlcEvent";
+            this.btnPlcEvent.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.btnPlcEvent.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ribMenu_ItemClick);
             // 
             // btnChangeStaion
@@ -430,7 +432,6 @@ namespace ACSManager
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem2);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem12);
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnPlcEvent);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem8);
             this.ribbonPageGroup1.ItemLinks.Add(this.barbtnCharging);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonPrint);
@@ -442,12 +443,13 @@ namespace ACSManager
             // 
             // ribbonPageGroup2
             // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.barBtnMap);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnPlcEvent);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem6);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem10);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem11);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem4);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem15);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barBtnMap);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnStation);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnChangeStaion);
             this.ribbonPageGroup2.ItemLinks.Add(this.skinRibbonGalleryBarItem1);
@@ -475,10 +477,10 @@ namespace ACSManager
             this.ribbonStatusBar1.Font = new System.Drawing.Font("Tahoma", 10F);
             this.ribbonStatusBar1.ItemLinks.Add(this.barLabel1);
             this.ribbonStatusBar1.ItemLinks.Add(this.barLabelDatetime);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 828);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 832);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1550, 27);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1552, 23);
             // 
             // documentManager1
             // 
@@ -495,7 +497,7 @@ namespace ACSManager
             // 
             // defaultLookAndFeel1
             // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Foggy";
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2007 Silver";
             // 
             // ribbonPage3
             // 
@@ -508,7 +510,7 @@ namespace ACSManager
             this.layoutControl4.Location = new System.Drawing.Point(0, 149);
             this.layoutControl4.Name = "layoutControl4";
             this.layoutControl4.Root = this.layoutControlGroup4;
-            this.layoutControl4.Size = new System.Drawing.Size(1550, 706);
+            this.layoutControl4.Size = new System.Drawing.Size(1552, 706);
             this.layoutControl4.TabIndex = 4;
             this.layoutControl4.Text = "layoutControl4";
             // 
@@ -518,7 +520,7 @@ namespace ACSManager
             this.layoutControlGroup4.GroupBordersVisible = false;
             this.layoutControlGroup4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup4.Name = "layoutControlGroup4";
-            this.layoutControlGroup4.Size = new System.Drawing.Size(1550, 706);
+            this.layoutControlGroup4.Size = new System.Drawing.Size(1552, 706);
             this.layoutControlGroup4.TextVisible = false;
             // 
             // customAlertControl1
@@ -547,7 +549,7 @@ namespace ACSManager
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1550, 855);
+            this.ClientSize = new System.Drawing.Size(1552, 855);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.layoutControl4);
             this.Controls.Add(this.ribbonControl1);

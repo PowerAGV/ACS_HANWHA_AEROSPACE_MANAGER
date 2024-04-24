@@ -108,7 +108,7 @@
     <Reference Include="DevExpress.DataAccess.v16.2.UI, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Diagram.v16.2.Core, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Images.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
-      <Private>False</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.Map.v16.2.Core, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Office.v16.2.Core, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
@@ -363,6 +363,7 @@
       <DependentUpon>UserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="IniControllor.cs" />
+    <Compile Include="MakeGUI.cs" />
     <Compile Include="MCSDB.cs" />
     <Compile Include="Control\MCSInfo.cs">
       <SubType>UserControl</SubType>

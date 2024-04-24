@@ -1,8 +1,8 @@
 ﻿/*
 * © SYSCON 
 * © TEAM :        SoftWare3
-* @ Start Date :  2024.03.01
-* @ Project :     AJIN GUEO
+* @ Start Date :  2024.04.23
+* @ Project :     HANWHA_AREOSPACE
 * @ Source :      PLCView.cs
 */
 
@@ -48,12 +48,17 @@ namespace ACSManager.Control
 {
     public partial class PLCView : XtraUserControl
     {
+        public static PLCView plcView;
         #region value
+        private string select_agv = "";
+        private string route_area = "ALL";
 
         long map_id = 0;
         bool isworking_AGV = false;
         List<agvInfo> m_agv = new List<agvInfo>();
-        List<MakeGUI> arrayGUI = new List<MakeGUI>();
+
+        MapDesign.Link_Node_JoinDataTable linkNodeJoinTbl = new MapDesign.Link_Node_JoinDataTable();
+        MakeGUI makeGUI = new MakeGUI();
 
         List<DiagramShape> subLineComm = new List<DiagramShape>();
         List<DiagramShape> subLineInfoA = new List<DiagramShape>();
@@ -61,6 +66,12 @@ namespace ACSManager.Control
         List<DiagramShape> mainLineComm = new List<DiagramShape>();
         List<DiagramShape> mainLineInfoA = new List<DiagramShape>();
         List<DiagramShape> mainLineInfoB = new List<DiagramShape>();
+
+        public DiagramShape[] shape_AreaBox_parts = new DiagramShape[3];
+        public DiagramShape[] shape_HardeningRoom_parts = new DiagramShape[8];
+
+        DiagramShape shape_ChargeRoom_Box = new DiagramShape();
+
 
         DiagramShape shape_subline_Auto = new DiagramShape();
         DiagramShape shape_subline_Manual = new DiagramShape();
@@ -109,101 +120,111 @@ namespace ACSManager.Control
         
         public List<NodeInfo> m_listTempNodeDate = new List<NodeInfo>();
         public List<LinkInfo> m_listTempLinkDate = new List<LinkInfo>();
+        
         #endregion
 
-        MakeGUI makeGUI = new MakeGUI();
-
+        /// <summary>
+        /// 생성자
+        /// </summary>
         public PLCView()
         {
             InitializeComponent();
+            plcView = this;
         }
 
+        /// <summary>
+        /// 온로딩
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PLCView_Load(object sender, EventArgs e)
         {
-            //Map
-            LoadMapInfo();
-            LoadMapLink(map_id);
-            LoadMapNode(map_id);
+            map_id = Setting.MAP_ID;
+            bool mapLoaded = map_id != 0;
 
-            //Node,Link
-            AddNodeFromList();
-            AddLinkFromList();
+            if (mapLoaded)
+            {
+                Load_MAP_Info(map_id);
+                Load_Map_Link(map_id);
+                Load_Map_Node(map_id);
+
+                Paint_Map_Shape();
+                Paint_Map_Node();
+                Paint_Map_Link();
+
+                //Rename_Shapes();
+
+                reloadAgvInfo();
+
+                DIAGRAM_GUI.FitToDrawing();
+            }
+            else
+            {
+                XtraMessageBox.Show("Check Map", "ACSManager", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             
-            loadGUI();
-            
-            //AGV
-            reloadAgvInfo();
-            
-            DIAGRAM_GUI.FitToDrawing();  
         }
 
+        /// <summary>
+        /// 타이머
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void timer1_Tick(object sender, EventArgs e)
         {
-            timer1.Enabled = false;
             try
             {
+                timer1.Enabled = false;
+
                 changeData_DiagramShape();
                 reloadAgvInfo();
                 displayAGV();
+
             }
             catch (Exception ee)
             {
                 TraceManager.AddLog(string.Format("{0}r\n{1}", ee.StackTrace, ee.Message));
             }
-            timer1.Enabled = true;
+            finally
+            {
+                timer1.Enabled = true;
+            }
         }
 
-        #region Map
+        
 
-        void LoadMapInfo()
+        /// <summary>
+        /// 맵 정보 로딩
+        /// </summary>
+        void Load_MAP_Info(long map_id)
         {
             globalRouteInfo.nodes.Clear();
             globalRouteInfo.m_linkes.Clear();
-
-            this.map_id = Setting.MAP_ID; //맵ID 받아오기
-
-            if (map_id == 0) //맵ID 없을때
-            {
-                Console.WriteLine("지정된 맵이 없습니다.");
-                return;
-            }
-
+            
             Link_Node_JoinTableAdapter lnjAdt = new Link_Node_JoinTableAdapter();
             Setting.linkNodeJoinTbl = lnjAdt.GetLinkNode(map_id);
 
             foreach (MapDesign.Link_Node_JoinRow rw in Setting.linkNodeJoinTbl)
             {
+                AddNodeIfNotExist(rw.FROM_NODE_NAME);
+                AddNodeIfNotExist(rw.TO_NODE_NAME);
+
                 int f = globalRouteInfo.nodes.FindIndex(x => x == rw.FROM_NODE_NAME);
                 int t = globalRouteInfo.nodes.FindIndex(x => x == rw.TO_NODE_NAME);
 
-                if (f == -1) globalRouteInfo.nodes.Add(rw.FROM_NODE_NAME);
-                if (t == -1) globalRouteInfo.nodes.Add(rw.TO_NODE_NAME);
-
-                f = globalRouteInfo.nodes.FindIndex(x => x == rw.FROM_NODE_NAME);
-                t = globalRouteInfo.nodes.FindIndex(x => x == rw.TO_NODE_NAME);
-
                 if (f != -1 && t != -1)
                 {
-                    int revaeseAngle = 0;
-                    Angle CA = new Angle(180);
-                    Angle LA = new Angle(rw.ANGLE);
-                    Angle a3 = CA + LA;
-                    revaeseAngle = (int)a3.Degrees360;
-                    if (revaeseAngle == 360)
-                        revaeseAngle = 0;
-
-                    // sensor on off 판단 넣기
-                    bool FromTo_isSensorOnOff = false;
-                    bool ToFrom_isSensorOnOff = false;
-
+                    int reversedAngle = CalculateReversedAngle(rw.ANGLE);
                     if (rw.DIRECTION == $"{LinkDirection.TwoWay}")
                     {
-                        globalRouteInfo.m_linkes.Add(new LinkInfoD(f, t, (int)rw.ANGLE, rw.SPEED.ToString(), FindNodeNameFromIndex(f), FindNodeNameFromIndex(t), FromTo_isSensorOnOff, rw.LINK_ID.ToString()));
-                        globalRouteInfo.m_linkes.Add(new LinkInfoD(t, f, revaeseAngle, rw.SPEED.ToString(), FindNodeNameFromIndex(t), FindNodeNameFromIndex(f), ToFrom_isSensorOnOff, rw.LINK_ID.ToString()));
+                        globalRouteInfo.m_linkes.Add(new LinkInfoD(f, t, (int)rw.ANGLE, rw.SPEED.ToString(), FindNodeNameFromIndex(f), FindNodeNameFromIndex(t), false, rw.LINK_ID.ToString()));
+                        globalRouteInfo.m_linkes.Add(new LinkInfoD(t, f, reversedAngle, rw.SPEED.ToString(), FindNodeNameFromIndex(t), FindNodeNameFromIndex(f), false, rw.LINK_ID.ToString()));
+
                     }
                     else if (rw.DIRECTION == $"{LinkDirection.OneWay}")
                     {
-                        globalRouteInfo.m_linkes.Add(new LinkInfoD(f, t, (int)rw.ANGLE, rw.SPEED.ToString(), FindNodeNameFromIndex(f), FindNodeNameFromIndex(t), ToFrom_isSensorOnOff, rw.LINK_ID.ToString()));
+                        globalRouteInfo.m_linkes.Add(new LinkInfoD(f, t, (int)rw.ANGLE, rw.SPEED.ToString(), FindNodeNameFromIndex(f), FindNodeNameFromIndex(t), false, rw.LINK_ID.ToString()));
                     }
                 }
             }
@@ -212,460 +233,228 @@ namespace ACSManager.Control
 
             foreach (MapDesign.Link_Node_JoinRow rw in Setting.linkNodeJoinTbl)
             {
-                //rw.angle
-
                 int f = globalRouteInfo.nodes.FindIndex(x => x == rw.FROM_NODE_NAME);
                 int d = globalRouteInfo.nodes.FindIndex(x => x == rw.TO_NODE_NAME);
 
-                int fcnt = globalRouteInfo.nodes.FindAll(x => x == rw.FROM_NODE_NAME).Count();
-                int dcnt = globalRouteInfo.nodes.FindAll(x => x == rw.TO_NODE_NAME).Count();
+                int fCount = CountNodesWithName(rw.FROM_NODE_NAME);
+                int dCount = CountNodesWithName(rw.TO_NODE_NAME);
 
-                int fadd = 0;
-                int dadd = 0;
+                int fAdd = fCount > 2 ? 100 : 0;
+                int dAdd = dCount > 2 ? 100 : 0;
 
-                if (fcnt > 2)
-                    fadd = 100;
-                if (dcnt > 2)
-                    dadd = 100;
-
-                // TwoWay 양방향
                 if (rw.DIRECTION == $"{LinkDirection.TwoWay}")
                 {
-                    globalRouteInfo.m_path.AddEdge(new WeightedEdge(f, d, rw.LENGTH + fadd));
-                    globalRouteInfo.m_path.AddEdge(new WeightedEdge(d, f, rw.LENGTH + dadd));
+                    globalRouteInfo.m_path.AddEdge(new WeightedEdge(f, d, rw.LENGTH + fAdd));
+                    globalRouteInfo.m_path.AddEdge(new WeightedEdge(d, f, rw.LENGTH + dAdd));
                 }
                 else if (rw.DIRECTION == $"{LinkDirection.OneWay}")
                 {
-                    globalRouteInfo.m_path.AddEdge(new WeightedEdge(f, d, rw.LENGTH + dadd));
+                    globalRouteInfo.m_path.AddEdge(new WeightedEdge(f, d, rw.LENGTH + dAdd));
                 }
             }
         }
 
-        public bool LoadMapLink(long MapID)
+        /// <summary>
+        /// 맵 링크 로딩
+        /// </summary>
+        /// <param name="MapID"></param>
+        void Load_Map_Link(long map_id)
         {
-            bool bRet = false;
-
             try
             {
                 Link_Node_JoinTableAdapter lnjAdt = new Link_Node_JoinTableAdapter();
+                MapDesign.Link_Node_JoinDataTable tb = lnjAdt.GetLinkNode(map_id);
 
-                MapDesign.Link_Node_JoinDataTable tb = lnjAdt.GetLinkNode(MapID);
-                int nRowCnt = tb.Rows.Count;
-
-                for (int nIndex = 0; nIndex < nRowCnt; nIndex++)
+                foreach (MapDesign.Link_Node_JoinRow row in tb.Rows)
                 {
-                    MapDesign.Link_Node_JoinRow row = (MapDesign.Link_Node_JoinRow)tb.Rows[nIndex];
+                    LinkInfo LinkInfoTemp       = new LinkInfo();
+                    LinkInfoTemp.strId          = row.LINK_ID.ToString();
+                    LinkInfoTemp.Direction      = row.DIRECTION;
+                    LinkInfoTemp.nSpeed         = Convert.ToInt32(row.SPEED);
+                    LinkInfoTemp.strFrom_Node   = row.FROM_NODE_NAME;
+                    LinkInfoTemp.strTo_Node     = row.TO_NODE_NAME;
+                    LinkInfoTemp.nAngle         = row.ANGLE;
 
-                    LinkInfo LinkInfoTemp = new LinkInfo();
-                    LinkInfoTemp.strId = row.LINK_ID.ToString();
-                    LinkInfoTemp.Direction = row.DIRECTION;
-                    LinkInfoTemp.nSpeed = int.Parse(row.SPEED.ToString());
-                    LinkInfoTemp.strFrom_Node = row.FROM_NODE_NAME;
-                    LinkInfoTemp.strTo_Node = row.TO_NODE_NAME;
+                    if (row.LENGTH == 0) LinkInfoTemp.nLength = 1000;
+                    else LinkInfoTemp.nLength = row.LENGTH; // 사이간격 확대용
 
-                    if (row.LENGTH == 0)
-                    {
-                        LinkInfoTemp.nLength = 1000;
-                    }
-                    else
-                    {
-                        LinkInfoTemp.nLength = row.LENGTH; // 사이간격 확대용
-                    }
-                    LinkInfoTemp.nAngle = row.ANGLE;
+                    m_listTempLinkDate.Add(LinkInfoTemp);
 
-                    m_listTempLinkDate.Add(LinkInfoTemp); //데이터 추가
                 }
-
-                bRet = true;
             }
             catch (Exception ex)
             {
                 TraceManager.AddLog(string.Format("{0}r\n{1}", ex.StackTrace, ex.Message));
-            }
-
-            return bRet;
+            }   
         }
 
-        public bool LoadMapNode(long lMapID)
+        /// <summary>
+        /// 맵 노드 로딩
+        /// </summary>
+        /// <param name="map_id"></param>
+        void Load_Map_Node(long map_id)
         {
-            bool bRet = false;
-
             try
             {
+                nodeTableAdapter nodAdt = new nodeTableAdapter();
+                MapDesign.nodeDataTable nodTbl = nodAdt.GetNodeByMapID(map_id);
+
                 foreach (MapDesign.nodeRow row in Setting.nodTbl)
                 {
-
-                    NodeInfo NodeInfoTemp = new NodeInfo();
-                    NodeInfoTemp.sNode_Name = row.name;
-                    NodeInfoTemp.sType = row.node_type;
-                    NodeInfoTemp.ptPos = DBStringToPointFloat((int)row.x, (int)row.y);
-                    NodeInfoTemp.NodeObj = null;
+                    NodeInfo NodeInfoTemp       = new NodeInfo();
+                    NodeInfoTemp.sNode_Name     = row.name ?? string.Empty;
+                    NodeInfoTemp.sType          = row.node_type ?? string.Empty;
+                    NodeInfoTemp.ptPos          = DBStringToPointFloat((int)row.x, (int)row.y);
+                    NodeInfoTemp.NodeObj        = null;
 
                     m_listTempNodeDate.Add(NodeInfoTemp);
                 }
-
-                bRet = true;
             }
             catch (Exception ex)
             {
                 TraceManager.AddLog(string.Format("{0}r\n{1}", ex.StackTrace, ex.Message));
             }
-
-            return bRet;
         }
-        #endregion
-
-        #region Node/Link
-
-        public bool AddNodeFromList()
+        
+        /// <summary>
+        /// 노드 그리기
+        /// </summary>
+        void Paint_Map_Node()
         {
-            bool bRet = false;
-
             try
             {
-                for (int nIndex = 0; nIndex < m_listTempNodeDate.Count; nIndex++)
+                foreach (NodeInfo tempNodeInfo in m_listTempNodeDate)
                 {
-                    NodeInfo NodeInfoTemp = new NodeInfo();
-                    NodeInfoTemp.Clear();
+                    if (tempNodeInfo == null)
+                    {
+                        // null인 경우에 대한 처리
+                        continue;
+                    }
 
+                    DiagramShape diagramItem = new DiagramShape();
+                    diagramItem.Position     = new PointFloat(tempNodeInfo.ptPos.X + 5 , tempNodeInfo.ptPos.Y + 5 );
 
-                    PointFloat ptTemp = m_listTempNodeDate[nIndex].ptPos;
+                    diagramItem.CanResize            = false;
+                    diagramItem.CanMove              = false;
+                    diagramItem.CanDelete            = false;
+                    diagramItem.CanCopy              = false;
+                    diagramItem.CanEdit              = false;
+                    diagramItem.CanResize            = false;
+                    diagramItem.CanSelect            = false;
 
-                    // 반지름 수치 15 보정
-                    ptTemp.X = ptTemp.X + 15;
-                    ptTemp.Y = ptTemp.Y + 15;
+                    diagramItem.Shape                = GetDiagramShape(tempNodeInfo.sType);
+                    diagramItem.Height               = GetDiagramHeight(tempNodeInfo.sType);
+                    diagramItem.Width                = GetDiagramWidth(tempNodeInfo.sType);
+                    diagramItem.Appearance.BackColor = GetNodeColor(tempNodeInfo.sType);
+                    diagramItem.Appearance.ForeColor = GetNodeColor(tempNodeInfo.sType);
+                    diagramItem.Tag                  = tempNodeInfo.sNode_Name ?? string.Empty;;
 
-                    NodeInfoTemp.ptPos = ptTemp;
-                    NodeInfoTemp.sNode_Name = m_listTempNodeDate[nIndex].sNode_Name;
-                    NodeInfoTemp.sType = m_listTempNodeDate[nIndex].sType;
-
-                    //노드그리기
-                    NodeInfoTemp.NodeObj = AddNodeOnDisplay(ref DIAGRAM_GUI, NodeInfoTemp);
-                    m_listNodeDate.Add(NodeInfoTemp);
+                    DIAGRAM_GUI.Items.Add(diagramItem);
                 }
+                for (int idx = 0; idx < DIAGRAM_GUI.Items.Count; idx++)
+                {
+                    if (DIAGRAM_GUI.Items[idx].Tag.ToString().Contains("00"))
+                    {
+                        DiagramShape ds = (DiagramShape)DIAGRAM_GUI.Items[idx];
 
-                bRet = true;
+                        ds.Appearance.Font = new Font("Tahoma", 4);
+                        ds.Appearance.ForeColor = Color.Black;
+                        ds.Content = ds.Tag.ToString();
+                    }
+                }
             }
             catch (Exception ex)
             {
                 TraceManager.AddLog(string.Format("{0}r\n{1}", ex.StackTrace, ex.Message));
             }
-
-            return bRet;
         }
 
-        public bool AddLinkFromList()
+        /// <summary>
+        /// 링크 그리기
+        /// </summary>
+        void Paint_Map_Link()
         {
-            bool bRet = false;
-
             try
             {
-                for (int nIndex = 0; nIndex < m_listTempLinkDate.Count; nIndex++)
+                foreach (var linkData in m_listTempLinkDate)
                 {
                     DiagramConnector dcon = new DiagramConnector();
 
-                    if (0.0f == m_listTempLinkDate[nIndex].ptPos1.X &&
-                        0.0f == m_listTempLinkDate[nIndex].ptPos1.Y &&
-                        0.0f == m_listTempLinkDate[nIndex].ptPos2.X &&
-                        0.0f == m_listTempLinkDate[nIndex].ptPos2.Y)
+                    if (linkData.ptPos1 == new PointFloat() && linkData.ptPos2 == new PointFloat())
                     {
                         dcon.Type = ConnectorType.Straight;
                     }
                     else
                     {
                         dcon.Type = ConnectorType.Curved;
-                        IList<DevExpress.Utils.PointFloat> lstPoints = new List<DevExpress.Utils.PointFloat>();
-                        lstPoints.Add(m_listTempLinkDate[nIndex].ptPos1);
-                        lstPoints.Add(m_listTempLinkDate[nIndex].ptPos2);
-                        PointCollection Points = new PointCollection(lstPoints);
-                        dcon.Points = Points;
+                        dcon.Points = new PointCollection(new List<PointFloat> { linkData.ptPos1, linkData.ptPos2 });
                     }
 
-                    dcon.Appearance.BackColor = Color.Red;
-                    dcon.Appearance.BorderColor = m_listTempLinkDate[nIndex].ColorLink;
-                    dcon.Tag = m_listTempLinkDate[nIndex].strId;
-                    dcon.BeginItem = GetNodeItemInDiagram(DIAGRAM_GUI, m_listTempLinkDate[nIndex].strFrom_Node);
-                    dcon.EndItem = GetNodeItemInDiagram(DIAGRAM_GUI, m_listTempLinkDate[nIndex].strTo_Node);
-                    dcon.CanResize = true;
-                    dcon.BeginArrow = ArrowDescriptions.ClosedDot;
-                    dcon.EndArrow = ArrowDescriptions.ClosedDot;
-                    dcon.Appearance.BorderSize = 1;
-                    dcon.CanMove = false;
-                    dcon.CanDragBeginPoint = false;
-                    dcon.CanDragEndPoint = false;
-                    dcon.CanEdit = false;
+                    dcon.Appearance.BackColor       = Color.Red;
+                    dcon.Appearance.BorderColor     = linkData.ColorLink;
+                    dcon.Tag                        = linkData.strId;
+                    dcon.BeginItem                  = GetNodeItemInDiagram(DIAGRAM_GUI, linkData.strFrom_Node);
+                    dcon.EndItem                    = GetNodeItemInDiagram(DIAGRAM_GUI, linkData.strTo_Node);
 
+                    dcon.BeginArrow                 = linkData.Direction == LinkDirection.TwoWay.ToString() ? ArrowDescriptions.Filled90 : ArrowDescriptions.ClosedDot;
+                    dcon.EndArrow                   = linkData.Direction != LinkDirection.OneWay.ToString() ? ArrowDescriptions.Filled90 : ArrowDescriptions.ClosedDot;
+                    dcon.Appearance.BorderSize      = 1;
 
-                    if ($"{LinkDirection.TwoWay}" == m_listTempLinkDate[nIndex].Direction)
-                    {
-                        dcon.BeginArrow = ArrowDescriptions.Filled90;
-                        dcon.EndArrow = ArrowDescriptions.Filled90;
-                    }
-                    else if ($"{LinkDirection.OneWay}" == m_listTempLinkDate[nIndex].Direction)
-                    {
-                        dcon.BeginArrow = ArrowDescriptions.ClosedDot;
-                        dcon.EndArrow = ArrowDescriptions.Filled90;
-                        //dcon.BeginArrow = ArrowDescriptions.Filled90;
-                        //dcon.EndArrow = ArrowDescriptions.ClosedDot;
-                    }
-                    else
-                    {
-                        dcon.BeginArrow = ArrowDescriptions.ClosedDot;
-                        dcon.EndArrow = ArrowDescriptions.ClosedDot;
-                    }
+                    dcon.CanResize                  = false;
+                    dcon.CanMove                    = false;
+                    dcon.CanDragBeginPoint          = false;
+                    dcon.CanDragEndPoint            = false;
+                    dcon.CanEdit                    = false;
 
                     DIAGRAM_GUI.Items.Add(dcon);
-
-                    LinkInfo linkInfoTemp = new LinkInfo();
-                    linkInfoTemp.Clear();
-                    linkInfoTemp.strFrom_Node = m_listTempLinkDate[nIndex].strFrom_Node; // dcon.BeginItem;
-                    linkInfoTemp.strTo_Node = m_listTempLinkDate[nIndex].strTo_Node; // dcon.EndItem;
-
-                    linkInfoTemp.strId = m_listTempLinkDate[nIndex].strId;
-                    linkInfoTemp.Direction = m_listTempLinkDate[nIndex].Direction;
-
-                    linkInfoTemp.ColorLink = m_listTempLinkDate[nIndex].ColorLink;
-                    linkInfoTemp.nSpeed = m_listTempLinkDate[nIndex].nSpeed;
-                    linkInfoTemp.nLength = m_listTempLinkDate[nIndex].nLength;
-                    linkInfoTemp.ptPos1 = m_listTempLinkDate[nIndex].ptPos1;
-                    linkInfoTemp.ptPos2 = m_listTempLinkDate[nIndex].ptPos2;
-                    linkInfoTemp.nAngle = m_listTempLinkDate[nIndex].nAngle;
-                    linkInfoTemp.sensorL = m_listTempLinkDate[nIndex].sensorL;
-                    linkInfoTemp.sensorR = m_listTempLinkDate[nIndex].sensorR;
-
-                    m_listLinkDate.Add(linkInfoTemp);
                 }
-
-                bRet = true;
             }
             catch (Exception ex)
             {
                 TraceManager.AddLog(string.Format("{0}r\n{1}", ex.StackTrace, ex.Message));
             }
-
-            return bRet;
         }
-        #endregion
-
-
-        void loadGUI()
+       
+        /// <summary>
+        /// 추가 도형 그리기
+        /// </summary>
+        void Paint_Map_Shape()
         {
-            // ▼ subLine Comm
-            make_subLine_Frame();
-            make_subLine_Auto();
-            make_subLine_Manual();
-            make_subLine_Abnormal();
-            make_subLine_Emergency();
+            MakeCustomShape makeCustomShape = new MakeCustomShape();
+            makeCustomShape.Rendering();
 
-            // ▼ subLineA Info
-            make_subLineA_CallAGV();
-            make_subLineA_pltOn();
-            make_subLineA_CarInfo();
-            make_subLineA_pltPartOn();
-            make_subLineA_pltPartCnt();
-
-            // ▼ subLineB Info
-            make_subLineB_CallAGV();
-            make_subLineB_pltOn();
-            make_subLineB_CarInfo();
-            make_subLineB_pltPartOn();
-            make_subLineB_pltPartCnt();
-
-            // ▼ mainLine Comm
-            make_mainLine_Frame();
-            make_mainLine_Auto();
-            make_mainLine_Manual();
-            make_mainLine_Abnormal();
-            make_mainLine_Emergency();
-
-            // ▼ mainLineA Info
-            make_mainLineA_CallAGV();
-            make_mainLineA_pltOn();
-            make_mainLineA_CarInfo();
-            make_mainLineA_pltPartOn();
-            make_mainLineA_pltPartCnt();
-
-            // ▼ mainLineB Info
-            make_mainLineB_CallAGV();
-            make_mainLineB_pltOn();
-            make_mainLineB_CarInfo();
-            make_mainLineB_pltPartOn();
-            make_mainLineB_pltPartCnt();
-
-            // ▼ brokingBar
-            make_blockingBar_R();
-            make_blockingBar_L();
-
-            // ▼ pltSitDownAram
-            make_Aram_PltSitDown_SubA();
-            make_Aram_PltSitDown_SubB();
-            make_Aram_PltSitDown_MainA();
-            make_Aram_PltSitDown_MainB();
-
-            foreach (MakeGUI GUI in arrayGUI)
+            foreach (MakeGUI GUI in makeCustomShape.arrayGUI)
             {
-                DiagramShape ds = GUI.ds;
-                DIAGRAM_GUI.Items.Add(ds);
+                DIAGRAM_GUI.Items.Add(GUI.ds);
             }
-
+        }
+        
+        /// <summary>
+        /// 도형 네이밍
+        /// </summary>
+        void Rename_Shapes()
+        {
             for (int idx = 0; idx < DIAGRAM_GUI.Items.Count; idx++)
             {
                 if (DIAGRAM_GUI.Items[idx].GetType().Name == "DiagramShape")
                 {
-                    DiagramShape ds = new DiagramShape();
-                    ds = (DiagramShape)DIAGRAM_GUI.Items[idx];
+                    DiagramShape ds = (DiagramShape)DIAGRAM_GUI.Items[idx];
 
                     ds.Appearance.Font = new Font("Tahoma", 4);
                     ds.Appearance.ForeColor = Color.Black;
 
-                    string dsTag = ds.Tag.ToString();
-
-                    if (dsTag.Contains("subLine_Auto")) shape_subline_Auto = ds;
-                    else if (dsTag.Contains("subLine_Manual")) shape_subline_Manual = ds;
-                    else if (dsTag.Contains("subLine_Abnormal")) shape_subline_Abnormal = ds;
-                    else if (dsTag.Contains("subLine_Emergency")) shape_subline_Emergency = ds;
-
-                    else if (dsTag.Contains("mainLine_Auto")) shape_mainline_Auto = ds;
-                    else if (dsTag.Contains("mainLine_Manual")) shape_mainline_Manual = ds;
-                    else if (dsTag.Contains("mainLine_Abnormal")) shape_mainline_Abnormal = ds;
-                    else if (dsTag.Contains("mainLine_Emergency")) shape_mainline_Emergency = ds;
-
-                    else if (dsTag.Contains("subLineA_pltOn")) shape_sublineA_pltOn = ds;
-                    else if (dsTag.Contains("subLineA_CallAGV")) shape_sublineA_CallAGV = ds;
-                    else if (dsTag.Contains("subLineA_CarInfo")) shape_sublineA_CarInfo = ds;
-                    else if (dsTag.Contains("subLineA_pltPartOn")) shape_sublineA_pltPartOn = ds;
-                    else if (dsTag.Contains("subLineA_pltPartCnt")) shape_sublineA_pltPartCnt = ds;
-
-                    else if (dsTag.Contains("subLineB_pltOn")) shape_sublineB_pltOn = ds;
-                    else if (dsTag.Contains("subLineB_CallAGV")) shape_sublineB_CallAGV = ds;
-                    else if (dsTag.Contains("subLineB_CarInfo")) shape_sublineB_CarInfo = ds;
-                    else if (dsTag.Contains("subLineB_pltPartOn")) shape_sublineB_pltPartOn = ds;
-                    else if (dsTag.Contains("subLineB_pltPartCnt")) shape_sublineB_pltPartCnt = ds;
-
-                    else if (dsTag.Contains("mainLineA_pltOn")) shape_mainlineA_pltOn = ds;
-                    else if (dsTag.Contains("mainLineA_CallAGV")) shape_mainlineA_CallAGV = ds;
-                    else if (dsTag.Contains("mainLineA_CarInfo")) shape_mainlineA_CarInfo = ds;
-                    else if (dsTag.Contains("mainLineA_pltPartOn")) shape_mainlineA_pltPartOn = ds;
-                    else if (dsTag.Contains("mainLineA_pltPartCnt")) shape_mainlineA_pltPartCnt = ds;
-
-                    else if (dsTag.Contains("mainLineB_pltOn")) shape_mainlineB_pltOn = ds;
-                    else if (dsTag.Contains("mainLineB_CallAGV")) shape_mainlineB_CallAGV = ds;
-                    else if (dsTag.Contains("mainLineB_CarInfo")) shape_mainlineB_CarInfo = ds;
-                    else if (dsTag.Contains("mainLineB_pltPartOn")) shape_mainlineB_pltPartOn = ds;
-                    else if (dsTag.Contains("mainLineB_pltPartCnt")) shape_mainlineB_pltPartCnt = ds;
-
-                    else if (dsTag.Contains("blockingBar_R")) shape_blockingBar_R = ds;
-                    else if (dsTag.Contains("blockingBar_L")) shape_blockingBar_L = ds;
-
-                    else if (dsTag.Contains("Aram_PltSitDown_SubA")) shape_Aram_PltSitDown_SubA = ds;
-                    else if (dsTag.Contains("Aram_PltSitDown_SubB")) shape_Aram_PltSitDown_SubB = ds;
-                    else if (dsTag.Contains("Aram_PltSitDown_MainA")) shape_Aram_PltSitDown_MainA = ds;
-                    else if (dsTag.Contains("Aram_PltSitDown_MainB")) shape_Aram_PltSitDown_MainB = ds;
-
-                    if (dsTag.Contains("Auto")) ds.Content = "자동";
-                    else if (dsTag.Contains("Manual")) ds.Content = "수동";
-                    else if (dsTag.Contains("Abnormal")) ds.Content = "정상";
-                    else if (dsTag.Contains("Emergency")) ds.Content = "비상";
-                    else if (dsTag.Contains("Frame")) ds.Content = "";
-                    else if (dsTag.Contains("CallAGV")) ds.Content = "AGV호출";
-                    else if (dsTag.Contains("CarInfo")) ds.Content = "차종";
-                    else if (dsTag.Contains("pltOn")) ds.Content = "팔레트 ON";
-                    else if (dsTag.Contains("pltPartOn")) ds.Content = "팔레트 파트ON";
-                    else if (dsTag.Contains("blocking")) ds.Content = "차단바";
-                    else if (dsTag.Contains("PltSitDown")) ds.Content = "안착 불량";
-                    else ds.Content = dsTag;
+                    if (ds.Tag.ToString().Contains("Auto")) ds.Content = "자동";
+                    //else ds.Content = ds.Tag.ToString();
                 }
             }
         }
-        
+
+
         #region Timer
         void changeData_DiagramShape()
         {
             try
             {
-                tb_plc_subLine_CommTableAdapter sublineCommAdt = new tb_plc_subLine_CommTableAdapter();
-                tb_plc_mainLine_CommTableAdapter mainlineCommAdt = new tb_plc_mainLine_CommTableAdapter();
-                tb_plc_subLine_InfoTableAdapter sublineInfoAdt = new tb_plc_subLine_InfoTableAdapter();
-                tb_plc_mainLine_InfoTableAdapter mainlineInfoAdt = new tb_plc_mainLine_InfoTableAdapter();
-                tb_blockingBarTableAdapter blockingBarAdt = new tb_blockingBarTableAdapter();
-                tb_plc_pltSitDownTableAdapter pltSitDownAdt = new tb_plc_pltSitDownTableAdapter();
-
-                foreach (DataSetPLC.tb_plc_subLine_CommRow Row in sublineCommAdt.GetDataByNolock())
-                { // Sub Comm
-                    changeShapeColor(Row.isAuto, shape_subline_Auto);
-                    changeShapeColor(Row.isManual, shape_subline_Manual);
-                    changeShapeColor(Row.abNormal, shape_subline_Abnormal);
-                    changeShapeColor(Row.emergency, shape_subline_Emergency);
-                }
-                foreach (DataSetPLC.tb_plc_mainLine_CommRow Row in mainlineCommAdt.GetDataByNolock())
-                { // Main Comm
-                    changeShapeColor(Row.isAuto, shape_mainline_Auto);
-                    changeShapeColor(Row.isManual, shape_mainline_Manual);
-                    changeShapeColor(Row.abNormal, shape_mainline_Abnormal);
-                    changeShapeColor(Row.emergency, shape_mainline_Emergency);
-                }
-                foreach (DataSetPLC.tb_plc_subLine_InfoRow Row in sublineInfoAdt.GetDataByNolock())
-                {
-                    if(Row.node == "0000240") // Sub A
-                    {
-                        changeShapeColor(Row.pltON, shape_sublineA_pltOn);
-                        changeShapeColor(Row.callAGV, shape_sublineA_CallAGV);
-                        changeShapeText(Row.carInfo, shape_sublineA_CarInfo);
-                        changeShapeColor(Row.pltPartON, shape_sublineA_pltPartOn);
-                        changeShapeText(Row.pltPartCnt.ToString(), shape_sublineA_pltPartCnt);
-                    }
-                    else if(Row.node == "0000540")// Sub B
-                    {
-                        changeShapeColor(Row.pltON, shape_sublineB_pltOn);
-                        changeShapeColor(Row.callAGV, shape_sublineB_CallAGV);
-                        changeShapeText(Row.carInfo, shape_sublineB_CarInfo);
-                        changeShapeColor(Row.pltPartON, shape_sublineB_pltPartOn);
-                        changeShapeText(Row.pltPartCnt.ToString(), shape_sublineB_pltPartCnt);
-                    }
-                }
-                foreach (DataSetPLC.tb_plc_mainLine_InfoRow Row in mainlineInfoAdt.GetDataByNolock())
-                {
-                    if (Row.node == "0000120") // Main A
-                    {
-                        changeShapeColor(Row.pltON, shape_mainlineA_pltOn);
-                        changeShapeColor(Row.callAGV, shape_mainlineA_CallAGV);
-                        changeShapeText(Row.carInfo, shape_mainlineA_CarInfo);
-                        changeShapeColor(Row.pltPartON, shape_mainlineA_pltPartOn);
-                        changeShapeText(Row.pltPartCnt.ToString(), shape_mainlineA_pltPartCnt);
-                    }
-                    else if (Row.node == "0000420") // Main B
-                    {
-                        changeShapeColor(Row.pltON, shape_mainlineB_pltOn);
-                        changeShapeColor(Row.callAGV, shape_mainlineB_CallAGV);
-                        changeShapeText(Row.carInfo, shape_mainlineB_CarInfo);
-                        changeShapeColor(Row.pltPartON, shape_mainlineB_pltPartOn);
-                        changeShapeText(Row.pltPartCnt.ToString(), shape_mainlineB_pltPartCnt);
-                    }
-                }
-                foreach (DataSet1M.tb_blockingBarRow Row in blockingBarAdt.GetData())
-                {
-                    changeShapeColor(Row.bleakBarMode, shape_blockingBar_R);
-                    changeShapeColor(Row.bleakBarMode, shape_blockingBar_L);
-                }
-                foreach (DataSetPLC.tb_plc_pltSitDownRow Row in pltSitDownAdt.GetData())
-                {
-                    if (Row.Area == "SUB_LINE_A")
-                    {
-                        changeShapeColor(Row.Signal, shape_Aram_PltSitDown_SubA);
-                    }
-                    else if (Row.Area == "SUB_LINE_B")
-                    {
-                        changeShapeColor(Row.Signal, shape_Aram_PltSitDown_SubB);
-                    }
-                    else if (Row.Area == "MAIN_LINE_A")
-                    {
-                        changeShapeColor(Row.Signal, shape_Aram_PltSitDown_MainA);
-                    }
-                    else if (Row.Area == "MAIN_LINE_B")
-                    {
-                        changeShapeColor(Row.Signal, shape_Aram_PltSitDown_MainB);
-                    }
-                }
             }
             catch (Exception ee)
             {
@@ -717,8 +506,6 @@ namespace ACSManager.Control
         }
 
         int agv_degree = 0;
-        //string preLocation = "";
-        //int pre_agv_degree = 270;
         private object changeDegree = new object();
         void displayAGV()
         {
@@ -742,75 +529,92 @@ namespace ACSManager.Control
 
 
         //-------------------------------------------Method-----------------------------------------//
-        public DiagramShape AddNodeOnDisplay(ref DevExpress.XtraDiagram.DiagramControl diagramControl, NodeInfo nodeData)
+
+        void AddNodeIfNotExist(string nodeName)
         {
-            DiagramShape diagramItem = null;
-
-            try
-            {
-                diagramItem = new DiagramShape();
-                diagramItem.Height = 20;//20
-                diagramItem.Width = 25;//20
-                diagramItem.Position = new DevExpress.Utils.PointFloat(nodeData.ptPos.X - 10, nodeData.ptPos.Y - 10);
-
-                diagramItem.Shape = BasicShapes.Ellipse;
-
-                //▼ 랙방에 해당할 때
-                if(nodeData.sType == "BackwardStation" || nodeData.sType == "ForwardStation")
-                {
-                    diagramItem.Shape = BasicShapes.Rectangle;
-                    diagramItem.Height = 25;
-                    diagramItem.Width = 30;
-                }
-                diagramItem.Appearance.BackColor = GetNodeVisibleColor(nodeData.sType); // 배경색
-                diagramItem.Appearance.ForeColor = GetNodeVisibleColor(nodeData.sType); // 전경색
-
-                //▼ 설정 세팅
-                diagramItem.CanResize   = false;
-                diagramItem.Tag         = nodeData.sNode_Name;
-                diagramItem.CanMove     = false;
-                diagramItem.CanDelete   = false;
-                diagramItem.CanCopy     = false;
-                diagramItem.CanEdit     = false;
-                diagramItem.CanResize   = false;
-                diagramItem.CanSelect   = false;
-
-                //text설정
-                //diagramItem.Content = GetNodeVisibleContent(nodeData.sType);
-
-                diagramControl.Items.Add(diagramItem); //다이어그램 컨트롤 아이템에 추가
-            }
-            catch (Exception ex)
-            {
-                TraceManager.AddLog(string.Format("{0}r\n{1}", ex.StackTrace, ex.Message));
-            }
-            return diagramItem;
+            if (!globalRouteInfo.nodes.Contains(nodeName))
+                globalRouteInfo.nodes.Add(nodeName);
         }
-        
-        public Color GetNodeVisibleColor(string NodeType)
+
+        int CalculateReversedAngle(double angle)
         {
-            Color colorNode = Color.PowderBlue;
+            Angle ca = new Angle(180);
+            Angle la = new Angle(angle);
+            Angle a3 = ca + la;
+            int reversedAngle = (int)a3.Degrees360;
+            return reversedAngle == 360 ? 0 : reversedAngle;
+        }
+
+        int CountNodesWithName(string name)
+        {
+            return globalRouteInfo.nodes.Count(x => x == name);
+        }
+
+        Color GetNodeColor(string NodeType)
+        {
+            Color color = Color.PowderBlue;
 
             switch (NodeType)
             {
                 case "Void":
-                    colorNode = Color.Silver;
-                    break;
-                case "Index":
-                    colorNode = Color.PowderBlue;
+                    color = Color.Silver;
                     break;
                 case "ForwardStation":
-                    colorNode = Color.DarkOrange;
+                    color = Color.DarkOrange;
                     break;
                 case "BackwardStation":
-                    colorNode = Color.PowderBlue;
+                    color = Color.PowderBlue;
                     break;
                 default:
-                    colorNode = Color.PowderBlue;
+                    color = Color.PowderBlue;
                     break;
             }
-            return colorNode;
+            return color;
         }
+
+        ShapeDescription GetDiagramShape(string Type)
+        {
+            if (Type == "BackwardStation" || Type == "ForwardStation")
+            {
+                return BasicShapes.Rectangle;
+            }
+            else
+            {
+                return BasicShapes.Ellipse;
+            }
+        }
+
+        float GetDiagramHeight(string Type)
+        {
+            if (Type == "BackwardStation" || Type == "ForwardStation")
+            {
+                return 35;
+            }
+            else
+            {
+                return 30;
+            }
+        }
+
+        float GetDiagramWidth(string Type)
+        {
+            if (Type == "BackwardStation" || Type == "ForwardStation")
+            {
+                return 35;
+            }
+            else
+            {
+                return 30;
+            }
+        }
+
+        PointFloat DBStringToPointFloat(int nX, int nY)
+        {
+            PointFloat ptPos = new PointFloat(new System.Drawing.Point(nX, nY));
+
+            return ptPos;
+        }
+
 
         public string GetNodeVisibleContent(string nNodeType)
         {
@@ -907,10 +711,6 @@ namespace ACSManager.Control
             }
         }
 
-        void Tab2_ArrayConnectComponet()
-        {
-            
-        }
 
         public Image byteArrayToImage(byte[] byteArrayIn)
         {
@@ -971,12 +771,7 @@ namespace ACSManager.Control
             return globalRouteInfo.nodes[idx];
         }
 
-        public static PointFloat DBStringToPointFloat(int nX, int nY)
-        {
-            PointFloat ptPos = new PointFloat(new System.Drawing.Point(nX, nY));
-
-            return ptPos;
-        }
+        
 
         /// <summary>
         /// 데이터 값에 따라 색 변경
@@ -1049,8 +844,6 @@ namespace ACSManager.Control
             ds.Appearance.BackColor = Color.LightGray;
         }
 
-        #region button Event
-
         /// <summary>
         /// 전체화면 버튼
         /// </summary>
@@ -1091,681 +884,61 @@ namespace ACSManager.Control
                 }
             }
         }
-        #endregion
 
-        #region make GUI in List - sublineComm
-        void make_subLine_Frame()
+        private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            MakeGUI subline_Frame = new MakeGUI
+            try
             {
-                color = Color.White,
-                postionX = 2725,
-                postionY = -820,
-                tagName = "subline_Frame",
-                shapes = BasicShapes.Frame,
-                bordersize = 1,
-                width = 180,
-                height = 40
-            };
-            subline_Frame.rendring();
-            arrayGUI.Add(subline_Frame);
+                object selectObj = gridView1.GetRow(gridView1.FocusedRowHandle);// (gridView1.FocusedRowHandle);
+                select_agv = (((DataRowView)selectObj)[0].ToString());
+
+                DataSet1MTableAdapters.tb_agvTableAdapter tAgv = new DataSet1MTableAdapters.tb_agvTableAdapter();
+                DataSet1M.tb_agvDataTable dtAgv = tAgv.GetDataByAgvID(select_agv);
+
+                foreach (DataSet1M.tb_agvRow agvItem in dtAgv)
+                {
+                    SetAgvInformation(agvItem, true);
+                    break;
+                }
+            }
+            catch (Exception)
+            {
+            }
         }
 
-        void make_subLine_Auto()
+        public void SetAgvInformation(DataSet1M.tb_agvRow agv, bool nodeChange)
         {
-            MakeGUI subLine_Auto = new MakeGUI
+            try
             {
-                color = SystemColors.ControlLight,
-                postionX = 2740,
-                postionY = -815,
-                tagName = "subLine_Auto",
-                shapes = BasicShapes.RoundCornerRectangle,
-                bordersize = 1,
-                width = 30,
-                height = 30
-            };
-            subLine_Auto.rendring();
-            arrayGUI.Add(subLine_Auto);
+                
+
+                EventHandler eh5 = delegate
+                {
+                    gridControl1.DataSource = null;
+
+                    //DataTable tbRoute = new DataSet1MTableAdapters.tb_final_routeTableAdapter().GetDataByID(agv.agv_id);
+                    var tbRoute = new DataSet1MTableAdapters.tb_final_routeTableAdapter().GetDataByID(agv.agv_id);
+
+                    if (tbRoute != null && tbRoute.Rows.Count > 0)
+                    {
+                        gridControl1.DataSource = tbRoute.OrderBy(p => p.sequance);
+                        gridView1.BestFitColumns();
+                    }
+
+                };
+
+
+            }
+            catch (Exception ee)
+            {
+                TraceManager.AddLog(string.Format("{0}r\n{1}", ee.StackTrace, ee.Message));
+            }
         }
 
-        void make_subLine_Manual()
-        {
-            MakeGUI subLine_Manual = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 2780,
-                postionY = -815,
-                tagName = "subLine_Manual",
-                shapes = BasicShapes.RoundCornerRectangle,
-                bordersize = 1,
-                width = 30,
-                height = 30
-            };
-            subLine_Manual.rendring();
-            arrayGUI.Add(subLine_Manual);
-        }
 
-        void make_subLine_Abnormal()
-        {
-            MakeGUI subLine_Abnormal = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 2820,
-                postionY = -815,
-                tagName = "subLine_Abnormal",
-                shapes = BasicShapes.RoundCornerRectangle,
-                bordersize = 1,
-                width = 30,
-                height = 30
-            };
-            subLine_Abnormal.rendring();
-            arrayGUI.Add(subLine_Abnormal);
-        }
-
-        void make_subLine_Emergency()
-        {
-            MakeGUI subLine_Emergency = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 2860,
-                postionY = -815,
-                tagName = "subLine_Emergency",
-                shapes = BasicShapes.RoundCornerRectangle,
-                bordersize = 1,
-                width = 30,
-                height = 30
-            };
-            subLine_Emergency.rendring();
-            arrayGUI.Add(subLine_Emergency);
-        }
-        #endregion
-
-        #region make GUI in List - sublineA
-        void make_subLineA_pltOn()
-        {
-            MakeGUI subLineA_pltOn = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 2625,
-                postionY = -810,
-                tagName = "subLineA_pltOn",
-                shapes = BasicShapes.SnipDiagonalCornerRectangle,
-                bordersize = 1,
-                width = 20,
-                height = 20
-            };
-            subLineA_pltOn.rendring();
-            arrayGUI.Add(subLineA_pltOn);
-        }
-
-        void make_subLineA_CallAGV()
-        {
-            MakeGUI subLineA_CallAGV = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 2650,
-                postionY = -810,
-                tagName = "subLineA_CallAGV",
-                shapes = BasicShapes.SnipDiagonalCornerRectangle,
-                bordersize = 1,
-                width = 20,
-                height = 20
-            };
-            subLineA_CallAGV.rendring();
-            arrayGUI.Add(subLineA_CallAGV);
-        }
-
-        void make_subLineA_CarInfo()
-        {
-            MakeGUI subLineA_CarInfo = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 2600,
-                postionY = -810,
-                tagName = "subLineA_CarInfo",
-                shapes = BasicShapes.SnipDiagonalCornerRectangle,
-                bordersize = 1,
-                width = 20,
-                height = 20
-            };
-            subLineA_CarInfo.rendring();
-            arrayGUI.Add(subLineA_CarInfo);
-        }
-
-        void make_subLineA_pltPartOn()
-        {
-            MakeGUI subLineA_pltPartOn = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 2550,
-                postionY = -810,
-                tagName = "subLineA_pltPartOn",
-                shapes = BasicShapes.SnipDiagonalCornerRectangle,
-                bordersize = 1,
-                width = 20,
-                height = 20
-            };
-            subLineA_pltPartOn.rendring();
-            arrayGUI.Add(subLineA_pltPartOn);
-        }
-
-        void make_subLineA_pltPartCnt()
-        {
-            MakeGUI subLineA_pltPartCnt = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 2575,
-                postionY = -810,
-                tagName = "subLineA_pltPartCnt",
-                shapes = BasicShapes.SnipDiagonalCornerRectangle,
-                bordersize = 1,
-                width = 20,
-                height = 20
-            };
-            subLineA_pltPartCnt.rendring();
-            arrayGUI.Add(subLineA_pltPartCnt);
-        }
-        #endregion
-
-        #region make GUI in List - sublineB
-        void make_subLineB_CallAGV()
-        {
-            MakeGUI subLineB_CallAGV = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 3060,
-                postionY = -810,
-                tagName = "subLineB_CallAGV",
-                shapes = BasicShapes.SnipDiagonalCornerRectangle,
-                bordersize = 1,
-                width = 20,
-                height = 20
-            };
-            subLineB_CallAGV.rendring();
-            arrayGUI.Add(subLineB_CallAGV);
-        }
-
-        void make_subLineB_pltOn()
-        {
-            MakeGUI subLineB_pltOn = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 3035,
-                postionY = -810,
-                tagName = "subLineB_pltOn",
-                shapes = BasicShapes.SnipDiagonalCornerRectangle,
-                bordersize = 1,
-                width = 20,
-                height = 20
-            };
-            subLineB_pltOn.rendring();
-            arrayGUI.Add(subLineB_pltOn);
-        }
-
-        void make_subLineB_CarInfo()
-        {
-            MakeGUI subLineB_CarInfo = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 3010,
-                postionY = -810,
-                tagName = "subLineB_CarInfo",
-                shapes = BasicShapes.SnipDiagonalCornerRectangle,
-                bordersize = 1,
-                width = 20,
-                height = 20
-            };
-            subLineB_CarInfo.rendring();
-            arrayGUI.Add(subLineB_CarInfo);
-        }
-
-        void make_subLineB_pltPartOn()
-        {
-            MakeGUI subLineB_pltPartOn = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 2960,
-                postionY = -810,
-                tagName = "subLineB_pltPartOn",
-                shapes = BasicShapes.SnipDiagonalCornerRectangle,
-                bordersize = 1,
-                width = 20,
-                height = 20
-            };
-            subLineB_pltPartOn.rendring();
-            arrayGUI.Add(subLineB_pltPartOn);
-        }
-
-        void make_subLineB_pltPartCnt()
-        {
-            MakeGUI subLineB_pltPartCnt = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 2985,
-                postionY = -810,
-                tagName = "subLineB_pltPartCnt",
-                shapes = BasicShapes.SnipDiagonalCornerRectangle,
-                bordersize = 1,
-                width = 20,
-                height = 20
-            };
-            subLineB_pltPartCnt.rendring();
-            arrayGUI.Add(subLineB_pltPartCnt);
-        }
-        #endregion
-
-        #region make GUI in List - mainLineComm
-        void make_mainLine_Frame()
-        {
-            MakeGUI mainLine_Frame = new MakeGUI
-            {
-                color = Color.White,
-                postionX = 2635,
-                postionY = -455,
-                tagName = "mainLine_Frame",
-                shapes = BasicShapes.Frame,
-                bordersize = 1,
-                width = 180,
-                height = 40
-            };
-            mainLine_Frame.rendring();
-            arrayGUI.Add(mainLine_Frame);
-        }
-
-        void make_mainLine_Auto()
-        {
-            MakeGUI mainLine_Auto = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 2650,
-                postionY = -450,
-                tagName = "mainLine_Auto",
-                shapes = BasicShapes.RoundCornerRectangle,
-                bordersize = 1,
-                width = 30,
-                height = 30
-            };
-            mainLine_Auto.rendring();
-            arrayGUI.Add(mainLine_Auto);
-        }
-
-        void make_mainLine_Manual()
-        {
-            MakeGUI mainLine_Manual = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 2690,
-                postionY = -450,
-                tagName = "mainLine_Manual",
-                shapes = BasicShapes.RoundCornerRectangle,
-                bordersize = 1,
-                width = 30,
-                height = 30
-            };
-            mainLine_Manual.rendring();
-            arrayGUI.Add(mainLine_Manual);
-        }
-
-        void make_mainLine_Abnormal()
-        {
-            MakeGUI mainLine_Abnormal = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 2730,
-                postionY = -450,
-                tagName = "mainLine_Abnormal",
-                shapes = BasicShapes.RoundCornerRectangle,
-                bordersize = 1,
-                width = 30,
-                height = 30
-            };
-            mainLine_Abnormal.rendring();
-            arrayGUI.Add(mainLine_Abnormal);
-        }
-
-        void make_mainLine_Emergency()
-        {
-            MakeGUI mainLine_Emergency = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 2770,
-                postionY = -450,
-                tagName = "mainLine_Emergency",
-                shapes = BasicShapes.RoundCornerRectangle,
-                bordersize = 1,
-                width = 30,
-                height = 30
-            };
-            mainLine_Emergency.rendring();
-            arrayGUI.Add(mainLine_Emergency);
-        }
-        #endregion
-
-        #region make GUI in List - mainlineA
-        void make_mainLineA_CallAGV()
-        {
-            MakeGUI mainLineA_CallAGV = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 2565,
-                postionY = -447,
-                tagName = "mainLineA_CallAGV",
-                shapes = BasicShapes.SnipDiagonalCornerRectangle,
-                bordersize = 1,
-                width = 20,
-                height = 20
-            };
-            mainLineA_CallAGV.rendring();
-            arrayGUI.Add(mainLineA_CallAGV);
-        }
-
-        void make_mainLineA_pltOn()
-        {
-            MakeGUI mainLineA_pltOn = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 2540,
-                postionY = -447,
-                tagName = "mainLineA_pltOn",
-                shapes = BasicShapes.SnipDiagonalCornerRectangle,
-                bordersize = 1,
-                width = 20,
-                height = 20
-            };
-            mainLineA_pltOn.rendring();
-            arrayGUI.Add(mainLineA_pltOn);
-        }
-
-        void make_mainLineA_CarInfo()
-        {
-            MakeGUI mainLineA_CarInfo = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 2515,
-                postionY = -447,
-                tagName = "mainLineA_CarInfo",
-                shapes = BasicShapes.SnipDiagonalCornerRectangle,
-                bordersize = 1,
-                width = 20,
-                height = 20
-            };
-            mainLineA_CarInfo.rendring();
-            arrayGUI.Add(mainLineA_CarInfo);
-        }
-
-        void make_mainLineA_pltPartOn()
-        {
-            MakeGUI mainLineA_pltPartOn = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 2465,
-                postionY = -447,
-                tagName = "mainLineA_pltPartOn",
-                shapes = BasicShapes.SnipDiagonalCornerRectangle,
-                bordersize = 1,
-                width = 20,
-                height = 20
-            };
-            mainLineA_pltPartOn.rendring();
-            arrayGUI.Add(mainLineA_pltPartOn);
-        }
-
-        void make_mainLineA_pltPartCnt()
-        {
-            MakeGUI mainLineA_pltPartCnt = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 2490,
-                postionY = -447,
-                tagName = "mainLineA_pltPartCnt",
-                shapes = BasicShapes.SnipDiagonalCornerRectangle,
-                bordersize = 1,
-                width = 20,
-                height = 20
-            };
-            mainLineA_pltPartCnt.rendring();
-            arrayGUI.Add(mainLineA_pltPartCnt);
-        }
-        #endregion
-
-        #region make GUI in List - mainlineB
-        void make_mainLineB_CallAGV()
-        {
-            MakeGUI mainLineB_CallAGV = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 2967,
-                postionY = -447,
-                tagName = "mainLineB_CallAGV",
-                shapes = BasicShapes.SnipDiagonalCornerRectangle,
-                bordersize = 1,
-                width = 20,
-                height = 20
-            };
-            mainLineB_CallAGV.rendring();
-            arrayGUI.Add(mainLineB_CallAGV);
-        }
-
-        void make_mainLineB_pltOn()
-        {
-            MakeGUI mainLineB_pltOn = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 2942,
-                postionY = -447,
-                tagName = "mainLineB_pltOn",
-                shapes = BasicShapes.SnipDiagonalCornerRectangle,
-                bordersize = 1,
-                width = 20,
-                height = 20
-            };
-            mainLineB_pltOn.rendring();
-            arrayGUI.Add(mainLineB_pltOn);
-        }
-
-        void make_mainLineB_CarInfo()
-        {
-            MakeGUI mainLineB_CarInfo = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 2917,
-                postionY = -447,
-                tagName = "mainLineB_CarInfo",
-                shapes = BasicShapes.SnipDiagonalCornerRectangle,
-                bordersize = 1,
-                width = 20,
-                height = 20
-            };
-            mainLineB_CarInfo.rendring();
-            arrayGUI.Add(mainLineB_CarInfo);
-        }
-
-        void make_mainLineB_pltPartOn()
-        {
-            MakeGUI mainLineB_pltPartOn = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 2867,
-                postionY = -447,
-                tagName = "mainLineB_pltPartOn",
-                shapes = BasicShapes.SnipDiagonalCornerRectangle,
-                bordersize = 1,
-                width = 20,
-                height = 20
-            };
-            mainLineB_pltPartOn.rendring();
-            arrayGUI.Add(mainLineB_pltPartOn);
-        }
-
-        void make_mainLineB_pltPartCnt()
-        {
-            MakeGUI mainLineB_pltPartCnt = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 2892,
-                postionY = -447,
-                tagName = "mainLineB_pltPartCnt",
-                shapes = BasicShapes.SnipDiagonalCornerRectangle,
-                bordersize = 1,
-                width = 20,
-                height = 20
-            };
-            mainLineB_pltPartCnt.rendring();
-            arrayGUI.Add(mainLineB_pltPartCnt);
-        }
-        #endregion
-
-        #region make BlockingBar
-        void make_blockingBar_R()
-        {
-            MakeGUI blockingBar_R = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 3100,
-                postionY = -770,
-                tagName = "blockingBar_R",
-                shapes = BasicShapes.Rectangle,
-                bordersize = 1,
-                width = 20,
-                height = 300
-            };
-            blockingBar_R.rendring();
-            arrayGUI.Add(blockingBar_R);
-        }
-
-        void make_blockingBar_L()
-        {
-            MakeGUI blockingBar_L = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 2475,
-                postionY = -770,
-                tagName = "blockingBar_L",
-                shapes = BasicShapes.Rectangle,
-                bordersize = 1,
-                width = 20,
-                height = 300
-            };
-            blockingBar_L.rendring();
-            arrayGUI.Add(blockingBar_L);
-        }
-        #endregion
-
-        #region make Aram PltSitDown
-        void make_Aram_PltSitDown_SubA()
-        {
-            MakeGUI Aram_PltSitDown_SubA = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 2650 + 31,
-                postionY = -810 - 30,
-                tagName = "Aram_PltSitDown_SubA",
-                shapes = BasicShapes.Rectangle,
-                bordersize = 1,
-                width = 20,
-                height = 20
-            };
-            Aram_PltSitDown_SubA.rendring();
-            arrayGUI.Add(Aram_PltSitDown_SubA);
-        }
-
-        void make_Aram_PltSitDown_SubB()
-        {
-            MakeGUI Aram_PltSitDown_SubB = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 2960 - 30,
-                postionY = -810 - 30,
-                tagName = "Aram_PltSitDown_SubB",
-                shapes = BasicShapes.Rectangle,
-                bordersize = 1,
-                width = 20,
-                height = 20
-            };
-            Aram_PltSitDown_SubB.rendring();
-            arrayGUI.Add(Aram_PltSitDown_SubB);
-        }
-
-        void make_Aram_PltSitDown_MainA()
-        {
-            MakeGUI Aram_PltSitDown_MainA = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 2565 + 30,
-                postionY = -447 + 35,
-                tagName = "Aram_PltSitDown_MainA",
-                shapes = BasicShapes.Rectangle,
-                bordersize = 1,
-                width = 20,
-                height = 20
-            };
-            Aram_PltSitDown_MainA.rendring();
-            arrayGUI.Add(Aram_PltSitDown_MainA);
-        }
-
-        void make_Aram_PltSitDown_MainB()
-        {
-            MakeGUI Aram_PltSitDown_MainB = new MakeGUI
-            {
-                color = SystemColors.ControlLight,
-                postionX = 2867 - 30,
-                postionY = -447 + 35,
-                tagName = "Aram_PltSitDown_MainB",
-                shapes = BasicShapes.Rectangle,
-                bordersize = 1,
-                width = 20,
-                height = 20
-            };
-            Aram_PltSitDown_MainB.rendring();
-            arrayGUI.Add(Aram_PltSitDown_MainB);
-        }
-        #endregion
 
 
     }
-
-    #region button Size Control
-    public class TabPane : DevExpress.XtraBars.Navigation.TabPane
-    {
-        protected override ButtonsPanel CreateButtonsPanel()
-        {
-            return new MyNavigationPaneButtonsPanel(this);
-        }
-    }
-    public class MyNavigationPaneButtonsPanel : NavigationPaneButtonsPanel
-    {
-        public MyNavigationPaneButtonsPanel(IButtonsPanelOwner owner) : base(owner)
-        {
-        }
-        protected override IButtonsPanelViewInfo CreateViewInfo()
-        {
-            return new MyNavigationPaneButtonsPanelViewInfo(this);
-        }
-    }
-    public class MyNavigationPaneButtonsPanelViewInfo : NavigationPaneButtonsPanelViewInfo
-    {
-        public MyNavigationPaneButtonsPanelViewInfo(IButtonsPanel panel) : base(panel)
-        {
-        }
-        protected override BaseButtonInfo CreateButtonInfo(IBaseButton button)
-        {
-            BaseButtonInfo info = new MyBaseButtonInfo(button, (this.Panel.Owner as TabPane).ItemOrientation == System.Windows.Forms.Orientation.Vertical);
-            return info;
-        }
-    }
-    public class MyBaseButtonInfo : BaseButtonInfo
-    {
-        public MyBaseButtonInfo(IBaseButton button, bool verticalRotated = false) : base(button, verticalRotated)
-        {
-        }
-
-        protected override System.Drawing.Size GetContentSize(System.Drawing.Size textSize, System.Drawing.Size imageSize, int interval, System.Drawing.Size minSize)
-        {
-            System.Drawing.Size size = base.GetContentSize(textSize, imageSize, interval, minSize);
-            return new System.Drawing.Size(size.Width + 666, size.Height + 20); // HERE
-        }
-    }
-    #endregion
 
 
 }

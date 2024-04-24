@@ -64,7 +64,7 @@ namespace ACSManager.Control
                 btn_complete.Enabled = false;
                 btn_emergency.Enabled = false;
             }
-            last_count = sourceTable.AsEnumerable().Count();
+            //last_count = sourceTable.AsEnumerable().Count();
 
             //타이머 안씀
             timer.Interval = 3000;

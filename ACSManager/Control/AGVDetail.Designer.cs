@@ -71,7 +71,6 @@
             this.layoutControlItem29 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -94,7 +93,6 @@
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -117,7 +115,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
@@ -140,7 +137,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
@@ -201,7 +197,7 @@
             this.simpleButton5.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.simpleButton5.Appearance.Options.UseFont = true;
             this.simpleButton5.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.Image")));
-            this.simpleButton5.Location = new System.Drawing.Point(12, 649);
+            this.simpleButton5.Location = new System.Drawing.Point(12, 785);
             this.simpleButton5.Name = "simpleButton5";
             this.simpleButton5.Size = new System.Drawing.Size(424, 38);
             this.simpleButton5.StyleController = this.layoutControl1;
@@ -214,7 +210,7 @@
             this.simpleButton3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.simpleButton3.Appearance.Options.UseFont = true;
             this.simpleButton3.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(12, 523);
+            this.simpleButton3.Location = new System.Drawing.Point(12, 659);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(424, 38);
             this.simpleButton3.StyleController = this.layoutControl1;
@@ -227,7 +223,7 @@
             this.allStart.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.allStart.Appearance.Options.UseFont = true;
             this.allStart.Image = ((System.Drawing.Image)(resources.GetObject("allStart.Image")));
-            this.allStart.Location = new System.Drawing.Point(12, 607);
+            this.allStart.Location = new System.Drawing.Point(12, 743);
             this.allStart.Name = "allStart";
             this.allStart.Size = new System.Drawing.Size(424, 38);
             this.allStart.StyleController = this.layoutControl1;
@@ -240,7 +236,7 @@
             this.allResum.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.allResum.Appearance.Options.UseFont = true;
             this.allResum.Image = ((System.Drawing.Image)(resources.GetObject("allResum.Image")));
-            this.allResum.Location = new System.Drawing.Point(12, 733);
+            this.allResum.Location = new System.Drawing.Point(12, 869);
             this.allResum.Name = "allResum";
             this.allResum.Size = new System.Drawing.Size(424, 38);
             this.allResum.StyleController = this.layoutControl1;
@@ -253,7 +249,7 @@
             this.allPause.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.allPause.Appearance.Options.UseFont = true;
             this.allPause.Image = ((System.Drawing.Image)(resources.GetObject("allPause.Image")));
-            this.allPause.Location = new System.Drawing.Point(12, 691);
+            this.allPause.Location = new System.Drawing.Point(12, 827);
             this.allPause.Name = "allPause";
             this.allPause.Size = new System.Drawing.Size(424, 38);
             this.allPause.StyleController = this.layoutControl1;
@@ -266,7 +262,7 @@
             this.LEFT_GO.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.LEFT_GO.Appearance.Options.UseFont = true;
             this.LEFT_GO.Image = ((System.Drawing.Image)(resources.GetObject("LEFT_GO.Image")));
-            this.LEFT_GO.Location = new System.Drawing.Point(12, 481);
+            this.LEFT_GO.Location = new System.Drawing.Point(12, 617);
             this.LEFT_GO.Name = "LEFT_GO";
             this.LEFT_GO.Size = new System.Drawing.Size(424, 38);
             this.LEFT_GO.StyleController = this.layoutControl1;
@@ -277,7 +273,7 @@
             // cmbToName
             // 
             this.cmbToName.EditValue = "All";
-            this.cmbToName.Location = new System.Drawing.Point(277, 289);
+            this.cmbToName.Location = new System.Drawing.Point(277, 434);
             this.cmbToName.Name = "cmbToName";
             this.cmbToName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.cmbToName.Properties.Appearance.Options.UseFont = true;
@@ -295,7 +291,7 @@
             // cmbFromName
             // 
             this.cmbFromName.EditValue = "All";
-            this.cmbFromName.Location = new System.Drawing.Point(78, 289);
+            this.cmbFromName.Location = new System.Drawing.Point(78, 434);
             this.cmbFromName.Name = "cmbFromName";
             this.cmbFromName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.cmbFromName.Properties.Appearance.Options.UseFont = true;
@@ -315,7 +311,7 @@
             this.btn_start.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.btn_start.Appearance.Options.UseFont = true;
             this.btn_start.Image = ((System.Drawing.Image)(resources.GetObject("btn_start.Image")));
-            this.btn_start.Location = new System.Drawing.Point(24, 122);
+            this.btn_start.Location = new System.Drawing.Point(24, 267);
             this.btn_start.Name = "btn_start";
             this.btn_start.Size = new System.Drawing.Size(400, 38);
             this.btn_start.StyleController = this.layoutControl1;
@@ -325,7 +321,7 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(12, 859);
+            this.gridControl1.Location = new System.Drawing.Point(12, 995);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(424, 20);
@@ -451,7 +447,7 @@
             this.btn_auto_drive.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.btn_auto_drive.Appearance.Options.UseFont = true;
             this.btn_auto_drive.Image = ((System.Drawing.Image)(resources.GetObject("btn_auto_drive.Image")));
-            this.btn_auto_drive.Location = new System.Drawing.Point(12, 565);
+            this.btn_auto_drive.Location = new System.Drawing.Point(12, 701);
             this.btn_auto_drive.Name = "btn_auto_drive";
             this.btn_auto_drive.Size = new System.Drawing.Size(424, 38);
             this.btn_auto_drive.StyleController = this.layoutControl1;
@@ -464,7 +460,7 @@
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(226, 38);
+            this.simpleButton1.Location = new System.Drawing.Point(226, 183);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(198, 38);
             this.simpleButton1.StyleController = this.layoutControl1;
@@ -477,7 +473,7 @@
             this.btn_lift_down.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.btn_lift_down.Appearance.Options.UseFont = true;
             this.btn_lift_down.Image = ((System.Drawing.Image)(resources.GetObject("btn_lift_down.Image")));
-            this.btn_lift_down.Location = new System.Drawing.Point(158, 775);
+            this.btn_lift_down.Location = new System.Drawing.Point(158, 911);
             this.btn_lift_down.Name = "btn_lift_down";
             this.btn_lift_down.Size = new System.Drawing.Size(278, 38);
             this.btn_lift_down.StyleController = this.layoutControl1;
@@ -490,7 +486,7 @@
             this.btn_resume.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.btn_resume.Appearance.Options.UseFont = true;
             this.btn_resume.ImageUri.Uri = "Refresh";
-            this.btn_resume.Location = new System.Drawing.Point(24, 164);
+            this.btn_resume.Location = new System.Drawing.Point(24, 309);
             this.btn_resume.Name = "btn_resume";
             this.btn_resume.Size = new System.Drawing.Size(400, 38);
             this.btn_resume.StyleController = this.layoutControl1;
@@ -503,7 +499,7 @@
             this.btn_dropjob.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.btn_dropjob.Appearance.Options.UseFont = true;
             this.btn_dropjob.Image = ((System.Drawing.Image)(resources.GetObject("btn_dropjob.Image")));
-            this.btn_dropjob.Location = new System.Drawing.Point(24, 38);
+            this.btn_dropjob.Location = new System.Drawing.Point(24, 183);
             this.btn_dropjob.Name = "btn_dropjob";
             this.btn_dropjob.Size = new System.Drawing.Size(198, 38);
             this.btn_dropjob.StyleController = this.layoutControl1;
@@ -516,7 +512,7 @@
             this.btn_manual_stop.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.btn_manual_stop.Appearance.Options.UseFont = true;
             this.btn_manual_stop.Image = ((System.Drawing.Image)(resources.GetObject("btn_manual_stop.Image")));
-            this.btn_manual_stop.Location = new System.Drawing.Point(12, 775);
+            this.btn_manual_stop.Location = new System.Drawing.Point(12, 911);
             this.btn_manual_stop.Name = "btn_manual_stop";
             this.btn_manual_stop.Size = new System.Drawing.Size(142, 38);
             this.btn_manual_stop.StyleController = this.layoutControl1;
@@ -529,7 +525,7 @@
             this.btn_liftup.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.btn_liftup.Appearance.Options.UseFont = true;
             this.btn_liftup.Image = ((System.Drawing.Image)(resources.GetObject("btn_liftup.Image")));
-            this.btn_liftup.Location = new System.Drawing.Point(12, 817);
+            this.btn_liftup.Location = new System.Drawing.Point(12, 953);
             this.btn_liftup.Name = "btn_liftup";
             this.btn_liftup.Size = new System.Drawing.Size(424, 38);
             this.btn_liftup.StyleController = this.layoutControl1;
@@ -542,7 +538,7 @@
             this.btn_manual_drive.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.btn_manual_drive.Appearance.Options.UseFont = true;
             this.btn_manual_drive.Image = ((System.Drawing.Image)(resources.GetObject("btn_manual_drive.Image")));
-            this.btn_manual_drive.Location = new System.Drawing.Point(17, 363);
+            this.btn_manual_drive.Location = new System.Drawing.Point(17, 498);
             this.btn_manual_drive.Name = "btn_manual_drive";
             this.btn_manual_drive.Size = new System.Drawing.Size(414, 38);
             this.btn_manual_drive.StyleController = this.layoutControl1;
@@ -552,7 +548,7 @@
             // 
             // txtTo
             // 
-            this.txtTo.Location = new System.Drawing.Point(257, 325);
+            this.txtTo.Location = new System.Drawing.Point(257, 470);
             this.txtTo.Name = "txtTo";
             this.txtTo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.5F);
             this.txtTo.Properties.Appearance.Options.UseFont = true;
@@ -562,7 +558,7 @@
             // 
             // txtFrom
             // 
-            this.txtFrom.Location = new System.Drawing.Point(77, 325);
+            this.txtFrom.Location = new System.Drawing.Point(77, 470);
             this.txtFrom.Name = "txtFrom";
             this.txtFrom.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.5F);
             this.txtFrom.Properties.Appearance.Options.UseFont = true;
@@ -579,7 +575,7 @@
             this.lbl_agvFromTo.Appearance.Options.UseFont = true;
             this.lbl_agvFromTo.Appearance.Options.UseForeColor = true;
             this.lbl_agvFromTo.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lbl_agvFromTo.Location = new System.Drawing.Point(143, -54);
+            this.lbl_agvFromTo.Location = new System.Drawing.Point(143, 91);
             this.lbl_agvFromTo.Name = "lbl_agvFromTo";
             this.lbl_agvFromTo.Size = new System.Drawing.Size(281, 18);
             this.lbl_agvFromTo.StyleController = this.layoutControl1;
@@ -594,7 +590,7 @@
             this.lbl_agvJobID.Appearance.Options.UseFont = true;
             this.lbl_agvJobID.Appearance.Options.UseForeColor = true;
             this.lbl_agvJobID.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lbl_agvJobID.Location = new System.Drawing.Point(143, -76);
+            this.lbl_agvJobID.Location = new System.Drawing.Point(143, 69);
             this.lbl_agvJobID.Name = "lbl_agvJobID";
             this.lbl_agvJobID.Size = new System.Drawing.Size(281, 18);
             this.lbl_agvJobID.StyleController = this.layoutControl1;
@@ -609,7 +605,7 @@
             this.lbl_agvName.Appearance.Options.UseFont = true;
             this.lbl_agvName.Appearance.Options.UseForeColor = true;
             this.lbl_agvName.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lbl_agvName.Location = new System.Drawing.Point(131, -143);
+            this.lbl_agvName.Location = new System.Drawing.Point(131, 12);
             this.lbl_agvName.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
             this.lbl_agvName.Name = "lbl_agvName";
             this.lbl_agvName.Size = new System.Drawing.Size(307, 18);
@@ -625,7 +621,7 @@
             this.lbl_Traffic.Appearance.Options.UseFont = true;
             this.lbl_Traffic.Appearance.Options.UseForeColor = true;
             this.lbl_Traffic.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lbl_Traffic.Location = new System.Drawing.Point(143, -32);
+            this.lbl_Traffic.Location = new System.Drawing.Point(143, 113);
             this.lbl_Traffic.Name = "lbl_Traffic";
             this.lbl_Traffic.Size = new System.Drawing.Size(281, 18);
             this.lbl_Traffic.StyleController = this.layoutControl1;
@@ -636,7 +632,7 @@
             this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.simpleButton2.Appearance.Options.UseFont = true;
             this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(24, 80);
+            this.simpleButton2.Location = new System.Drawing.Point(24, 225);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(400, 38);
             this.simpleButton2.StyleController = this.layoutControl1;
@@ -649,7 +645,7 @@
             this.btnChargeStart.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.btnChargeStart.Appearance.Options.UseFont = true;
             this.btnChargeStart.ImageUri.Uri = "AddNewDataSource";
-            this.btnChargeStart.Location = new System.Drawing.Point(24, 206);
+            this.btnChargeStart.Location = new System.Drawing.Point(24, 351);
             this.btnChargeStart.Name = "btnChargeStart";
             this.btnChargeStart.Size = new System.Drawing.Size(198, 38);
             this.btnChargeStart.StyleController = this.layoutControl1;
@@ -662,7 +658,7 @@
             this.btnChargeEnd.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.btnChargeEnd.Appearance.Options.UseFont = true;
             this.btnChargeEnd.ImageUri.Uri = "DeleteDataSource";
-            this.btnChargeEnd.Location = new System.Drawing.Point(226, 206);
+            this.btnChargeEnd.Location = new System.Drawing.Point(226, 351);
             this.btnChargeEnd.Name = "btnChargeEnd";
             this.btnChargeEnd.Size = new System.Drawing.Size(198, 38);
             this.btnChargeEnd.StyleController = this.layoutControl1;
@@ -675,7 +671,7 @@
             this.btn_UseAcsSelected.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.btn_UseAcsSelected.Appearance.Options.UseFont = true;
             this.btn_UseAcsSelected.Image = ((System.Drawing.Image)(resources.GetObject("btn_UseAcsSelected.Image")));
-            this.btn_UseAcsSelected.Location = new System.Drawing.Point(17, 434);
+            this.btn_UseAcsSelected.Location = new System.Drawing.Point(17, 570);
             this.btn_UseAcsSelected.Name = "btn_UseAcsSelected";
             this.btn_UseAcsSelected.Size = new System.Drawing.Size(414, 38);
             this.btn_UseAcsSelected.StyleController = this.layoutControl1;
@@ -727,7 +723,6 @@
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
-            this.emptySpaceItem2,
             this.layoutControlGroup2,
             this.layoutControlItem15,
             this.layoutControlItem18,
@@ -743,9 +738,9 @@
             this.layoutControlItem30,
             this.layoutControlGroup6,
             this.layoutControlItem22});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, -155);
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(448, 1046);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(448, 1027);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -763,14 +758,6 @@
             this.layoutControlItem1.Text = "선택된 AGV";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(116, 18);
             // 
-            // emptySpaceItem2
-            // 
-            this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 22);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(428, 10);
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
-            // 
             // layoutControlGroup2
             // 
             this.layoutControlGroup2.AppearanceGroup.Font = new System.Drawing.Font("Tahoma", 11F);
@@ -779,11 +766,10 @@
             this.layoutControlItem6,
             this.layoutControlItem10,
             this.layoutControlItem24});
-            this.layoutControlGroup2.Location = new System.Drawing.Point(0, 32);
+            this.layoutControlGroup2.Location = new System.Drawing.Point(0, 22);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
             this.layoutControlGroup2.Size = new System.Drawing.Size(428, 113);
             this.layoutControlGroup2.Text = "AGV 상태";
-            this.layoutControlGroup2.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // layoutControlItem6
             // 
@@ -796,7 +782,6 @@
             this.layoutControlItem6.Size = new System.Drawing.Size(404, 22);
             this.layoutControlItem6.Text = "작업번호";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(116, 18);
-            this.layoutControlItem6.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // layoutControlItem10
             // 
@@ -808,7 +793,6 @@
             this.layoutControlItem10.Size = new System.Drawing.Size(404, 22);
             this.layoutControlItem10.Text = "From - To";
             this.layoutControlItem10.TextSize = new System.Drawing.Size(116, 18);
-            this.layoutControlItem10.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // layoutControlItem24
             // 
@@ -821,12 +805,11 @@
             this.layoutControlItem24.Size = new System.Drawing.Size(404, 22);
             this.layoutControlItem24.Text = "AGV 원인으로 멈춤";
             this.layoutControlItem24.TextSize = new System.Drawing.Size(116, 18);
-            this.layoutControlItem24.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // layoutControlItem15
             // 
             this.layoutControlItem15.Control = this.btn_manual_stop;
-            this.layoutControlItem15.Location = new System.Drawing.Point(0, 918);
+            this.layoutControlItem15.Location = new System.Drawing.Point(0, 899);
             this.layoutControlItem15.Name = "layoutControlItem15";
             this.layoutControlItem15.Size = new System.Drawing.Size(146, 42);
             this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
@@ -836,7 +819,7 @@
             // layoutControlItem18
             // 
             this.layoutControlItem18.Control = this.btn_lift_down;
-            this.layoutControlItem18.Location = new System.Drawing.Point(146, 918);
+            this.layoutControlItem18.Location = new System.Drawing.Point(146, 899);
             this.layoutControlItem18.Name = "layoutControlItem18";
             this.layoutControlItem18.Size = new System.Drawing.Size(282, 42);
             this.layoutControlItem18.TextSize = new System.Drawing.Size(0, 0);
@@ -846,7 +829,7 @@
             // layoutControlItem14
             // 
             this.layoutControlItem14.Control = this.btn_liftup;
-            this.layoutControlItem14.Location = new System.Drawing.Point(0, 960);
+            this.layoutControlItem14.Location = new System.Drawing.Point(0, 941);
             this.layoutControlItem14.Name = "layoutControlItem14";
             this.layoutControlItem14.Size = new System.Drawing.Size(428, 42);
             this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
@@ -856,11 +839,12 @@
             // layoutControlItem23
             // 
             this.layoutControlItem23.Control = this.gridControl1;
-            this.layoutControlItem23.Location = new System.Drawing.Point(0, 1002);
+            this.layoutControlItem23.Location = new System.Drawing.Point(0, 983);
             this.layoutControlItem23.Name = "layoutControlItem23";
             this.layoutControlItem23.Size = new System.Drawing.Size(428, 24);
             this.layoutControlItem23.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem23.TextVisible = false;
+            this.layoutControlItem23.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // layoutControlGroup3
             // 
@@ -876,7 +860,7 @@
             this.layoutControlItem19,
             this.layoutControlItem5,
             this.layoutControlItem17});
-            this.layoutControlGroup3.Location = new System.Drawing.Point(0, 145);
+            this.layoutControlGroup3.Location = new System.Drawing.Point(0, 135);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
             this.layoutControlGroup3.Size = new System.Drawing.Size(428, 258);
             this.layoutControlGroup3.Text = "AGV 명령";
@@ -907,7 +891,6 @@
             this.layoutControlItem7.Size = new System.Drawing.Size(202, 42);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
-            this.layoutControlItem7.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // layoutControlItem20
             // 
@@ -935,7 +918,6 @@
             this.layoutControlItem5.Size = new System.Drawing.Size(202, 42);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
-            this.layoutControlItem5.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // layoutControlItem17
             // 
@@ -945,7 +927,6 @@
             this.layoutControlItem17.Size = new System.Drawing.Size(404, 42);
             this.layoutControlItem17.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem17.TextVisible = false;
-            this.layoutControlItem17.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // layoutControlGroup4
             // 
@@ -956,12 +937,11 @@
             this.layoutControlItem12,
             this.layoutControlItem13,
             this.layoutControlItem3,
-            this.layoutControlItem4,
-            this.emptySpaceItem1});
-            this.layoutControlGroup4.Location = new System.Drawing.Point(0, 403);
+            this.layoutControlItem4});
+            this.layoutControlGroup4.Location = new System.Drawing.Point(0, 393);
             this.layoutControlGroup4.Name = "layoutControlGroup4";
             this.layoutControlGroup4.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
-            this.layoutControlGroup4.Size = new System.Drawing.Size(428, 150);
+            this.layoutControlGroup4.Size = new System.Drawing.Size(428, 140);
             this.layoutControlGroup4.Text = "수동전송";
             // 
             // layoutControlItem11
@@ -997,7 +977,8 @@
             // layoutControlItem13
             // 
             this.layoutControlItem13.Control = this.btn_manual_drive;
-            this.layoutControlItem13.Location = new System.Drawing.Point(0, 74);
+            this.layoutControlItem13.ControlAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.layoutControlItem13.Location = new System.Drawing.Point(0, 64);
             this.layoutControlItem13.Name = "layoutControlItem13";
             this.layoutControlItem13.Size = new System.Drawing.Size(418, 42);
             this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
@@ -1035,18 +1016,10 @@
             this.layoutControlItem4.TextSize = new System.Drawing.Size(56, 19);
             this.layoutControlItem4.TextToControlDistance = 5;
             // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 64);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(418, 10);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.LEFT_GO;
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 624);
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 605);
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.Size = new System.Drawing.Size(428, 42);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
@@ -1056,7 +1029,7 @@
             // layoutControlItem25
             // 
             this.layoutControlItem25.Control = this.allPause;
-            this.layoutControlItem25.Location = new System.Drawing.Point(0, 834);
+            this.layoutControlItem25.Location = new System.Drawing.Point(0, 815);
             this.layoutControlItem25.Name = "layoutControlItem25";
             this.layoutControlItem25.Size = new System.Drawing.Size(428, 42);
             this.layoutControlItem25.TextSize = new System.Drawing.Size(0, 0);
@@ -1066,7 +1039,7 @@
             // layoutControlItem26
             // 
             this.layoutControlItem26.Control = this.allResum;
-            this.layoutControlItem26.Location = new System.Drawing.Point(0, 876);
+            this.layoutControlItem26.Location = new System.Drawing.Point(0, 857);
             this.layoutControlItem26.Name = "layoutControlItem26";
             this.layoutControlItem26.Size = new System.Drawing.Size(428, 42);
             this.layoutControlItem26.TextSize = new System.Drawing.Size(0, 0);
@@ -1076,7 +1049,7 @@
             // layoutControlItem27
             // 
             this.layoutControlItem27.Control = this.allStart;
-            this.layoutControlItem27.Location = new System.Drawing.Point(0, 750);
+            this.layoutControlItem27.Location = new System.Drawing.Point(0, 731);
             this.layoutControlItem27.Name = "layoutControlItem27";
             this.layoutControlItem27.Size = new System.Drawing.Size(428, 42);
             this.layoutControlItem27.TextSize = new System.Drawing.Size(0, 0);
@@ -1086,7 +1059,7 @@
             // layoutControlItem28
             // 
             this.layoutControlItem28.Control = this.simpleButton3;
-            this.layoutControlItem28.Location = new System.Drawing.Point(0, 666);
+            this.layoutControlItem28.Location = new System.Drawing.Point(0, 647);
             this.layoutControlItem28.Name = "layoutControlItem28";
             this.layoutControlItem28.Size = new System.Drawing.Size(428, 42);
             this.layoutControlItem28.TextSize = new System.Drawing.Size(0, 0);
@@ -1096,7 +1069,7 @@
             // layoutControlItem30
             // 
             this.layoutControlItem30.Control = this.simpleButton5;
-            this.layoutControlItem30.Location = new System.Drawing.Point(0, 792);
+            this.layoutControlItem30.Location = new System.Drawing.Point(0, 773);
             this.layoutControlItem30.Name = "layoutControlItem30";
             this.layoutControlItem30.Size = new System.Drawing.Size(428, 42);
             this.layoutControlItem30.TextSize = new System.Drawing.Size(0, 0);
@@ -1108,10 +1081,10 @@
             this.layoutControlGroup6.CustomizationFormText = "수동전송";
             this.layoutControlGroup6.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem9});
-            this.layoutControlGroup6.Location = new System.Drawing.Point(0, 553);
+            this.layoutControlGroup6.Location = new System.Drawing.Point(0, 533);
             this.layoutControlGroup6.Name = "layoutControlGroup6";
             this.layoutControlGroup6.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
-            this.layoutControlGroup6.Size = new System.Drawing.Size(428, 71);
+            this.layoutControlGroup6.Size = new System.Drawing.Size(428, 72);
             this.layoutControlGroup6.Text = "ACS 기동 설정";
             // 
             // layoutControlItem9
@@ -1128,7 +1101,7 @@
             // layoutControlItem22
             // 
             this.layoutControlItem22.Control = this.btn_auto_drive;
-            this.layoutControlItem22.Location = new System.Drawing.Point(0, 708);
+            this.layoutControlItem22.Location = new System.Drawing.Point(0, 689);
             this.layoutControlItem22.Name = "layoutControlItem22";
             this.layoutControlItem22.Size = new System.Drawing.Size(428, 42);
             this.layoutControlItem22.TextSize = new System.Drawing.Size(0, 0);
@@ -1161,7 +1134,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
@@ -1184,7 +1156,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
@@ -1214,7 +1185,6 @@
         private DevExpress.XtraEditors.LabelControl lbl_agvJobID;
         private DevExpress.XtraEditors.LabelControl lbl_agvName;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
@@ -1274,6 +1244,5 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem29;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
     }
 }
