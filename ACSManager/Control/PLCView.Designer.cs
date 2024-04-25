@@ -163,7 +163,7 @@
             this.layoutControlItem1.Control = this.DIAGRAM_GUI;
             this.layoutControlItem1.Location = new System.Drawing.Point(138, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1138, 851);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1035, 851);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -370,9 +370,9 @@
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.gridControl1;
-            this.layoutControlItem3.Location = new System.Drawing.Point(1276, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(1173, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(331, 851);
+            this.layoutControlItem3.Size = new System.Drawing.Size(434, 851);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 

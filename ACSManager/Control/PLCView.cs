@@ -50,13 +50,10 @@ namespace ACSManager.Control
     {
         public static PLCView plcView;
         long map_id = 0;
-       
-        private string select_agv = "";
-        private string route_area = "ALL";
-
-        
         bool isworking_AGV = false;
 
+        private string select_agv = "";
+        
         List<agvInfo> m_agv = new List<agvInfo>();
 
         public DiagramShape[] shape_AreaBox_parts = new DiagramShape[3];
@@ -397,7 +394,6 @@ namespace ACSManager.Control
                 }
             }
         }
-
 
         /// <summary>
         /// DB데이터 매칭 도형 색변경
@@ -931,7 +927,7 @@ namespace ACSManager.Control
 
 
 
-
+        //-------------------------------------------ETC-----------------------------------------//
 
         public string GetNodeVisibleContent(string nNodeType)
         {
@@ -1088,46 +1084,18 @@ namespace ACSManager.Control
             return globalRouteInfo.nodes[idx];
         }
 
-        
-
-
-
-
-
-
-        private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
-        {
-            try
-            {
-                object selectObj = gridView1.GetRow(gridView1.FocusedRowHandle);// (gridView1.FocusedRowHandle);
-                select_agv = (((DataRowView)selectObj)[0].ToString());
-
-                DataSet1MTableAdapters.tb_agvTableAdapter tAgv = new DataSet1MTableAdapters.tb_agvTableAdapter();
-                DataSet1M.tb_agvDataTable dtAgv = tAgv.GetDataByAgvID(select_agv);
-
-                foreach (DataSet1M.tb_agvRow agvItem in dtAgv)
-                {
-                    SetAgvInformation(agvItem, true);
-                    break;
-                }
-            }
-            catch (Exception)
-            {
-            }
-        }
 
         public void SetAgvInformation(DataSet1M.tb_agvRow agv, bool nodeChange)
         {
             try
             {
                 
-
-                EventHandler eh5 = delegate
-                {
+                //EventHandler eh5 = delegate
+                //{
                     gridControl1.DataSource = null;
 
                     //DataTable tbRoute = new DataSet1MTableAdapters.tb_final_routeTableAdapter().GetDataByID(agv.agv_id);
-                    var tbRoute = new DataSet1MTableAdapters.tb_final_routeTableAdapter().GetDataByID(agv.agv_id);
+                    var tbRoute = new tb_final_routeTableAdapter().GetDataByID(agv.agv_id);
 
                     if (tbRoute != null && tbRoute.Rows.Count > 0)
                     {
@@ -1135,7 +1103,7 @@ namespace ACSManager.Control
                         gridView1.BestFitColumns();
                     }
 
-                };
+                //};
 
 
             }
