@@ -12,7 +12,7 @@ namespace ACSManager.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.9.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -110,21 +110,11 @@ namespace ACSManager.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=127.0.0.1;Initial Catalog=acs_SUNIL;User ID=agvcuser;Password=1234agv" +
-            "c")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.100.250;Initial Catalog=Hanwha_Aero;User ID=agvcuser;Password" +
+            "=1234agvc")]
         public string acsMSSqlConnectionString {
             get {
                 return ((string)(this["acsMSSqlConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("User Id=sunil;Password=Sunilmes2021;Host=127.0.0.1;Database=sunildyfas_db")]
-        public string sunildyfas_dbConnectionString {
-            get {
-                return ((string)(this["sunildyfas_dbConnectionString"]));
             }
         }
     }

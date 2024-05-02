@@ -421,7 +421,7 @@ namespace ACSManager.Control
 
                 foreach (DataSet1M.tb_agvRow agvItem in dtAgv)
                 {
-                    //agvDetail1.SetAgvInformation(agvItem, true);
+                    agvDetail1.SetAgvInformation(agvItem, true);
                     plcView1.SetAgvInformation(agvItem, true);
                     break;
                 }

@@ -425,71 +425,71 @@ namespace ACSManager.Control
                 {
                     if (Row.PLC_GROUP == 1)
                     {
-                        if      (Row.PLC_ADDRESS.Contains("D104")) Charge_Door = Row.PLC_VALUE.Contains("true") ? true : false;
-                        else if (Row.PLC_ADDRESS.Contains("D101.0")) Charge_PLT1 = Row.PLC_VALUE.Contains("true") ? true : false;
-                        else if (Row.PLC_ADDRESS.Contains("D101.1")) Charge_PLT2 = Row.PLC_VALUE.Contains("true") ? true : false;
+                        if      (Row.PLC_ADDRESS.Contains("D104.0")) Charge_Door = Row.PLC_VALUE.Contains("True") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D101.0")) Charge_PLT1 = Row.PLC_VALUE.Contains("True") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D101.1")) Charge_PLT2 = Row.PLC_VALUE.Contains("True") ? true : false;
                     }
                     else if (Row.PLC_GROUP == 11)
                     {
-                        if (Row.PLC_ADDRESS.Contains("D104.2")) Hardening_Door[0] = Row.PLC_VALUE.Contains("true") ? true : false;
-                        else if (Row.PLC_ADDRESS.Contains("D101.4")) Hardening_Plt[0, 0] = Row.PLC_VALUE.Contains("true") ? true : false;
-                        else if (Row.PLC_ADDRESS.Contains("D101.5")) Hardening_Plt[0, 1] = Row.PLC_VALUE.Contains("true") ? true : false;
-                        else if (Row.PLC_ADDRESS.Contains("D101.6")) Hardening_Plt[0, 2] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        if (Row.PLC_ADDRESS.Contains("D104.2")) Hardening_Door[0] = Row.PLC_VALUE.Contains("True") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D101.4")) Hardening_Plt[0, 0] = Row.PLC_VALUE.Contains("True") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D101.5")) Hardening_Plt[0, 1] = Row.PLC_VALUE.Contains("True") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D101.6")) Hardening_Plt[0, 2] = Row.PLC_VALUE.Contains("True") ? true : false;
                     }
                     else if (Row.PLC_GROUP == 12)
                     {
-                        if (Row.PLC_ADDRESS.Contains("D104.3")) Hardening_Door[1] = Row.PLC_VALUE.Contains("true") ? true : false;
-                        else if (Row.PLC_ADDRESS.Contains("D101.8")) Hardening_Plt[1, 0] = Row.PLC_VALUE.Contains("true") ? true : false;
-                        else if (Row.PLC_ADDRESS.Contains("D101.9")) Hardening_Plt[1, 1] = Row.PLC_VALUE.Contains("true") ? true : false;
-                        else if (Row.PLC_ADDRESS.Contains("D101.A")) Hardening_Plt[1, 2] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        if (Row.PLC_ADDRESS.Contains("D104.3")) Hardening_Door[1] = Row.PLC_VALUE.Contains("True") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D101.8")) Hardening_Plt[1, 0] = Row.PLC_VALUE.Contains("True") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D101.9")) Hardening_Plt[1, 1] = Row.PLC_VALUE.Contains("True") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D101.A")) Hardening_Plt[1, 2] = Row.PLC_VALUE.Contains("True") ? true : false;
                     }
                     else if (Row.PLC_GROUP == 13)
                     {
-                        if (Row.PLC_ADDRESS.Contains("D104.4")) Hardening_Door[2] = Row.PLC_VALUE.Contains("true") ? true : false;
-                        else if (Row.PLC_ADDRESS.Contains("D101.C")) Hardening_Plt[2, 0] = Row.PLC_VALUE.Contains("true") ? true : false;
-                        else if (Row.PLC_ADDRESS.Contains("D101.D")) Hardening_Plt[2, 1] = Row.PLC_VALUE.Contains("true") ? true : false;
-                        else if (Row.PLC_ADDRESS.Contains("D101.E")) Hardening_Plt[2, 2] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        if (Row.PLC_ADDRESS.Contains("D104.4")) Hardening_Door[2] = Row.PLC_VALUE.Contains("True") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D101.C")) Hardening_Plt[2, 0] = Row.PLC_VALUE.Contains("True") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D101.D")) Hardening_Plt[2, 1] = Row.PLC_VALUE.Contains("True") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D101.E")) Hardening_Plt[2, 2] = Row.PLC_VALUE.Contains("True") ? true : false;
                     }
                     else if (Row.PLC_GROUP == 14)
                     {
-                        if (Row.PLC_ADDRESS.Contains("D104.5")) Hardening_Door[3] = Row.PLC_VALUE.Contains("true") ? true : false;
-                        else if (Row.PLC_ADDRESS.Contains("D102.0")) Hardening_Plt[3, 0] = Row.PLC_VALUE.Contains("true") ? true : false;
-                        else if (Row.PLC_ADDRESS.Contains("D102.1")) Hardening_Plt[3, 1] = Row.PLC_VALUE.Contains("true") ? true : false;
-                        else if (Row.PLC_ADDRESS.Contains("D102.2")) Hardening_Plt[3, 2] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        if (Row.PLC_ADDRESS.Contains("D104.5")) Hardening_Door[3] = Row.PLC_VALUE.Contains("True") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D102.0")) Hardening_Plt[3, 0] = Row.PLC_VALUE.Contains("True") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D102.1")) Hardening_Plt[3, 1] = Row.PLC_VALUE.Contains("True") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D102.2")) Hardening_Plt[3, 2] = Row.PLC_VALUE.Contains("True") ? true : false;
                     }
                     else if (Row.PLC_GROUP == 15)
                     {
-                        if (Row.PLC_ADDRESS.Contains("D104.6")) Hardening_Door[4] = Row.PLC_VALUE.Contains("true") ? true : false;
-                        else if (Row.PLC_ADDRESS.Contains("D102.4")) Hardening_Plt[4, 0] = Row.PLC_VALUE.Contains("true") ? true : false;
-                        else if (Row.PLC_ADDRESS.Contains("D102.5")) Hardening_Plt[4, 1] = Row.PLC_VALUE.Contains("true") ? true : false;
-                        else if (Row.PLC_ADDRESS.Contains("D102.6")) Hardening_Plt[4, 2] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        if (Row.PLC_ADDRESS.Contains("D104.6")) Hardening_Door[4] = Row.PLC_VALUE.Contains("True") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D102.4")) Hardening_Plt[4, 0] = Row.PLC_VALUE.Contains("True") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D102.5")) Hardening_Plt[4, 1] = Row.PLC_VALUE.Contains("True") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D102.6")) Hardening_Plt[4, 2] = Row.PLC_VALUE.Contains("True") ? true : false;
                     }
                     else if (Row.PLC_GROUP == 16)
                     {
-                        if (Row.PLC_ADDRESS.Contains("D104.7")) Hardening_Door[5] = Row.PLC_VALUE.Contains("true") ? true : false;
-                        else if (Row.PLC_ADDRESS.Contains("D102.8")) Hardening_Plt[5, 0] = Row.PLC_VALUE.Contains("true") ? true : false;
-                        else if (Row.PLC_ADDRESS.Contains("D102.9")) Hardening_Plt[5, 1] = Row.PLC_VALUE.Contains("true") ? true : false;
-                        else if (Row.PLC_ADDRESS.Contains("D102.A")) Hardening_Plt[5, 2] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        if (Row.PLC_ADDRESS.Contains("D104.7")) Hardening_Door[5] = Row.PLC_VALUE.Contains("True") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D102.8")) Hardening_Plt[5, 0] = Row.PLC_VALUE.Contains("True") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D102.9")) Hardening_Plt[5, 1] = Row.PLC_VALUE.Contains("True") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D102.A")) Hardening_Plt[5, 2] = Row.PLC_VALUE.Contains("True") ? true : false;
                     }
                     else if (Row.PLC_GROUP == 17)
                     {
-                        if (Row.PLC_ADDRESS.Contains("D104.8")) Hardening_Door[6] = Row.PLC_VALUE.Contains("true") ? true : false;
-                        else if (Row.PLC_ADDRESS.Contains("D102.C")) Hardening_Plt[6, 0] = Row.PLC_VALUE.Contains("true") ? true : false;
-                        else if (Row.PLC_ADDRESS.Contains("D102.D")) Hardening_Plt[6, 1] = Row.PLC_VALUE.Contains("true") ? true : false;
-                        else if (Row.PLC_ADDRESS.Contains("D102.E")) Hardening_Plt[6, 2] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        if (Row.PLC_ADDRESS.Contains("D104.8")) Hardening_Door[6] = Row.PLC_VALUE.Contains("True") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D102.C")) Hardening_Plt[6, 0] = Row.PLC_VALUE.Contains("True") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D102.D")) Hardening_Plt[6, 1] = Row.PLC_VALUE.Contains("True") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D102.E")) Hardening_Plt[6, 2] = Row.PLC_VALUE.Contains("True") ? true : false;
                     }
                     else if (Row.PLC_GROUP == 18)
                     {
-                        if (Row.PLC_ADDRESS.Contains("D104.9")) Hardening_Door[7] = Row.PLC_VALUE.Contains("true") ? true : false;
-                        else if (Row.PLC_ADDRESS.Contains("D103.0")) Hardening_Plt[7, 0] = Row.PLC_VALUE.Contains("true") ? true : false;
-                        else if (Row.PLC_ADDRESS.Contains("D103.1")) Hardening_Plt[7, 1] = Row.PLC_VALUE.Contains("true") ? true : false;
-                        else if (Row.PLC_ADDRESS.Contains("D103.2")) Hardening_Plt[7, 2] = Row.PLC_VALUE.Contains("true") ? true : false;
+                        if (Row.PLC_ADDRESS.Contains("D104.9")) Hardening_Door[7] = Row.PLC_VALUE.Contains("True") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D103.0")) Hardening_Plt[7, 0] = Row.PLC_VALUE.Contains("True") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D103.1")) Hardening_Plt[7, 1] = Row.PLC_VALUE.Contains("True") ? true : false;
+                        else if (Row.PLC_ADDRESS.Contains("D103.2")) Hardening_Plt[7, 2] = Row.PLC_VALUE.Contains("True") ? true : false;
                     }
                     else if (Row.PLC_GROUP == 20)
                     {
-                        if (Row.PLC_ADDRESS.Contains("D104.A")) LeeHynungGong_Door = Row.PLC_VALUE.Contains("true") ? true : false;
-                        if (Row.PLC_ADDRESS.Contains("D103.4")) LeeHynungGong_PLT1 = Row.PLC_VALUE.Contains("true") ? true : false;
-                        if (Row.PLC_ADDRESS.Contains("D103.5")) LeeHynungGong_PLT2 = Row.PLC_VALUE.Contains("true") ? true : false;
+                        if (Row.PLC_ADDRESS.Contains("D104.A")) LeeHynungGong_Door = Row.PLC_VALUE.Contains("True") ? true : false;
+                        if (Row.PLC_ADDRESS.Contains("D103.4")) LeeHynungGong_PLT1 = Row.PLC_VALUE.Contains("True") ? true : false;
+                        if (Row.PLC_ADDRESS.Contains("D103.5")) LeeHynungGong_PLT2 = Row.PLC_VALUE.Contains("True") ? true : false;
                     }
                     else if (Row.PLC_GROUP == 30)
                     {
@@ -504,59 +504,59 @@ namespace ACSManager.Control
                         else if (Row.PLC_ADDRESS.Contains("D711")) AGV_Door2_Send = Row.PLC_VALUE.Contains("1") ? true : false;
                     }
                 }
-                shape_ChargeRoom_Door[0].Appearance.BackColor = Charge_Door ? Color.Lime : Color.Red;
-                shape_ChargeRoom_Plt[0].Appearance.BackColor = Charge_PLT1 ? Color.Lime : Color.LightSlateGray;
-                shape_ChargeRoom_Plt[1].Appearance.BackColor = Charge_PLT2 ? Color.Lime : Color.LightSlateGray;
+                PLCView.plcView.shape_ChargeRoom_Door[0].Appearance.BackColor = Charge_Door ? Color.Lime : Color.Red;
+                PLCView.plcView.shape_ChargeRoom_Plt[0].Appearance.BackColor = Charge_PLT1 ? Color.Lime : Color.LightSlateGray;
+                PLCView.plcView.shape_ChargeRoom_Plt[1].Appearance.BackColor = Charge_PLT2 ? Color.Lime : Color.LightSlateGray;
 
-                shape_HardeningRoom_Door[0].Appearance.BackColor = Hardening_Door[0] ? Color.Lime : Color.Red;
-                shape_HardeningRoom_Door[1].Appearance.BackColor = Hardening_Door[1] ? Color.Lime : Color.Red;
-                shape_HardeningRoom_Door[2].Appearance.BackColor = Hardening_Door[2] ? Color.Lime : Color.Red;
-                shape_HardeningRoom_Door[3].Appearance.BackColor = Hardening_Door[3] ? Color.Lime : Color.Red;
-                shape_HardeningRoom_Door[4].Appearance.BackColor = Hardening_Door[4] ? Color.Lime : Color.Red;
-                shape_HardeningRoom_Door[5].Appearance.BackColor = Hardening_Door[5] ? Color.Lime : Color.Red;
-                shape_HardeningRoom_Door[6].Appearance.BackColor = Hardening_Door[6] ? Color.Lime : Color.Red;
-                shape_HardeningRoom_Door[7].Appearance.BackColor = Hardening_Door[7] ? Color.Lime : Color.Red;
+                PLCView.plcView.shape_HardeningRoom_Door[0].Appearance.BackColor = Hardening_Door[0] ? Color.Lime : Color.Red;
+                PLCView.plcView.shape_HardeningRoom_Door[1].Appearance.BackColor = Hardening_Door[1] ? Color.Lime : Color.Red;
+                PLCView.plcView.shape_HardeningRoom_Door[2].Appearance.BackColor = Hardening_Door[2] ? Color.Lime : Color.Red;
+                PLCView.plcView.shape_HardeningRoom_Door[3].Appearance.BackColor = Hardening_Door[3] ? Color.Lime : Color.Red;
+                PLCView.plcView.shape_HardeningRoom_Door[4].Appearance.BackColor = Hardening_Door[4] ? Color.Lime : Color.Red;
+                PLCView.plcView.shape_HardeningRoom_Door[5].Appearance.BackColor = Hardening_Door[5] ? Color.Lime : Color.Red;
+                PLCView.plcView.shape_HardeningRoom_Door[6].Appearance.BackColor = Hardening_Door[6] ? Color.Lime : Color.Red;
+                PLCView.plcView.shape_HardeningRoom_Door[7].Appearance.BackColor = Hardening_Door[7] ? Color.Lime : Color.Red;
 
-                shape_HardeningRoom_Plt[0, 0].Appearance.BackColor = Hardening_Plt[0, 0] ? Color.Lime : Color.LightSlateGray;
-                shape_HardeningRoom_Plt[0, 1].Appearance.BackColor = Hardening_Plt[0, 1] ? Color.Lime : Color.LightSlateGray;
-                shape_HardeningRoom_Plt[0, 2].Appearance.BackColor = Hardening_Plt[0, 2] ? Color.Lime : Color.LightSlateGray;
+                PLCView.plcView.shape_HardeningRoom_Plt[0, 0].Appearance.BackColor = Hardening_Plt[0, 0] ? Color.Lime : Color.LightSlateGray;
+                PLCView.plcView.shape_HardeningRoom_Plt[0, 1].Appearance.BackColor = Hardening_Plt[0, 1] ? Color.Lime : Color.LightSlateGray;
+                PLCView.plcView.shape_HardeningRoom_Plt[0, 2].Appearance.BackColor = Hardening_Plt[0, 2] ? Color.Lime : Color.LightSlateGray;
 
-                shape_HardeningRoom_Plt[1, 0].Appearance.BackColor = Hardening_Plt[1, 0] ? Color.Lime : Color.LightSlateGray;
-                shape_HardeningRoom_Plt[1, 1].Appearance.BackColor = Hardening_Plt[1, 1] ? Color.Lime : Color.LightSlateGray;
-                shape_HardeningRoom_Plt[1, 2].Appearance.BackColor = Hardening_Plt[1, 2] ? Color.Lime : Color.LightSlateGray;
+                PLCView.plcView.shape_HardeningRoom_Plt[1, 0].Appearance.BackColor = Hardening_Plt[1, 0] ? Color.Lime : Color.LightSlateGray;
+                PLCView.plcView.shape_HardeningRoom_Plt[1, 1].Appearance.BackColor = Hardening_Plt[1, 1] ? Color.Lime : Color.LightSlateGray;
+                PLCView.plcView.shape_HardeningRoom_Plt[1, 2].Appearance.BackColor = Hardening_Plt[1, 2] ? Color.Lime : Color.LightSlateGray;
 
-                shape_HardeningRoom_Plt[2, 0].Appearance.BackColor = Hardening_Plt[2, 0] ? Color.Lime : Color.LightSlateGray;
-                shape_HardeningRoom_Plt[2, 1].Appearance.BackColor = Hardening_Plt[2, 1] ? Color.Lime : Color.LightSlateGray;
-                shape_HardeningRoom_Plt[2, 2].Appearance.BackColor = Hardening_Plt[2, 2] ? Color.Lime : Color.LightSlateGray;
+                PLCView.plcView.shape_HardeningRoom_Plt[2, 0].Appearance.BackColor = Hardening_Plt[2, 0] ? Color.Lime : Color.LightSlateGray;
+                PLCView.plcView.shape_HardeningRoom_Plt[2, 1].Appearance.BackColor = Hardening_Plt[2, 1] ? Color.Lime : Color.LightSlateGray;
+                PLCView.plcView.shape_HardeningRoom_Plt[2, 2].Appearance.BackColor = Hardening_Plt[2, 2] ? Color.Lime : Color.LightSlateGray;
 
-                shape_HardeningRoom_Plt[3, 0].Appearance.BackColor = Hardening_Plt[3, 0] ? Color.Lime : Color.LightSlateGray;
-                shape_HardeningRoom_Plt[3, 1].Appearance.BackColor = Hardening_Plt[3, 1] ? Color.Lime : Color.LightSlateGray;
-                shape_HardeningRoom_Plt[3, 2].Appearance.BackColor = Hardening_Plt[3, 2] ? Color.Lime : Color.LightSlateGray;
+                PLCView.plcView.shape_HardeningRoom_Plt[3, 0].Appearance.BackColor = Hardening_Plt[3, 0] ? Color.Lime : Color.LightSlateGray;
+                PLCView.plcView.shape_HardeningRoom_Plt[3, 1].Appearance.BackColor = Hardening_Plt[3, 1] ? Color.Lime : Color.LightSlateGray;
+                PLCView.plcView.shape_HardeningRoom_Plt[3, 2].Appearance.BackColor = Hardening_Plt[3, 2] ? Color.Lime : Color.LightSlateGray;
 
-                shape_HardeningRoom_Plt[4, 0].Appearance.BackColor = Hardening_Plt[4, 0] ? Color.Lime : Color.LightSlateGray;
-                shape_HardeningRoom_Plt[4, 1].Appearance.BackColor = Hardening_Plt[4, 1] ? Color.Lime : Color.LightSlateGray;
-                shape_HardeningRoom_Plt[4, 2].Appearance.BackColor = Hardening_Plt[4, 2] ? Color.Lime : Color.LightSlateGray;
+                PLCView.plcView.shape_HardeningRoom_Plt[4, 0].Appearance.BackColor = Hardening_Plt[4, 0] ? Color.Lime : Color.LightSlateGray;
+                PLCView.plcView.shape_HardeningRoom_Plt[4, 1].Appearance.BackColor = Hardening_Plt[4, 1] ? Color.Lime : Color.LightSlateGray;
+                PLCView.plcView.shape_HardeningRoom_Plt[4, 2].Appearance.BackColor = Hardening_Plt[4, 2] ? Color.Lime : Color.LightSlateGray;
 
-                shape_HardeningRoom_Plt[5, 0].Appearance.BackColor = Hardening_Plt[5, 0] ? Color.Lime : Color.LightSlateGray;
-                shape_HardeningRoom_Plt[5, 1].Appearance.BackColor = Hardening_Plt[5, 1] ? Color.Lime : Color.LightSlateGray;
-                shape_HardeningRoom_Plt[5, 2].Appearance.BackColor = Hardening_Plt[5, 2] ? Color.Lime : Color.LightSlateGray;
+                PLCView.plcView.shape_HardeningRoom_Plt[5, 0].Appearance.BackColor = Hardening_Plt[5, 0] ? Color.Lime : Color.LightSlateGray;
+                PLCView.plcView.shape_HardeningRoom_Plt[5, 1].Appearance.BackColor = Hardening_Plt[5, 1] ? Color.Lime : Color.LightSlateGray;
+                PLCView.plcView.shape_HardeningRoom_Plt[5, 2].Appearance.BackColor = Hardening_Plt[5, 2] ? Color.Lime : Color.LightSlateGray;
 
-                shape_HardeningRoom_Plt[6, 0].Appearance.BackColor = Hardening_Plt[6, 0] ? Color.Lime : Color.LightSlateGray;
-                shape_HardeningRoom_Plt[6, 1].Appearance.BackColor = Hardening_Plt[6, 1] ? Color.Lime : Color.LightSlateGray;
-                shape_HardeningRoom_Plt[6, 2].Appearance.BackColor = Hardening_Plt[6, 2] ? Color.Lime : Color.LightSlateGray;
+                PLCView.plcView.shape_HardeningRoom_Plt[6, 0].Appearance.BackColor = Hardening_Plt[6, 0] ? Color.Lime : Color.LightSlateGray;
+                PLCView.plcView.shape_HardeningRoom_Plt[6, 1].Appearance.BackColor = Hardening_Plt[6, 1] ? Color.Lime : Color.LightSlateGray;
+                PLCView.plcView.shape_HardeningRoom_Plt[6, 2].Appearance.BackColor = Hardening_Plt[6, 2] ? Color.Lime : Color.LightSlateGray;
 
-                shape_HardeningRoom_Plt[7, 0].Appearance.BackColor = Hardening_Plt[7, 0] ? Color.Lime : Color.LightSlateGray;
-                shape_HardeningRoom_Plt[7, 1].Appearance.BackColor = Hardening_Plt[7, 1] ? Color.Lime : Color.LightSlateGray;
-                shape_HardeningRoom_Plt[7, 2].Appearance.BackColor = Hardening_Plt[7, 2] ? Color.Lime : Color.LightSlateGray;
+                PLCView.plcView.shape_HardeningRoom_Plt[7, 0].Appearance.BackColor = Hardening_Plt[7, 0] ? Color.Lime : Color.LightSlateGray;
+                PLCView.plcView.shape_HardeningRoom_Plt[7, 1].Appearance.BackColor = Hardening_Plt[7, 1] ? Color.Lime : Color.LightSlateGray;
+                PLCView.plcView.shape_HardeningRoom_Plt[7, 2].Appearance.BackColor = Hardening_Plt[7, 2] ? Color.Lime : Color.LightSlateGray;
 
-                shape_LeeHyungGongRoom_Door[0].Appearance.BackColor = LeeHynungGong_Door ? Color.Lime : Color.Red;
-                shape_LeeHyungGongRoom_Plt[0].Appearance.BackColor = LeeHynungGong_PLT1 ? Color.Lime : Color.LightSlateGray;
-                shape_LeeHyungGongRoom_Plt[1].Appearance.BackColor = LeeHynungGong_PLT2 ? Color.Lime : Color.LightSlateGray;
+                PLCView.plcView.shape_LeeHyungGongRoom_Door[0].Appearance.BackColor = LeeHynungGong_Door ? Color.Lime : Color.Red;
+                PLCView.plcView.shape_LeeHyungGongRoom_Plt[0].Appearance.BackColor = LeeHynungGong_PLT1 ? Color.Lime : Color.LightSlateGray;
+                PLCView.plcView.shape_LeeHyungGongRoom_Plt[1].Appearance.BackColor = LeeHynungGong_PLT2 ? Color.Lime : Color.LightSlateGray;
 
-                shape_AGVChargeRoom_Doors[0].Appearance.BackColor = AGV_Door1_Open && !AGV_Door1_Close ? Color.Lime : Color.Red;
-                shape_AGVChargeRoom_Doors[1].Appearance.BackColor = AGV_Door2_Open && !AGV_Door2_Close ? Color.Lime : Color.Red;
-                shape_AGVChargeRoom_Doors[2].Appearance.BackColor = AGV_Door1_Send ? Color.Lime : Color.Red;
-                shape_AGVChargeRoom_Doors[3].Appearance.BackColor = AGV_Door2_Send ? Color.Lime : Color.Red;
+                PLCView.plcView.shape_AGVChargeRoom_Doors[0].Appearance.BackColor = AGV_Door1_Open && !AGV_Door1_Close ? Color.Lime : Color.Red;
+                PLCView.plcView.shape_AGVChargeRoom_Doors[1].Appearance.BackColor = AGV_Door2_Open && !AGV_Door2_Close ? Color.Lime : Color.Red;
+                PLCView.plcView.shape_AGVChargeRoom_Doors[2].Appearance.BackColor = AGV_Door1_Send ? Color.Lime : Color.Red;
+                PLCView.plcView.shape_AGVChargeRoom_Doors[3].Appearance.BackColor = AGV_Door2_Send ? Color.Lime : Color.Red;
             }
             catch (Exception ee)
             {
