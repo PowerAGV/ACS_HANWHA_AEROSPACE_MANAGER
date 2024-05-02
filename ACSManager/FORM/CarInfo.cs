@@ -60,18 +60,12 @@ namespace ACSManager.FORM
                         gnames.Add(rrow.C_GROUP_NAME);
 
                 }
-                List<string> apply_group = new List<string>();
-                apply_group.Add("ALL");
-                apply_group.Add("DCAP_LH");
-                apply_group.Add("DCAP_RH");
-                apply_group.Add("SCAP_LH");
-                apply_group.Add("SCAP_RH");
-                apply_group.Add("SPARE");
+                
 
                 foreach (string gname in gnames)
                 {
                     //if(apply_group.Contains(gname))
-                    if(gname.Contains("ALL") || gname.Contains("ONLY"))
+                    //if(gname.Contains("ALL") || gname.Contains("ONLY"))
                         cmb_area.Properties.Items.Add(gname);
                 }
                 if (gnames.Count > 0)

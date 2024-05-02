@@ -99,32 +99,32 @@
             // txtPort
             // 
             this.txtPort.EditValue = "0";
-            this.txtPort.Location = new System.Drawing.Point(92, 217);
+            this.txtPort.Location = new System.Drawing.Point(113, 265);
             this.txtPort.Name = "txtPort";
             this.txtPort.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txtPort.Properties.Appearance.Options.UseFont = true;
             this.txtPort.Properties.Mask.EditMask = "d";
             this.txtPort.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtPort.Size = new System.Drawing.Size(359, 26);
+            this.txtPort.Size = new System.Drawing.Size(313, 30);
             this.txtPort.StyleController = this.layoutControl1;
             this.txtPort.TabIndex = 10;
             // 
             // txtIP
             // 
-            this.txtIP.Location = new System.Drawing.Point(92, 187);
+            this.txtIP.Location = new System.Drawing.Point(113, 229);
             this.txtIP.Name = "txtIP";
             this.txtIP.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txtIP.Properties.Appearance.Options.UseFont = true;
-            this.txtIP.Size = new System.Drawing.Size(359, 26);
+            this.txtIP.Size = new System.Drawing.Size(313, 30);
             this.txtIP.StyleController = this.layoutControl1;
             this.txtIP.TabIndex = 9;
             // 
             // btn_cancel
             // 
             this.btn_cancel.Image = ((System.Drawing.Image)(resources.GetObject("btn_cancel.Image")));
-            this.btn_cancel.Location = new System.Drawing.Point(308, 247);
+            this.btn_cancel.Location = new System.Drawing.Point(294, 301);
             this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(143, 38);
+            this.btn_cancel.Size = new System.Drawing.Size(132, 40);
             this.btn_cancel.StyleController = this.layoutControl1;
             this.btn_cancel.TabIndex = 8;
             this.btn_cancel.Text = "Cancel";
@@ -133,9 +133,9 @@
             // btn_save
             // 
             this.btn_save.Image = ((System.Drawing.Image)(resources.GetObject("btn_save.Image")));
-            this.btn_save.Location = new System.Drawing.Point(160, 247);
+            this.btn_save.Location = new System.Drawing.Point(155, 301);
             this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(144, 38);
+            this.btn_save.Size = new System.Drawing.Size(133, 40);
             this.btn_save.StyleController = this.layoutControl1;
             this.btn_save.TabIndex = 7;
             this.btn_save.Text = "Save";
@@ -143,7 +143,7 @@
             // 
             // cmb_area
             // 
-            this.cmb_area.Location = new System.Drawing.Point(92, 127);
+            this.cmb_area.Location = new System.Drawing.Point(113, 157);
             this.cmb_area.Name = "cmb_area";
             this.cmb_area.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.cmb_area.Properties.Appearance.Options.UseFont = true;
@@ -152,17 +152,17 @@
             this.cmb_area.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmb_area.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cmb_area.Size = new System.Drawing.Size(359, 26);
+            this.cmb_area.Size = new System.Drawing.Size(313, 30);
             this.cmb_area.StyleController = this.layoutControl1;
             this.cmb_area.TabIndex = 6;
             // 
             // txtAGVID
             // 
-            this.txtAGVID.Location = new System.Drawing.Point(92, 37);
+            this.txtAGVID.Location = new System.Drawing.Point(113, 49);
             this.txtAGVID.Name = "txtAGVID";
             this.txtAGVID.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txtAGVID.Properties.Appearance.Options.UseFont = true;
-            this.txtAGVID.Size = new System.Drawing.Size(359, 26);
+            this.txtAGVID.Size = new System.Drawing.Size(313, 30);
             this.txtAGVID.StyleController = this.layoutControl1;
             this.txtAGVID.TabIndex = 5;
             // 
@@ -170,16 +170,16 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(12, 12);
+            this.labelControl1.Location = new System.Drawing.Point(16, 16);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(145, 21);
+            this.labelControl1.Size = new System.Drawing.Size(187, 27);
             this.labelControl1.StyleController = this.layoutControl1;
             this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "AGV Information";
             // 
             // cmbAGVType
             // 
-            this.cmbAGVType.Location = new System.Drawing.Point(92, 67);
+            this.cmbAGVType.Location = new System.Drawing.Point(113, 85);
             this.cmbAGVType.Name = "cmbAGVType";
             this.cmbAGVType.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.cmbAGVType.Properties.Appearance.Options.UseFont = true;
@@ -190,13 +190,13 @@
             this.cmbAGVType.Properties.Items.AddRange(new object[] {
             "General"});
             this.cmbAGVType.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cmbAGVType.Size = new System.Drawing.Size(359, 26);
+            this.cmbAGVType.Size = new System.Drawing.Size(313, 30);
             this.cmbAGVType.StyleController = this.layoutControl1;
             this.cmbAGVType.TabIndex = 11;
             // 
             // cmbFloor
             // 
-            this.cmbFloor.Location = new System.Drawing.Point(92, 97);
+            this.cmbFloor.Location = new System.Drawing.Point(113, 121);
             this.cmbFloor.Name = "cmbFloor";
             this.cmbFloor.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.cmbFloor.Properties.Appearance.Options.UseFont = true;
@@ -209,14 +209,14 @@
             "None",
             "1 Floor"});
             this.cmbFloor.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cmbFloor.Size = new System.Drawing.Size(359, 26);
+            this.cmbFloor.Size = new System.Drawing.Size(313, 30);
             this.cmbFloor.StyleController = this.layoutControl1;
             this.cmbFloor.TabIndex = 13;
             this.cmbFloor.SelectedIndexChanged += new System.EventHandler(this.cmbFloor_SelectedIndexChanged);
             // 
             // cmb_waiting
             // 
-            this.cmb_waiting.Location = new System.Drawing.Point(92, 157);
+            this.cmb_waiting.Location = new System.Drawing.Point(113, 193);
             this.cmb_waiting.Name = "cmb_waiting";
             this.cmb_waiting.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.cmb_waiting.Properties.Appearance.Options.UseFont = true;
@@ -225,7 +225,7 @@
             this.cmb_waiting.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmb_waiting.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cmb_waiting.Size = new System.Drawing.Size(359, 26);
+            this.cmb_waiting.Size = new System.Drawing.Size(313, 30);
             this.cmb_waiting.StyleController = this.layoutControl1;
             this.cmb_waiting.TabIndex = 6;
             // 
@@ -247,7 +247,7 @@
             this.layoutControlItem9});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(463, 300);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(442, 357);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -255,16 +255,16 @@
             this.layoutControlItem1.Control = this.labelControl1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(443, 25);
+            this.layoutControlItem1.Size = new System.Drawing.Size(416, 33);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 235);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 285);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(148, 45);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(139, 46);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
@@ -272,29 +272,29 @@
             this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 12F);
             this.layoutControlItem2.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem2.Control = this.txtAGVID;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 25);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 33);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(443, 30);
+            this.layoutControlItem2.Size = new System.Drawing.Size(416, 36);
             this.layoutControlItem2.Text = "ID";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(77, 19);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(94, 24);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 12F);
             this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem3.Control = this.cmb_area;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 115);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 141);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(443, 30);
+            this.layoutControlItem3.Size = new System.Drawing.Size(416, 36);
             this.layoutControlItem3.Text = "AGV 구분";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(77, 19);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(94, 24);
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.btn_cancel;
-            this.layoutControlItem5.Location = new System.Drawing.Point(296, 235);
+            this.layoutControlItem5.Location = new System.Drawing.Point(278, 285);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(147, 45);
+            this.layoutControlItem5.Size = new System.Drawing.Size(138, 46);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
@@ -303,41 +303,41 @@
             this.layoutControlItem6.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 12F);
             this.layoutControlItem6.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem6.Control = this.txtIP;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 175);
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 213);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(443, 30);
+            this.layoutControlItem6.Size = new System.Drawing.Size(416, 36);
             this.layoutControlItem6.Text = "IP Address";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(77, 19);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(94, 24);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 12F);
             this.layoutControlItem7.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem7.Control = this.txtPort;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 205);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 249);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(443, 30);
+            this.layoutControlItem7.Size = new System.Drawing.Size(416, 36);
             this.layoutControlItem7.Text = "Port";
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(77, 19);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(94, 24);
             // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 12F);
             this.layoutControlItem8.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem8.Control = this.cmbAGVType;
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 55);
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 69);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(443, 30);
+            this.layoutControlItem8.Size = new System.Drawing.Size(416, 36);
             this.layoutControlItem8.Text = "Type";
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(77, 19);
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(94, 24);
             this.layoutControlItem8.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btn_save;
-            this.layoutControlItem4.Location = new System.Drawing.Point(148, 235);
+            this.layoutControlItem4.Location = new System.Drawing.Point(139, 285);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(148, 45);
+            this.layoutControlItem4.Size = new System.Drawing.Size(139, 46);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
@@ -346,11 +346,11 @@
             this.layoutControlItem10.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 12F);
             this.layoutControlItem10.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem10.Control = this.cmbFloor;
-            this.layoutControlItem10.Location = new System.Drawing.Point(0, 85);
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 105);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(443, 30);
+            this.layoutControlItem10.Size = new System.Drawing.Size(416, 36);
             this.layoutControlItem10.Text = "Floor";
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(77, 19);
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(94, 24);
             this.layoutControlItem10.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // layoutControlItem9
@@ -359,11 +359,11 @@
             this.layoutControlItem9.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem9.Control = this.cmb_waiting;
             this.layoutControlItem9.CustomizationFormText = "Move Area";
-            this.layoutControlItem9.Location = new System.Drawing.Point(0, 145);
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 177);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(443, 30);
+            this.layoutControlItem9.Size = new System.Drawing.Size(416, 36);
             this.layoutControlItem9.Text = "대기장소";
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(77, 19);
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(94, 24);
             // 
             // CarInfo
             // 
