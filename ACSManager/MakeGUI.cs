@@ -25,6 +25,7 @@ namespace ACSManager
 {
     class MakeGUI
     {
+       
         public DiagramShape ds = new DiagramShape();
         public Color color;
         public ShapeDescription shapes;
@@ -100,9 +101,11 @@ namespace ACSManager
 
     class MakeCustomShape
     {
+        private PLCView plcView = null;
         public List<MakeGUI> arrayGUI = new List<MakeGUI>();
-        public void Rendering()
+        public void Rendering(PLCView plcView)
         {
+            this.plcView = plcView;
             make_ChargeRoom_Box();
             make_ChargeRoom_Tag();
             make_ChargeRoom_Door();
@@ -200,7 +203,7 @@ namespace ACSManager
             make_ChargeRoom_Box.rendring();
             arrayGUI.Add(make_ChargeRoom_Box);
 
-            PLCView.plcView.shape_AreaBox_parts[0] = make_ChargeRoom_Box.ds;
+            this.plcView.shape_AreaBox_parts[0] = make_ChargeRoom_Box.ds;
         }
 
         void make_ChargeRoom_Tag()
@@ -240,7 +243,7 @@ namespace ACSManager
             make_ChargeRoom_Door.rendring();
             arrayGUI.Add(make_ChargeRoom_Door);
 
-            PLCView.plcView.shape_ChargeRoom_Door[0] = make_ChargeRoom_Door.ds;
+            this.plcView.shape_ChargeRoom_Door[0] = make_ChargeRoom_Door.ds;
         }
 
         void make_CharegRoom_Plt1()
@@ -261,7 +264,7 @@ namespace ACSManager
             make_CharegRoom_Plt1.rendring();
             arrayGUI.Add(make_CharegRoom_Plt1);
 
-            PLCView.plcView.shape_ChargeRoom_Plt[0] = make_CharegRoom_Plt1.ds;
+            this.plcView.shape_ChargeRoom_Plt[0] = make_CharegRoom_Plt1.ds;
         }
 
         void make_CharegRoom_Plt2()
@@ -282,7 +285,7 @@ namespace ACSManager
             make_CharegRoom_Plt2.rendring();
             arrayGUI.Add(make_CharegRoom_Plt2);
 
-            PLCView.plcView.shape_ChargeRoom_Plt[1] = make_CharegRoom_Plt2.ds;
+            this.plcView.shape_ChargeRoom_Plt[1] = make_CharegRoom_Plt2.ds;
         }
 
 
@@ -303,7 +306,7 @@ namespace ACSManager
             make_AGVChargeRoom_Box.rendring();
             arrayGUI.Add(make_AGVChargeRoom_Box);
 
-            PLCView.plcView.shape_AreaBox_parts[1] = make_AGVChargeRoom_Box.ds;
+            this.plcView.shape_AreaBox_parts[1] = make_AGVChargeRoom_Box.ds;
         }
 
         void make_AGVChargeRoom_Tag()
@@ -343,7 +346,7 @@ namespace ACSManager
             make_AGVChargeRoom_Door1.rendring();
             arrayGUI.Add(make_AGVChargeRoom_Door1);
 
-            PLCView.plcView.shape_AGVChargeRoom_Doors[0] = make_AGVChargeRoom_Door1.ds;
+            this.plcView.shape_AGVChargeRoom_Doors[0] = make_AGVChargeRoom_Door1.ds;
         }
 
         void make_AGVChargeRoom_Door2()
@@ -364,7 +367,7 @@ namespace ACSManager
             make_AGVChargeRoom_Door2.rendring();
             arrayGUI.Add(make_AGVChargeRoom_Door2);
 
-            PLCView.plcView.shape_AGVChargeRoom_Doors[1] = make_AGVChargeRoom_Door2.ds;
+            this.plcView.shape_AGVChargeRoom_Doors[1] = make_AGVChargeRoom_Door2.ds;
         }
 
         void make_AGVChargeRoom_Door1_Send()
@@ -385,7 +388,7 @@ namespace ACSManager
             make_AGVChargeRoom_Door1_Send1.rendring();
             arrayGUI.Add(make_AGVChargeRoom_Door1_Send1);
 
-            PLCView.plcView.shape_AGVChargeRoom_Doors[2] = make_AGVChargeRoom_Door1_Send1.ds;
+            this.plcView.shape_AGVChargeRoom_Doors[2] = make_AGVChargeRoom_Door1_Send1.ds;
         }
 
         void make_AGVChargeRoom_Door2_Send()
@@ -406,7 +409,7 @@ namespace ACSManager
             make_AGVChargeRoom_Door2_Send.rendring();
             arrayGUI.Add(make_AGVChargeRoom_Door2_Send);
 
-            PLCView.plcView.shape_AGVChargeRoom_Doors[3] = make_AGVChargeRoom_Door2_Send.ds;
+            this.plcView.shape_AGVChargeRoom_Doors[3] = make_AGVChargeRoom_Door2_Send.ds;
         }
 
 
@@ -427,7 +430,7 @@ namespace ACSManager
             make_LeeHyunGongRoom_Box.rendring();
             arrayGUI.Add(make_LeeHyunGongRoom_Box);
 
-            PLCView.plcView.shape_AreaBox_parts[2] = make_LeeHyunGongRoom_Box.ds;
+            this.plcView.shape_AreaBox_parts[2] = make_LeeHyunGongRoom_Box.ds;
         }
 
         void make_LeeHyunGongRoom_Tag()
@@ -467,7 +470,7 @@ namespace ACSManager
             make_LeeHyunGongRoom_Door.rendring();
             arrayGUI.Add(make_LeeHyunGongRoom_Door);
 
-            PLCView.plcView.shape_LeeHyungGongRoom_Door[0] = make_LeeHyunGongRoom_Door.ds;
+            this.plcView.shape_LeeHyungGongRoom_Door[0] = make_LeeHyunGongRoom_Door.ds;
         }
 
         void make_LeeHyunGongRoom_Plt1()
@@ -488,7 +491,7 @@ namespace ACSManager
             make_LeeHyunGongRoom_Plt1.rendring();
             arrayGUI.Add(make_LeeHyunGongRoom_Plt1);
 
-            PLCView.plcView.shape_LeeHyungGongRoom_Plt[0] = make_LeeHyunGongRoom_Plt1.ds;
+            this.plcView.shape_LeeHyungGongRoom_Plt[0] = make_LeeHyunGongRoom_Plt1.ds;
         }
 
         void make_LeeHyunGongRoom_Plt2()
@@ -509,7 +512,7 @@ namespace ACSManager
             make_LeeHyunGongRoom_Plt2.rendring();
             arrayGUI.Add(make_LeeHyunGongRoom_Plt2);
 
-            PLCView.plcView.shape_LeeHyungGongRoom_Plt[1] = make_LeeHyunGongRoom_Plt2.ds;
+            this.plcView.shape_LeeHyungGongRoom_Plt[1] = make_LeeHyunGongRoom_Plt2.ds;
         }
 
 
@@ -669,7 +672,7 @@ namespace ACSManager
             make_HardeningRoom_Plt1_1.rendring();
             arrayGUI.Add(make_HardeningRoom_Plt1_1);
 
-            PLCView.plcView.shape_HardeningRoom_Plt[0,0] = make_HardeningRoom_Plt1_1.ds;
+            this.plcView.shape_HardeningRoom_Plt[0,0] = make_HardeningRoom_Plt1_1.ds;
         }
 
         void make_HardeningRoom_Plt1_2()
@@ -690,7 +693,7 @@ namespace ACSManager
             make_HardeningRoom_Plt1_2.rendring();
             arrayGUI.Add(make_HardeningRoom_Plt1_2);
 
-            PLCView.plcView.shape_HardeningRoom_Plt[0, 1] = make_HardeningRoom_Plt1_2.ds;
+            this.plcView.shape_HardeningRoom_Plt[0, 1] = make_HardeningRoom_Plt1_2.ds;
         }
 
         void make_HardeningRoom_Plt1_3()
@@ -711,7 +714,7 @@ namespace ACSManager
             make_HardeningRoom_Plt1_3.rendring();
             arrayGUI.Add(make_HardeningRoom_Plt1_3);
 
-            PLCView.plcView.shape_HardeningRoom_Plt[0, 2] = make_HardeningRoom_Plt1_3.ds;
+            this.plcView.shape_HardeningRoom_Plt[0, 2] = make_HardeningRoom_Plt1_3.ds;
         }
 
 
@@ -733,7 +736,7 @@ namespace ACSManager
             make_HardeningRoom_Plt2_1.rendring();
             arrayGUI.Add(make_HardeningRoom_Plt2_1);
 
-            PLCView.plcView.shape_HardeningRoom_Plt[1, 0] = make_HardeningRoom_Plt2_1.ds;
+            this.plcView.shape_HardeningRoom_Plt[1, 0] = make_HardeningRoom_Plt2_1.ds;
         }
 
         void make_HardeningRoom_Plt2_2()
@@ -754,7 +757,7 @@ namespace ACSManager
             make_HardeningRoom_Plt2_2.rendring();
             arrayGUI.Add(make_HardeningRoom_Plt2_2);
 
-            PLCView.plcView.shape_HardeningRoom_Plt[1, 1] = make_HardeningRoom_Plt2_2.ds;
+            this.plcView.shape_HardeningRoom_Plt[1, 1] = make_HardeningRoom_Plt2_2.ds;
         }
 
         void make_HardeningRoom_Plt2_3()
@@ -775,7 +778,7 @@ namespace ACSManager
             make_HardeningRoom_Plt2_3.rendring();
             arrayGUI.Add(make_HardeningRoom_Plt2_3);
 
-            PLCView.plcView.shape_HardeningRoom_Plt[1, 2] = make_HardeningRoom_Plt2_3.ds;
+            this.plcView.shape_HardeningRoom_Plt[1, 2] = make_HardeningRoom_Plt2_3.ds;
         }
 
 
@@ -797,7 +800,7 @@ namespace ACSManager
             make_HardeningRoom_Plt3_1.rendring();
             arrayGUI.Add(make_HardeningRoom_Plt3_1);
 
-            PLCView.plcView.shape_HardeningRoom_Plt[2, 0] = make_HardeningRoom_Plt3_1.ds;
+            this.plcView.shape_HardeningRoom_Plt[2, 0] = make_HardeningRoom_Plt3_1.ds;
         }
 
         void make_HardeningRoom_Plt3_2()
@@ -818,7 +821,7 @@ namespace ACSManager
             make_HardeningRoom_Plt3_2.rendring();
             arrayGUI.Add(make_HardeningRoom_Plt3_2);
 
-            PLCView.plcView.shape_HardeningRoom_Plt[2, 1] = make_HardeningRoom_Plt3_2.ds;
+            this.plcView.shape_HardeningRoom_Plt[2, 1] = make_HardeningRoom_Plt3_2.ds;
         }
 
         void make_HardeningRoom_Plt3_3()
@@ -839,7 +842,7 @@ namespace ACSManager
             make_HardeningRoom_Plt3_3.rendring();
             arrayGUI.Add(make_HardeningRoom_Plt3_3);
 
-            PLCView.plcView.shape_HardeningRoom_Plt[2, 2] = make_HardeningRoom_Plt3_3.ds;
+            this.plcView.shape_HardeningRoom_Plt[2, 2] = make_HardeningRoom_Plt3_3.ds;
         }
 
 
@@ -861,7 +864,7 @@ namespace ACSManager
             make_HardeningRoom_Plt4_1.rendring();
             arrayGUI.Add(make_HardeningRoom_Plt4_1);
 
-            PLCView.plcView.shape_HardeningRoom_Plt[3, 0] = make_HardeningRoom_Plt4_1.ds;
+            this.plcView.shape_HardeningRoom_Plt[3, 0] = make_HardeningRoom_Plt4_1.ds;
         }
 
         void make_HardeningRoom_Plt4_2()
@@ -882,7 +885,7 @@ namespace ACSManager
             make_HardeningRoom_Plt4_2.rendring();
             arrayGUI.Add(make_HardeningRoom_Plt4_2);
 
-            PLCView.plcView.shape_HardeningRoom_Plt[3, 1] = make_HardeningRoom_Plt4_2.ds;
+            this.plcView.shape_HardeningRoom_Plt[3, 1] = make_HardeningRoom_Plt4_2.ds;
         }
 
         void make_HardeningRoom_Plt4_3()
@@ -903,7 +906,7 @@ namespace ACSManager
             make_HardeningRoom_Plt4_3.rendring();
             arrayGUI.Add(make_HardeningRoom_Plt4_3);
 
-            PLCView.plcView.shape_HardeningRoom_Plt[3, 2] = make_HardeningRoom_Plt4_3.ds;
+            this.plcView.shape_HardeningRoom_Plt[3, 2] = make_HardeningRoom_Plt4_3.ds;
         }
 
 
@@ -925,7 +928,7 @@ namespace ACSManager
             make_HardeningRoom_Plt5_1.rendring();
             arrayGUI.Add(make_HardeningRoom_Plt5_1);
 
-            PLCView.plcView.shape_HardeningRoom_Plt[4, 0] = make_HardeningRoom_Plt5_1.ds;
+            this.plcView.shape_HardeningRoom_Plt[4, 0] = make_HardeningRoom_Plt5_1.ds;
         }
 
         void make_HardeningRoom_Plt5_2()
@@ -946,7 +949,7 @@ namespace ACSManager
             make_HardeningRoom_Plt5_2.rendring();
             arrayGUI.Add(make_HardeningRoom_Plt5_2);
 
-            PLCView.plcView.shape_HardeningRoom_Plt[4, 1] = make_HardeningRoom_Plt5_2.ds;
+            this.plcView.shape_HardeningRoom_Plt[4, 1] = make_HardeningRoom_Plt5_2.ds;
         }
 
         void make_HardeningRoom_Plt5_3()
@@ -967,7 +970,7 @@ namespace ACSManager
             make_HardeningRoom_Plt5_3.rendring();
             arrayGUI.Add(make_HardeningRoom_Plt5_3);
 
-            PLCView.plcView.shape_HardeningRoom_Plt[4, 2] = make_HardeningRoom_Plt5_3.ds;
+            this.plcView.shape_HardeningRoom_Plt[4, 2] = make_HardeningRoom_Plt5_3.ds;
         }
 
 
@@ -989,7 +992,7 @@ namespace ACSManager
             make_HardeningRoom_Plt6_1.rendring();
             arrayGUI.Add(make_HardeningRoom_Plt6_1);
 
-            PLCView.plcView.shape_HardeningRoom_Plt[5, 0] = make_HardeningRoom_Plt6_1.ds;
+            this.plcView.shape_HardeningRoom_Plt[5, 0] = make_HardeningRoom_Plt6_1.ds;
         }
 
         void make_HardeningRoom_Plt6_2()
@@ -1010,7 +1013,7 @@ namespace ACSManager
             make_HardeningRoom_Plt6_2.rendring();
             arrayGUI.Add(make_HardeningRoom_Plt6_2);
 
-            PLCView.plcView.shape_HardeningRoom_Plt[5, 1] = make_HardeningRoom_Plt6_2.ds;
+            this.plcView.shape_HardeningRoom_Plt[5, 1] = make_HardeningRoom_Plt6_2.ds;
         }
 
         void make_HardeningRoom_Plt6_3()
@@ -1031,7 +1034,7 @@ namespace ACSManager
             make_HardeningRoom_Plt6_3.rendring();
             arrayGUI.Add(make_HardeningRoom_Plt6_3);
 
-            PLCView.plcView.shape_HardeningRoom_Plt[5, 2] = make_HardeningRoom_Plt6_3.ds;
+            this.plcView.shape_HardeningRoom_Plt[5, 2] = make_HardeningRoom_Plt6_3.ds;
         }
 
 
@@ -1053,7 +1056,7 @@ namespace ACSManager
             make_HardeningRoom_Plt7_1.rendring();
             arrayGUI.Add(make_HardeningRoom_Plt7_1);
 
-            PLCView.plcView.shape_HardeningRoom_Plt[6, 0] = make_HardeningRoom_Plt7_1.ds;
+            this.plcView.shape_HardeningRoom_Plt[6, 0] = make_HardeningRoom_Plt7_1.ds;
         }
 
         void make_HardeningRoom_Plt7_2()
@@ -1074,7 +1077,7 @@ namespace ACSManager
             make_HardeningRoom_Plt7_2.rendring();
             arrayGUI.Add(make_HardeningRoom_Plt7_2);
 
-            PLCView.plcView.shape_HardeningRoom_Plt[6, 1] = make_HardeningRoom_Plt7_2.ds;
+            this.plcView.shape_HardeningRoom_Plt[6, 1] = make_HardeningRoom_Plt7_2.ds;
         }
 
         void make_HardeningRoom_Plt7_3()
@@ -1095,7 +1098,7 @@ namespace ACSManager
             make_HardeningRoom_Plt7_3.rendring();
             arrayGUI.Add(make_HardeningRoom_Plt7_3);
 
-            PLCView.plcView.shape_HardeningRoom_Plt[6, 2] = make_HardeningRoom_Plt7_3.ds;
+            this.plcView.shape_HardeningRoom_Plt[6, 2] = make_HardeningRoom_Plt7_3.ds;
         }
 
 
@@ -1117,7 +1120,7 @@ namespace ACSManager
             make_HardeningRoom_Plt8_1.rendring();
             arrayGUI.Add(make_HardeningRoom_Plt8_1);
 
-            PLCView.plcView.shape_HardeningRoom_Plt[7, 0] = make_HardeningRoom_Plt8_1.ds;
+            this.plcView.shape_HardeningRoom_Plt[7, 0] = make_HardeningRoom_Plt8_1.ds;
         }
 
         void make_HardeningRoom_Plt8_2()
@@ -1138,7 +1141,7 @@ namespace ACSManager
             make_HardeningRoom_Plt8_2.rendring();
             arrayGUI.Add(make_HardeningRoom_Plt8_2);
 
-            PLCView.plcView.shape_HardeningRoom_Plt[7, 1] = make_HardeningRoom_Plt8_2.ds;
+            this.plcView.shape_HardeningRoom_Plt[7, 1] = make_HardeningRoom_Plt8_2.ds;
         }
 
         void make_HardeningRoom_Plt8_3()
@@ -1159,7 +1162,7 @@ namespace ACSManager
             make_HardeningRoom_Plt8_3.rendring();
             arrayGUI.Add(make_HardeningRoom_Plt8_3);
 
-            PLCView.plcView.shape_HardeningRoom_Plt[7, 2] = make_HardeningRoom_Plt8_3.ds;
+            this.plcView.shape_HardeningRoom_Plt[7, 2] = make_HardeningRoom_Plt8_3.ds;
         }
 
 
@@ -1181,7 +1184,7 @@ namespace ACSManager
             make_HardeningRoom_Door1.rendring();
             arrayGUI.Add(make_HardeningRoom_Door1);
 
-            PLCView.plcView.shape_HardeningRoom_Door[0] = make_HardeningRoom_Door1.ds;
+            this.plcView.shape_HardeningRoom_Door[0] = make_HardeningRoom_Door1.ds;
         }
 
         void make_HardeningRoom_Door2()
@@ -1202,7 +1205,7 @@ namespace ACSManager
             make_HardeningRoom_Door2.rendring();
             arrayGUI.Add(make_HardeningRoom_Door2);
 
-            PLCView.plcView.shape_HardeningRoom_Door[1] = make_HardeningRoom_Door2.ds;
+            this.plcView.shape_HardeningRoom_Door[1] = make_HardeningRoom_Door2.ds;
         }
 
         void make_HardeningRoom_Door3()
@@ -1223,7 +1226,7 @@ namespace ACSManager
             make_HardeningRoom_Door3.rendring();
             arrayGUI.Add(make_HardeningRoom_Door3);
 
-            PLCView.plcView.shape_HardeningRoom_Door[2] = make_HardeningRoom_Door3.ds;
+            this.plcView.shape_HardeningRoom_Door[2] = make_HardeningRoom_Door3.ds;
         }
 
         void make_HardeningRoom_Door4()
@@ -1244,7 +1247,7 @@ namespace ACSManager
             make_HardeningRoom_Door4.rendring();
             arrayGUI.Add(make_HardeningRoom_Door4);
 
-            PLCView.plcView.shape_HardeningRoom_Door[3] = make_HardeningRoom_Door4.ds;
+            this.plcView.shape_HardeningRoom_Door[3] = make_HardeningRoom_Door4.ds;
         }
 
         void make_HardeningRoom_Door5()
@@ -1265,7 +1268,7 @@ namespace ACSManager
             make_HardeningRoom_Door5.rendring();
             arrayGUI.Add(make_HardeningRoom_Door5);
 
-            PLCView.plcView.shape_HardeningRoom_Door[4] = make_HardeningRoom_Door5.ds;
+            this.plcView.shape_HardeningRoom_Door[4] = make_HardeningRoom_Door5.ds;
         }
 
         void make_HardeningRoom_Door6()
@@ -1286,7 +1289,7 @@ namespace ACSManager
             make_HardeningRoom_Door6.rendring();
             arrayGUI.Add(make_HardeningRoom_Door6);
 
-            PLCView.plcView.shape_HardeningRoom_Door[5] = make_HardeningRoom_Door6.ds;
+            this.plcView.shape_HardeningRoom_Door[5] = make_HardeningRoom_Door6.ds;
         }
 
         void make_HardeningRoom_Door7()
@@ -1307,7 +1310,7 @@ namespace ACSManager
             make_HardeningRoom_Door7.rendring();
             arrayGUI.Add(make_HardeningRoom_Door7);
 
-            PLCView.plcView.shape_HardeningRoom_Door[6] = make_HardeningRoom_Door7.ds;
+            this.plcView.shape_HardeningRoom_Door[6] = make_HardeningRoom_Door7.ds;
         }
 
         void make_HardeningRoom_Door8()
@@ -1328,7 +1331,7 @@ namespace ACSManager
             make_HardeningRoom_Door8.rendring();
             arrayGUI.Add(make_HardeningRoom_Door8);
 
-            PLCView.plcView.shape_HardeningRoom_Door[7] = make_HardeningRoom_Door8.ds;
+            this.plcView.shape_HardeningRoom_Door[7] = make_HardeningRoom_Door8.ds;
         }
 
 

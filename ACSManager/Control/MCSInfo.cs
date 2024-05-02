@@ -419,13 +419,16 @@ namespace ACSManager.Control
         {
             ReLoadInfo();
 
-            var table = sourceTable.AsEnumerable()
+            if (sourceTable != null)
+            {
+                var table = sourceTable.AsEnumerable()
                 .Where(P => P["STATUS"].ToString() != "3" && P["STATUS"].ToString() != "4" && P["STATUS"].ToString() != "6");
 
-            if (table != null && table.Count() > 0)
-                gridControl1.DataSource = table.CopyToDataTable();
-            else
-                gridControl1.DataSource = sourceTable.Clone();
+                if (table != null && table.Count() > 0)
+                    gridControl1.DataSource = table.CopyToDataTable();
+                else
+                    gridControl1.DataSource = sourceTable.Clone();
+            }
 
             InitTextBox();
         }

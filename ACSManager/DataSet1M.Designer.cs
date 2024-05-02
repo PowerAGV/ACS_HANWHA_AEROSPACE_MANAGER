@@ -23991,7 +23991,7 @@ ORDER BY UID";
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
             this._commandCollection[4].CommandText = @"SELECT  cmd.UID, cmd.ORDER_ID, cmd.FROM_LOCATOR, cmd.TO_LOCATOR, cmd.TARGET_ID, cmd.GROUP_ID, cmd.TXN_DATE, cmd.STATUS, cmd.REG_DATE, cmd.ReserveDate, cmd.DepatureDate, 
-               cmd.ArriveDate, cmd.CancelDate, RTRIM(cmd.AGV_ID) AS AGV_ID, cmd.TAG_READ, cmd.TAG_RESULT, cmd.FROM_GUBUN, cmd.TO_GUBUN, cmd.mes_input_date
+               cmd.ArriveDate, cmd.CancelDate, RTRIM(cmd.AGV_ID) AS AGV_ID, cmd.TAG_READ, cmd.TAG_RESULT, cmd.FROM_GUBUN, cmd.TO_GUBUN
 FROM     tb_mcs_command AS cmd INNER JOIN
                tb_agv AS agv ON cmd.AGV_ID = agv.agv_id
 WHERE  (cmd.REG_DATE BETWEEN @start AND @end) AND (agv.route_area = @route_area) 
@@ -24003,7 +24003,7 @@ ORDER BY cmd.UID DESC";
             this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[5].Connection = this.Connection;
             this._commandCollection[5].CommandText = @"SELECT UID, ORDER_ID, FROM_LOCATOR, TO_LOCATOR, TARGET_ID, GROUP_ID, TXN_DATE, STATUS, REG_DATE, ReserveDate, DepatureDate, ArriveDate, CancelDate, RTRIM(AGV_ID) AS AGV_ID, 
-            TAG_READ, TAG_RESULT, FROM_GUBUN, TO_GUBUN, mes_input_date
+            TAG_READ, TAG_RESULT, FROM_GUBUN, TO_GUBUN
 FROM  tb_mcs_command AS cmd
 WHERE (REG_DATE BETWEEN @start AND @end)
 ORDER BY UID DESC";

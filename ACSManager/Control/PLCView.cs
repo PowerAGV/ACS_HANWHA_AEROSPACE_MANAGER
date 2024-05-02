@@ -48,7 +48,7 @@ namespace ACSManager.Control
 {
     public partial class PLCView : XtraUserControl
     {
-        public static PLCView plcView;
+        //public static PLCView plcView;
         long map_id = 0;
         bool isworking_AGV = false;
 
@@ -79,7 +79,7 @@ namespace ACSManager.Control
         public PLCView()
         {
             InitializeComponent();
-            plcView = this;
+            //plcView = this;
         }
 
         /// <summary>
@@ -368,7 +368,7 @@ namespace ACSManager.Control
         void Paint_Map_Shape()
         {
             MakeCustomShape makeCustomShape = new MakeCustomShape();
-            makeCustomShape.Rendering();
+            makeCustomShape.Rendering(this);
 
             foreach (MakeGUI GUI in makeCustomShape.arrayGUI)
             {
@@ -504,59 +504,64 @@ namespace ACSManager.Control
                         else if (Row.PLC_ADDRESS.Contains("D711")) AGV_Door2_Send = Row.PLC_VALUE.Contains("1") ? true : false;
                     }
                 }
-                PLCView.plcView.shape_ChargeRoom_Door[0].Appearance.BackColor = Charge_Door ? Color.Lime : Color.Red;
-                PLCView.plcView.shape_ChargeRoom_Plt[0].Appearance.BackColor = Charge_PLT1 ? Color.Lime : Color.LightSlateGray;
-                PLCView.plcView.shape_ChargeRoom_Plt[1].Appearance.BackColor = Charge_PLT2 ? Color.Lime : Color.LightSlateGray;
+                if(shape_ChargeRoom_Door[0] != null )
+                {
 
-                PLCView.plcView.shape_HardeningRoom_Door[0].Appearance.BackColor = Hardening_Door[0] ? Color.Lime : Color.Red;
-                PLCView.plcView.shape_HardeningRoom_Door[1].Appearance.BackColor = Hardening_Door[1] ? Color.Lime : Color.Red;
-                PLCView.plcView.shape_HardeningRoom_Door[2].Appearance.BackColor = Hardening_Door[2] ? Color.Lime : Color.Red;
-                PLCView.plcView.shape_HardeningRoom_Door[3].Appearance.BackColor = Hardening_Door[3] ? Color.Lime : Color.Red;
-                PLCView.plcView.shape_HardeningRoom_Door[4].Appearance.BackColor = Hardening_Door[4] ? Color.Lime : Color.Red;
-                PLCView.plcView.shape_HardeningRoom_Door[5].Appearance.BackColor = Hardening_Door[5] ? Color.Lime : Color.Red;
-                PLCView.plcView.shape_HardeningRoom_Door[6].Appearance.BackColor = Hardening_Door[6] ? Color.Lime : Color.Red;
-                PLCView.plcView.shape_HardeningRoom_Door[7].Appearance.BackColor = Hardening_Door[7] ? Color.Lime : Color.Red;
+                    shape_ChargeRoom_Door[0].Appearance.BackColor = Charge_Door ? Color.Lime : Color.Red;
+                    shape_ChargeRoom_Plt[0].Appearance.BackColor = Charge_PLT1 ? Color.Lime : Color.LightSlateGray;
+                    shape_ChargeRoom_Plt[1].Appearance.BackColor = Charge_PLT2 ? Color.Lime : Color.LightSlateGray;
 
-                PLCView.plcView.shape_HardeningRoom_Plt[0, 0].Appearance.BackColor = Hardening_Plt[0, 0] ? Color.Lime : Color.LightSlateGray;
-                PLCView.plcView.shape_HardeningRoom_Plt[0, 1].Appearance.BackColor = Hardening_Plt[0, 1] ? Color.Lime : Color.LightSlateGray;
-                PLCView.plcView.shape_HardeningRoom_Plt[0, 2].Appearance.BackColor = Hardening_Plt[0, 2] ? Color.Lime : Color.LightSlateGray;
+                    shape_HardeningRoom_Door[0].Appearance.BackColor = Hardening_Door[0] ? Color.Lime : Color.Red;
+                    shape_HardeningRoom_Door[1].Appearance.BackColor = Hardening_Door[1] ? Color.Lime : Color.Red;
+                    shape_HardeningRoom_Door[2].Appearance.BackColor = Hardening_Door[2] ? Color.Lime : Color.Red;
+                    shape_HardeningRoom_Door[3].Appearance.BackColor = Hardening_Door[3] ? Color.Lime : Color.Red;
+                    shape_HardeningRoom_Door[4].Appearance.BackColor = Hardening_Door[4] ? Color.Lime : Color.Red;
+                    shape_HardeningRoom_Door[5].Appearance.BackColor = Hardening_Door[5] ? Color.Lime : Color.Red;
+                    shape_HardeningRoom_Door[6].Appearance.BackColor = Hardening_Door[6] ? Color.Lime : Color.Red;
+                    shape_HardeningRoom_Door[7].Appearance.BackColor = Hardening_Door[7] ? Color.Lime : Color.Red;
 
-                PLCView.plcView.shape_HardeningRoom_Plt[1, 0].Appearance.BackColor = Hardening_Plt[1, 0] ? Color.Lime : Color.LightSlateGray;
-                PLCView.plcView.shape_HardeningRoom_Plt[1, 1].Appearance.BackColor = Hardening_Plt[1, 1] ? Color.Lime : Color.LightSlateGray;
-                PLCView.plcView.shape_HardeningRoom_Plt[1, 2].Appearance.BackColor = Hardening_Plt[1, 2] ? Color.Lime : Color.LightSlateGray;
+                    shape_HardeningRoom_Plt[0, 0].Appearance.BackColor = Hardening_Plt[0, 0] ? Color.Lime : Color.LightSlateGray;
+                    shape_HardeningRoom_Plt[0, 1].Appearance.BackColor = Hardening_Plt[0, 1] ? Color.Lime : Color.LightSlateGray;
+                    shape_HardeningRoom_Plt[0, 2].Appearance.BackColor = Hardening_Plt[0, 2] ? Color.Lime : Color.LightSlateGray;
 
-                PLCView.plcView.shape_HardeningRoom_Plt[2, 0].Appearance.BackColor = Hardening_Plt[2, 0] ? Color.Lime : Color.LightSlateGray;
-                PLCView.plcView.shape_HardeningRoom_Plt[2, 1].Appearance.BackColor = Hardening_Plt[2, 1] ? Color.Lime : Color.LightSlateGray;
-                PLCView.plcView.shape_HardeningRoom_Plt[2, 2].Appearance.BackColor = Hardening_Plt[2, 2] ? Color.Lime : Color.LightSlateGray;
+                    shape_HardeningRoom_Plt[1, 0].Appearance.BackColor = Hardening_Plt[1, 0] ? Color.Lime : Color.LightSlateGray;
+                    shape_HardeningRoom_Plt[1, 1].Appearance.BackColor = Hardening_Plt[1, 1] ? Color.Lime : Color.LightSlateGray;
+                    shape_HardeningRoom_Plt[1, 2].Appearance.BackColor = Hardening_Plt[1, 2] ? Color.Lime : Color.LightSlateGray;
 
-                PLCView.plcView.shape_HardeningRoom_Plt[3, 0].Appearance.BackColor = Hardening_Plt[3, 0] ? Color.Lime : Color.LightSlateGray;
-                PLCView.plcView.shape_HardeningRoom_Plt[3, 1].Appearance.BackColor = Hardening_Plt[3, 1] ? Color.Lime : Color.LightSlateGray;
-                PLCView.plcView.shape_HardeningRoom_Plt[3, 2].Appearance.BackColor = Hardening_Plt[3, 2] ? Color.Lime : Color.LightSlateGray;
+                    shape_HardeningRoom_Plt[2, 0].Appearance.BackColor = Hardening_Plt[2, 0] ? Color.Lime : Color.LightSlateGray;
+                    shape_HardeningRoom_Plt[2, 1].Appearance.BackColor = Hardening_Plt[2, 1] ? Color.Lime : Color.LightSlateGray;
+                    shape_HardeningRoom_Plt[2, 2].Appearance.BackColor = Hardening_Plt[2, 2] ? Color.Lime : Color.LightSlateGray;
 
-                PLCView.plcView.shape_HardeningRoom_Plt[4, 0].Appearance.BackColor = Hardening_Plt[4, 0] ? Color.Lime : Color.LightSlateGray;
-                PLCView.plcView.shape_HardeningRoom_Plt[4, 1].Appearance.BackColor = Hardening_Plt[4, 1] ? Color.Lime : Color.LightSlateGray;
-                PLCView.plcView.shape_HardeningRoom_Plt[4, 2].Appearance.BackColor = Hardening_Plt[4, 2] ? Color.Lime : Color.LightSlateGray;
+                    shape_HardeningRoom_Plt[3, 0].Appearance.BackColor = Hardening_Plt[3, 0] ? Color.Lime : Color.LightSlateGray;
+                    shape_HardeningRoom_Plt[3, 1].Appearance.BackColor = Hardening_Plt[3, 1] ? Color.Lime : Color.LightSlateGray;
+                    shape_HardeningRoom_Plt[3, 2].Appearance.BackColor = Hardening_Plt[3, 2] ? Color.Lime : Color.LightSlateGray;
 
-                PLCView.plcView.shape_HardeningRoom_Plt[5, 0].Appearance.BackColor = Hardening_Plt[5, 0] ? Color.Lime : Color.LightSlateGray;
-                PLCView.plcView.shape_HardeningRoom_Plt[5, 1].Appearance.BackColor = Hardening_Plt[5, 1] ? Color.Lime : Color.LightSlateGray;
-                PLCView.plcView.shape_HardeningRoom_Plt[5, 2].Appearance.BackColor = Hardening_Plt[5, 2] ? Color.Lime : Color.LightSlateGray;
+                    shape_HardeningRoom_Plt[4, 0].Appearance.BackColor = Hardening_Plt[4, 0] ? Color.Lime : Color.LightSlateGray;
+                    shape_HardeningRoom_Plt[4, 1].Appearance.BackColor = Hardening_Plt[4, 1] ? Color.Lime : Color.LightSlateGray;
+                    shape_HardeningRoom_Plt[4, 2].Appearance.BackColor = Hardening_Plt[4, 2] ? Color.Lime : Color.LightSlateGray;
 
-                PLCView.plcView.shape_HardeningRoom_Plt[6, 0].Appearance.BackColor = Hardening_Plt[6, 0] ? Color.Lime : Color.LightSlateGray;
-                PLCView.plcView.shape_HardeningRoom_Plt[6, 1].Appearance.BackColor = Hardening_Plt[6, 1] ? Color.Lime : Color.LightSlateGray;
-                PLCView.plcView.shape_HardeningRoom_Plt[6, 2].Appearance.BackColor = Hardening_Plt[6, 2] ? Color.Lime : Color.LightSlateGray;
+                    shape_HardeningRoom_Plt[5, 0].Appearance.BackColor = Hardening_Plt[5, 0] ? Color.Lime : Color.LightSlateGray;
+                    shape_HardeningRoom_Plt[5, 1].Appearance.BackColor = Hardening_Plt[5, 1] ? Color.Lime : Color.LightSlateGray;
+                    shape_HardeningRoom_Plt[5, 2].Appearance.BackColor = Hardening_Plt[5, 2] ? Color.Lime : Color.LightSlateGray;
 
-                PLCView.plcView.shape_HardeningRoom_Plt[7, 0].Appearance.BackColor = Hardening_Plt[7, 0] ? Color.Lime : Color.LightSlateGray;
-                PLCView.plcView.shape_HardeningRoom_Plt[7, 1].Appearance.BackColor = Hardening_Plt[7, 1] ? Color.Lime : Color.LightSlateGray;
-                PLCView.plcView.shape_HardeningRoom_Plt[7, 2].Appearance.BackColor = Hardening_Plt[7, 2] ? Color.Lime : Color.LightSlateGray;
+                    shape_HardeningRoom_Plt[6, 0].Appearance.BackColor = Hardening_Plt[6, 0] ? Color.Lime : Color.LightSlateGray;
+                    shape_HardeningRoom_Plt[6, 1].Appearance.BackColor = Hardening_Plt[6, 1] ? Color.Lime : Color.LightSlateGray;
+                    shape_HardeningRoom_Plt[6, 2].Appearance.BackColor = Hardening_Plt[6, 2] ? Color.Lime : Color.LightSlateGray;
 
-                PLCView.plcView.shape_LeeHyungGongRoom_Door[0].Appearance.BackColor = LeeHynungGong_Door ? Color.Lime : Color.Red;
-                PLCView.plcView.shape_LeeHyungGongRoom_Plt[0].Appearance.BackColor = LeeHynungGong_PLT1 ? Color.Lime : Color.LightSlateGray;
-                PLCView.plcView.shape_LeeHyungGongRoom_Plt[1].Appearance.BackColor = LeeHynungGong_PLT2 ? Color.Lime : Color.LightSlateGray;
+                    shape_HardeningRoom_Plt[7, 0].Appearance.BackColor = Hardening_Plt[7, 0] ? Color.Lime : Color.LightSlateGray;
+                    shape_HardeningRoom_Plt[7, 1].Appearance.BackColor = Hardening_Plt[7, 1] ? Color.Lime : Color.LightSlateGray;
+                    shape_HardeningRoom_Plt[7, 2].Appearance.BackColor = Hardening_Plt[7, 2] ? Color.Lime : Color.LightSlateGray;
 
-                PLCView.plcView.shape_AGVChargeRoom_Doors[0].Appearance.BackColor = AGV_Door1_Open && !AGV_Door1_Close ? Color.Lime : Color.Red;
-                PLCView.plcView.shape_AGVChargeRoom_Doors[1].Appearance.BackColor = AGV_Door2_Open && !AGV_Door2_Close ? Color.Lime : Color.Red;
-                PLCView.plcView.shape_AGVChargeRoom_Doors[2].Appearance.BackColor = AGV_Door1_Send ? Color.Lime : Color.Red;
-                PLCView.plcView.shape_AGVChargeRoom_Doors[3].Appearance.BackColor = AGV_Door2_Send ? Color.Lime : Color.Red;
+                    shape_LeeHyungGongRoom_Door[0].Appearance.BackColor = LeeHynungGong_Door ? Color.Lime : Color.Red;
+                    shape_LeeHyungGongRoom_Plt[0].Appearance.BackColor = LeeHynungGong_PLT1 ? Color.Lime : Color.LightSlateGray;
+                    shape_LeeHyungGongRoom_Plt[1].Appearance.BackColor = LeeHynungGong_PLT2 ? Color.Lime : Color.LightSlateGray;
+
+                    shape_AGVChargeRoom_Doors[0].Appearance.BackColor = AGV_Door1_Open && !AGV_Door1_Close ? Color.Lime : Color.Red;
+                    shape_AGVChargeRoom_Doors[1].Appearance.BackColor = AGV_Door2_Open && !AGV_Door2_Close ? Color.Lime : Color.Red;
+                    shape_AGVChargeRoom_Doors[2].Appearance.BackColor = AGV_Door1_Send ? Color.Lime : Color.Red;
+                    shape_AGVChargeRoom_Doors[3].Appearance.BackColor = AGV_Door2_Send ? Color.Lime : Color.Red;
+                }
+                
             }
             catch (Exception ee)
             {
