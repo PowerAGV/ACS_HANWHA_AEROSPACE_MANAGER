@@ -56,22 +56,10 @@ namespace ACSManager.Control
         
         List<agvInfo> m_agv = new List<agvInfo>();
 
-        public DiagramShape[] shape_AreaBox_parts = new DiagramShape[3];
 
-        public DiagramShape[] shape_HardeningRoom_Door = new DiagramShape[8];
-        public DiagramShape[,] shape_HardeningRoom_Plt = new DiagramShape[8,3];
-
-        public DiagramShape[] shape_ChargeRoom_Door = new DiagramShape[1];
-        public DiagramShape[] shape_ChargeRoom_Plt = new DiagramShape[2];
-
-        public DiagramShape[] shape_AGVChargeRoom_Doors = new DiagramShape[4];
-
-        public DiagramShape[] shape_LeeHyungGongRoom_Door = new DiagramShape[1];
-        public DiagramShape[] shape_LeeHyungGongRoom_Plt = new DiagramShape[2];
-
+        private MakeCustomShape makeCustomShape = null;
         public List<NodeInfo> m_listTempNodeDate = new List<NodeInfo>();
         public List<LinkInfo> m_listTempLinkDate = new List<LinkInfo>();
-        
 
         /// <summary>
         /// 생성자
@@ -94,11 +82,13 @@ namespace ACSManager.Control
 
             if (mapLoaded)
             {
+                Paint_Map_Shape();
+
                 Load_MAP_Info(map_id);
                 Load_Map_Link(map_id);
                 Load_Map_Node(map_id);
 
-                Paint_Map_Shape();
+             
                 Paint_Map_Node();
                 Paint_Map_Link();
 
@@ -367,9 +357,8 @@ namespace ACSManager.Control
         /// </summary>
         void Paint_Map_Shape()
         {
-            MakeCustomShape makeCustomShape = new MakeCustomShape();
+            makeCustomShape = new MakeCustomShape();
             makeCustomShape.Rendering(this);
-
             foreach (MakeGUI GUI in makeCustomShape.arrayGUI)
             {
                 DIAGRAM_GUI.Items.Add(GUI.ds);
@@ -504,62 +493,62 @@ namespace ACSManager.Control
                         else if (Row.PLC_ADDRESS.Contains("D711")) AGV_Door2_Send = Row.PLC_VALUE.Contains("1") ? true : false;
                     }
                 }
-                if(shape_ChargeRoom_Door[0] != null )
+                if(makeCustomShape != null )
                 {
 
-                    shape_ChargeRoom_Door[0].Appearance.BackColor = Charge_Door ? Color.Lime : Color.Red;
-                    shape_ChargeRoom_Plt[0].Appearance.BackColor = Charge_PLT1 ? Color.Lime : Color.LightSlateGray;
-                    shape_ChargeRoom_Plt[1].Appearance.BackColor = Charge_PLT2 ? Color.Lime : Color.LightSlateGray;
+                    makeCustomShape.shape_ChargeRoom_Door[0].Appearance.BackColor = Charge_Door ? Color.Lime : Color.Red;
+                    makeCustomShape.shape_ChargeRoom_Plt[0].Appearance.BackColor = Charge_PLT1 ? Color.Lime : Color.LightSlateGray;
+                    makeCustomShape.shape_ChargeRoom_Plt[1].Appearance.BackColor = Charge_PLT2 ? Color.Lime : Color.LightSlateGray;
 
-                    shape_HardeningRoom_Door[0].Appearance.BackColor = Hardening_Door[0] ? Color.Lime : Color.Red;
-                    shape_HardeningRoom_Door[1].Appearance.BackColor = Hardening_Door[1] ? Color.Lime : Color.Red;
-                    shape_HardeningRoom_Door[2].Appearance.BackColor = Hardening_Door[2] ? Color.Lime : Color.Red;
-                    shape_HardeningRoom_Door[3].Appearance.BackColor = Hardening_Door[3] ? Color.Lime : Color.Red;
-                    shape_HardeningRoom_Door[4].Appearance.BackColor = Hardening_Door[4] ? Color.Lime : Color.Red;
-                    shape_HardeningRoom_Door[5].Appearance.BackColor = Hardening_Door[5] ? Color.Lime : Color.Red;
-                    shape_HardeningRoom_Door[6].Appearance.BackColor = Hardening_Door[6] ? Color.Lime : Color.Red;
-                    shape_HardeningRoom_Door[7].Appearance.BackColor = Hardening_Door[7] ? Color.Lime : Color.Red;
+                    makeCustomShape.shape_HardeningRoom_Door[0].Appearance.BackColor = Hardening_Door[0] ? Color.Lime : Color.Red;
+                    makeCustomShape.shape_HardeningRoom_Door[1].Appearance.BackColor = Hardening_Door[1] ? Color.Lime : Color.Red;
+                    makeCustomShape.shape_HardeningRoom_Door[2].Appearance.BackColor = Hardening_Door[2] ? Color.Lime : Color.Red;
+                    makeCustomShape.shape_HardeningRoom_Door[3].Appearance.BackColor = Hardening_Door[3] ? Color.Lime : Color.Red;
+                    makeCustomShape.shape_HardeningRoom_Door[4].Appearance.BackColor = Hardening_Door[4] ? Color.Lime : Color.Red;
+                    makeCustomShape.shape_HardeningRoom_Door[5].Appearance.BackColor = Hardening_Door[5] ? Color.Lime : Color.Red;
+                    makeCustomShape.shape_HardeningRoom_Door[6].Appearance.BackColor = Hardening_Door[6] ? Color.Lime : Color.Red;
+                    makeCustomShape.shape_HardeningRoom_Door[7].Appearance.BackColor = Hardening_Door[7] ? Color.Lime : Color.Red;
 
-                    shape_HardeningRoom_Plt[0, 0].Appearance.BackColor = Hardening_Plt[0, 0] ? Color.Lime : Color.LightSlateGray;
-                    shape_HardeningRoom_Plt[0, 1].Appearance.BackColor = Hardening_Plt[0, 1] ? Color.Lime : Color.LightSlateGray;
-                    shape_HardeningRoom_Plt[0, 2].Appearance.BackColor = Hardening_Plt[0, 2] ? Color.Lime : Color.LightSlateGray;
+                    makeCustomShape.shape_HardeningRoom_Plt[0, 0].Appearance.BackColor = Hardening_Plt[0, 0] ? Color.Lime : Color.LightSlateGray;
+                    makeCustomShape.shape_HardeningRoom_Plt[0, 1].Appearance.BackColor = Hardening_Plt[0, 1] ? Color.Lime : Color.LightSlateGray;
+                    makeCustomShape.shape_HardeningRoom_Plt[0, 2].Appearance.BackColor = Hardening_Plt[0, 2] ? Color.Lime : Color.LightSlateGray;
 
-                    shape_HardeningRoom_Plt[1, 0].Appearance.BackColor = Hardening_Plt[1, 0] ? Color.Lime : Color.LightSlateGray;
-                    shape_HardeningRoom_Plt[1, 1].Appearance.BackColor = Hardening_Plt[1, 1] ? Color.Lime : Color.LightSlateGray;
-                    shape_HardeningRoom_Plt[1, 2].Appearance.BackColor = Hardening_Plt[1, 2] ? Color.Lime : Color.LightSlateGray;
+                    makeCustomShape.shape_HardeningRoom_Plt[1, 0].Appearance.BackColor = Hardening_Plt[1, 0] ? Color.Lime : Color.LightSlateGray;
+                    makeCustomShape.shape_HardeningRoom_Plt[1, 1].Appearance.BackColor = Hardening_Plt[1, 1] ? Color.Lime : Color.LightSlateGray;
+                    makeCustomShape.shape_HardeningRoom_Plt[1, 2].Appearance.BackColor = Hardening_Plt[1, 2] ? Color.Lime : Color.LightSlateGray;
 
-                    shape_HardeningRoom_Plt[2, 0].Appearance.BackColor = Hardening_Plt[2, 0] ? Color.Lime : Color.LightSlateGray;
-                    shape_HardeningRoom_Plt[2, 1].Appearance.BackColor = Hardening_Plt[2, 1] ? Color.Lime : Color.LightSlateGray;
-                    shape_HardeningRoom_Plt[2, 2].Appearance.BackColor = Hardening_Plt[2, 2] ? Color.Lime : Color.LightSlateGray;
+                    makeCustomShape.shape_HardeningRoom_Plt[2, 0].Appearance.BackColor = Hardening_Plt[2, 0] ? Color.Lime : Color.LightSlateGray;
+                    makeCustomShape.shape_HardeningRoom_Plt[2, 1].Appearance.BackColor = Hardening_Plt[2, 1] ? Color.Lime : Color.LightSlateGray;
+                    makeCustomShape.shape_HardeningRoom_Plt[2, 2].Appearance.BackColor = Hardening_Plt[2, 2] ? Color.Lime : Color.LightSlateGray;
 
-                    shape_HardeningRoom_Plt[3, 0].Appearance.BackColor = Hardening_Plt[3, 0] ? Color.Lime : Color.LightSlateGray;
-                    shape_HardeningRoom_Plt[3, 1].Appearance.BackColor = Hardening_Plt[3, 1] ? Color.Lime : Color.LightSlateGray;
-                    shape_HardeningRoom_Plt[3, 2].Appearance.BackColor = Hardening_Plt[3, 2] ? Color.Lime : Color.LightSlateGray;
+                    makeCustomShape.shape_HardeningRoom_Plt[3, 0].Appearance.BackColor = Hardening_Plt[3, 0] ? Color.Lime : Color.LightSlateGray;
+                    makeCustomShape.shape_HardeningRoom_Plt[3, 1].Appearance.BackColor = Hardening_Plt[3, 1] ? Color.Lime : Color.LightSlateGray;
+                    makeCustomShape.shape_HardeningRoom_Plt[3, 2].Appearance.BackColor = Hardening_Plt[3, 2] ? Color.Lime : Color.LightSlateGray;
 
-                    shape_HardeningRoom_Plt[4, 0].Appearance.BackColor = Hardening_Plt[4, 0] ? Color.Lime : Color.LightSlateGray;
-                    shape_HardeningRoom_Plt[4, 1].Appearance.BackColor = Hardening_Plt[4, 1] ? Color.Lime : Color.LightSlateGray;
-                    shape_HardeningRoom_Plt[4, 2].Appearance.BackColor = Hardening_Plt[4, 2] ? Color.Lime : Color.LightSlateGray;
+                    makeCustomShape.shape_HardeningRoom_Plt[4, 0].Appearance.BackColor = Hardening_Plt[4, 0] ? Color.Lime : Color.LightSlateGray;
+                    makeCustomShape.shape_HardeningRoom_Plt[4, 1].Appearance.BackColor = Hardening_Plt[4, 1] ? Color.Lime : Color.LightSlateGray;
+                    makeCustomShape.shape_HardeningRoom_Plt[4, 2].Appearance.BackColor = Hardening_Plt[4, 2] ? Color.Lime : Color.LightSlateGray;
 
-                    shape_HardeningRoom_Plt[5, 0].Appearance.BackColor = Hardening_Plt[5, 0] ? Color.Lime : Color.LightSlateGray;
-                    shape_HardeningRoom_Plt[5, 1].Appearance.BackColor = Hardening_Plt[5, 1] ? Color.Lime : Color.LightSlateGray;
-                    shape_HardeningRoom_Plt[5, 2].Appearance.BackColor = Hardening_Plt[5, 2] ? Color.Lime : Color.LightSlateGray;
+                    makeCustomShape.shape_HardeningRoom_Plt[5, 0].Appearance.BackColor = Hardening_Plt[5, 0] ? Color.Lime : Color.LightSlateGray;
+                    makeCustomShape.shape_HardeningRoom_Plt[5, 1].Appearance.BackColor = Hardening_Plt[5, 1] ? Color.Lime : Color.LightSlateGray;
+                    makeCustomShape.shape_HardeningRoom_Plt[5, 2].Appearance.BackColor = Hardening_Plt[5, 2] ? Color.Lime : Color.LightSlateGray;
 
-                    shape_HardeningRoom_Plt[6, 0].Appearance.BackColor = Hardening_Plt[6, 0] ? Color.Lime : Color.LightSlateGray;
-                    shape_HardeningRoom_Plt[6, 1].Appearance.BackColor = Hardening_Plt[6, 1] ? Color.Lime : Color.LightSlateGray;
-                    shape_HardeningRoom_Plt[6, 2].Appearance.BackColor = Hardening_Plt[6, 2] ? Color.Lime : Color.LightSlateGray;
+                    makeCustomShape.shape_HardeningRoom_Plt[6, 0].Appearance.BackColor = Hardening_Plt[6, 0] ? Color.Lime : Color.LightSlateGray;
+                    makeCustomShape.shape_HardeningRoom_Plt[6, 1].Appearance.BackColor = Hardening_Plt[6, 1] ? Color.Lime : Color.LightSlateGray;
+                    makeCustomShape.shape_HardeningRoom_Plt[6, 2].Appearance.BackColor = Hardening_Plt[6, 2] ? Color.Lime : Color.LightSlateGray;
 
-                    shape_HardeningRoom_Plt[7, 0].Appearance.BackColor = Hardening_Plt[7, 0] ? Color.Lime : Color.LightSlateGray;
-                    shape_HardeningRoom_Plt[7, 1].Appearance.BackColor = Hardening_Plt[7, 1] ? Color.Lime : Color.LightSlateGray;
-                    shape_HardeningRoom_Plt[7, 2].Appearance.BackColor = Hardening_Plt[7, 2] ? Color.Lime : Color.LightSlateGray;
+                    makeCustomShape.shape_HardeningRoom_Plt[7, 0].Appearance.BackColor = Hardening_Plt[7, 0] ? Color.Lime : Color.LightSlateGray;
+                    makeCustomShape.shape_HardeningRoom_Plt[7, 1].Appearance.BackColor = Hardening_Plt[7, 1] ? Color.Lime : Color.LightSlateGray;
+                    makeCustomShape.shape_HardeningRoom_Plt[7, 2].Appearance.BackColor = Hardening_Plt[7, 2] ? Color.Lime : Color.LightSlateGray;
 
-                    shape_LeeHyungGongRoom_Door[0].Appearance.BackColor = LeeHynungGong_Door ? Color.Lime : Color.Red;
-                    shape_LeeHyungGongRoom_Plt[0].Appearance.BackColor = LeeHynungGong_PLT1 ? Color.Lime : Color.LightSlateGray;
-                    shape_LeeHyungGongRoom_Plt[1].Appearance.BackColor = LeeHynungGong_PLT2 ? Color.Lime : Color.LightSlateGray;
+                    makeCustomShape.shape_LeeHyungGongRoom_Door[0].Appearance.BackColor = LeeHynungGong_Door ? Color.Lime : Color.Red;
+                    makeCustomShape.shape_LeeHyungGongRoom_Plt[0].Appearance.BackColor = LeeHynungGong_PLT1 ? Color.Lime : Color.LightSlateGray;
+                    makeCustomShape.shape_LeeHyungGongRoom_Plt[1].Appearance.BackColor = LeeHynungGong_PLT2 ? Color.Lime : Color.LightSlateGray;
 
-                    shape_AGVChargeRoom_Doors[0].Appearance.BackColor = AGV_Door1_Open && !AGV_Door1_Close ? Color.Lime : Color.Red;
-                    shape_AGVChargeRoom_Doors[1].Appearance.BackColor = AGV_Door2_Open && !AGV_Door2_Close ? Color.Lime : Color.Red;
-                    shape_AGVChargeRoom_Doors[2].Appearance.BackColor = AGV_Door1_Send ? Color.Lime : Color.Red;
-                    shape_AGVChargeRoom_Doors[3].Appearance.BackColor = AGV_Door2_Send ? Color.Lime : Color.Red;
+                    makeCustomShape.shape_AGVChargeRoom_Doors[0].Appearance.BackColor = AGV_Door1_Open && !AGV_Door1_Close ? Color.Lime : Color.Red;
+                    makeCustomShape.shape_AGVChargeRoom_Doors[1].Appearance.BackColor = AGV_Door2_Open && !AGV_Door2_Close ? Color.Lime : Color.Red;
+                    makeCustomShape.shape_AGVChargeRoom_Doors[2].Appearance.BackColor = AGV_Door1_Send ? Color.Lime : Color.Red;
+                    makeCustomShape.shape_AGVChargeRoom_Doors[3].Appearance.BackColor = AGV_Door2_Send ? Color.Lime : Color.Red;
                 }
                 
             }
