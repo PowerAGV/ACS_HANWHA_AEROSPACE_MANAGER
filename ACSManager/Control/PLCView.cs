@@ -975,7 +975,8 @@ namespace ACSManager.Control
         {
             DiagramShapeEx nitm = null;
 
-            nitm = new DiagramShapeEx(BasicShapes.Pentagon, pos.X, pos.Y, 35, 35, carname) { ImagePath = "car.png" };
+            //nitm = new DiagramShapeEx(BasicShapes.Pentagon, pos.X, pos.Y, 35, 35, carname) { ImagePath = "car.png" };
+            nitm = new DiagramShapeEx(BasicShapes.Pentagon, pos.X, pos.Y, 150, 150, carname) { ImagePath = "car.png" };
 
             nitm.Tag = carname;
             nitm.Angle = ang;
@@ -983,7 +984,10 @@ namespace ACSManager.Control
             nitm.CanRotate = false;
             nitm.CanMove = false;
 
-            nitm.Appearance.Font = new Font("Tahoma", 6);
+            nitm.Appearance.Font = new Font("Tahoma", 36, System.Drawing.FontStyle.Bold);
+//            nitm.Appearance.Font.Bold = true;
+
+
             nitm.Appearance.BackColor = Color.White;
             nitm.Appearance.ForeColor = Color.Black;
 
@@ -1006,7 +1010,11 @@ namespace ACSManager.Control
             if (fidx != -1)
             {
                 agvInfo av = m_agv.Find(x => x.agv_id == agvID);
-                DIAGRAM_GUI.Items[fidx].Position = new PointFloat(GetNodePosition(av.location));
+
+                // 위로 왼쪽으로 당겨 놓는다..                 
+                PointF pf = GetNodePosition(av.location);
+                pf = new PointF(pf.X - 60, pf.Y - 60);
+                DIAGRAM_GUI.Items[fidx].Position = new PointFloat(pf);
                 DIAGRAM_GUI.Items[fidx].Angle = angle;
 
                 if (av.status != "WAIT" && lift == "UP") DIAGRAM_GUI.Items[fidx].Appearance.BackColor = Color.Gold;

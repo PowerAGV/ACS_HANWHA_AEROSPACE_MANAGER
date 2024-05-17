@@ -95,12 +95,24 @@ namespace ACSManager.Control
         }
         #endregion
 
+        public static Dictionary<string, string> error_code = new Dictionary<string, string>();
+
         #region Function
         private void ReLoadInfo()
         {
             try
             {
-                
+                error_code.Clear();
+
+                DataSet1MTableAdapters.tb_comm_codeTableAdapter cAdtp = new DataSet1MTableAdapters.tb_comm_codeTableAdapter();
+                foreach (DataSet1M.tb_comm_codeRow crw in cAdtp.GetDataBy("AGV_Err"))
+                {
+                    if (!error_code.ContainsKey(crw.comm_code))
+                    {
+                        error_code.Add(crw.comm_code, crw.comm_name);
+                    }
+                }
+
 
                 DateTime sdate = new DateTime(int.Parse(dateStart.DateTime.ToString("yyyy")), int.Parse(dateStart.DateTime.ToString("MM")), int.Parse(dateStart.DateTime.ToString("dd")));
                 DateTime edate = new DateTime(int.Parse(dateEnd.DateTime.AddDays(1).ToString("yyyy")), int.Parse(dateEnd.DateTime.AddDays(1).ToString("MM")), int.Parse(dateEnd.DateTime.AddDays(1).ToString("dd")));
@@ -116,6 +128,18 @@ namespace ACSManager.Control
 
                 if (sourceTable != null && sourceTable.Rows.Count > 0)
                     InsertNumber(ref sourceTable);
+
+                // 알람 코드 DB를 이용 하여 변경
+                foreach (DataRow row in sourceTable.Rows)
+                {
+                    if(row["param"].ToString().Length > 1)
+                    {// error_code
+                        string code = row["param"].ToString().Substring(0, 2);
+                        if (error_code.ContainsKey(code))
+                            row["param_nm"] = error_code[code];
+                    }
+                }
+
 
                 gridControl1.DataSource = sourceTable;
                 //gridView1.BestFitColumns();
@@ -133,136 +157,90 @@ namespace ACSManager.Control
         {
 
             string message = "";
-            switch (cmd) {
-                case "32":
-                    message = "비상정지";
-                    break;
-                case "33":
-                    message = "라인이탈";
-                    break;
-                case "34":
-                    message = "범퍼충돌";
-                    break;
-                case "35":
-                    message = "전진 주행중 장애물 감지";
-                    break;
-                case "36":
-                    message = "후진 주행중 장애물 감지";
-                    break;
-                case "37":
-                    message = "좌회전 중 장애물 감지";
-                    break;
-                case "38":
-                    message = "우회전 중 장애물 감지";
-                    break;
-                case "39":
-                    message = "경로 이탈";
-                    break;
-                case "3B":
-                    message = "회전 중 라인 이탈";
-                    break;
-                case "3D":
-                    message = "우측 주행 모터 이상";
-                    break;
-                case "3E":
-                    message = "좌측 주행 모터 이상";
-                    break;
-                case "41":
-                    message = "리프트 모터 이상";
-                    break;
-                case "42":
-                    message = "팔레트 미감지";
-                    break;
-                case "43":
-                    message = "팔레트 감지";
-                    break;
-                case "4C":
-                    message = "자동충전기 비상정지";
-                    break;
-                case "4D":
-                    message = "충전 동작 시간 초과";
-                    break;
-                case "4E":
-                    message = "충전 중 충전 이상";
-                    break;
-                case "50":
-                    message = "브레이크 스위치 해제 이상";
-                    break;
-                case "52":
-                    message = "리프트 동작 시간 초과";
-                    break;
-                case "65":
-                    message = "우측 모터드라이버 CAN 통신 이상";
-                    break;
-                case "66":
-                    message = "좌측 모터드라이버 CAN 통신 이상";
-                    break;
-                case "67":
-                    message = "리프트 모터드라이버 CAN 통신 이상";
-                    break;
-                case "6E":
-                    message = "컨베이어 비상정지";
-                    break;
-                case "6F":
-                    message = "컨베이어 동작 시간 초과";
-                    break;
-                //case "74":
-                //    message = "BMS 통신 불량";
-                //    break;
-                //case "75":
-                //    message = "자동 충전기 꺼짐";
-                //    break;
-                //case "76":
-                //    message = "자동 충전기 비상정지";
-                //    break;
-                //case "77":
-                //    message = "자동 충전 동작 시간초과";
-                //    break;
-                //case "78":
-                //    message = "충전중 충전 안됨";
-                //    break;
-                //case "80":
-                //    message = "키 스위치 브레이크 해제 상태";
-                //    break;
-                //case "81":
-                //    message = "리프트 동작 시간 초과";
-                //    break;
-                //case "82":
-                //    message = "리프트 높이 감지 센서 감지 안됨";
-                //    break;
-                //case "90":
-                //    message = "안전 전원 CP 이상";
-                //    break;
-                //case "91":
-                //    message = "전방 구동 모터 전원 CP 이상";
-                //    break;
-                //case "92":
-                //    message = "후방 구동 모터 전원 CP 이상";
-                //    break;
-                //case "93":
-                //    message = "전방 조향 모터 전원 CP 이상";
-                //    break;
-                //case "94":
-                //    message = "후방 조향 모터 전원 CP 이상";
-                //    break;
-                //case "95":
-                //    message = "리프트 모터 전원 CP 이상";
-                //    break;
-                //case "96":
-                //    message = "LED 전원 CP 이상";
-                //    break;
-                //case "97":
-                //    message = "DC 제어 전원 CP 이상";
-                //    break;
-                //case "98":
-                //    message = "브레이크 전원 CP 이상";
-                //    break;
-                //case "99":
-                //    message = "FAN 전원 CP 이상";
-                //    break;
-                default:
-                    message = "미등록 메시지";
-                    break;
+
+            if (error_code.ContainsKey(cmd))
+            {
+                message = error_code[cmd];
+            }
+            else
+            {
+                switch (cmd) {
+                    case "32":
+                        message = "비상정지";
+                        break;
+                    case "33":
+                        message = "라인이탈";
+                        break;
+                    case "34":
+                        message = "범퍼충돌";
+                        break;
+                    case "35":
+                        message = "전진 주행중 장애물 감지";
+                        break;
+                    case "36":
+                        message = "후진 주행중 장애물 감지";
+                        break;
+                    case "37":
+                        message = "좌회전 중 장애물 감지";
+                        break;
+                    case "38":
+                        message = "우회전 중 장애물 감지";
+                        break;
+                    case "39":
+                        message = "경로 이탈";
+                        break;
+                    case "3B":
+                        message = "회전 중 라인 이탈";
+                        break;
+                    case "3D":
+                        message = "우측 주행 모터 이상";
+                        break;
+                    case "3E":
+                        message = "좌측 주행 모터 이상";
+                        break;
+                    case "41":
+                        message = "리프트 모터 이상";
+                        break;
+                    case "42":
+                        message = "팔레트 미감지";
+                        break;
+                    case "43":
+                        message = "팔레트 감지";
+                        break;
+                    case "4C":
+                        message = "자동충전기 비상정지";
+                        break;
+                    case "4D":
+                        message = "충전 동작 시간 초과";
+                        break;
+                    case "4E":
+                        message = "충전 중 충전 이상";
+                        break;
+                    case "50":
+                        message = "브레이크 스위치 해제 이상";
+                        break;
+                    case "52":
+                        message = "리프트 동작 시간 초과";
+                        break;
+                    case "65":
+                        message = "우측 모터드라이버 CAN 통신 이상";
+                        break;
+                    case "66":
+                        message = "좌측 모터드라이버 CAN 통신 이상";
+                        break;
+                    case "67":
+                        message = "리프트 모터드라이버 CAN 통신 이상";
+                        break;
+                    case "6E":
+                        message = "컨베이어 비상정지";
+                        break;
+                    case "6F":
+                        message = "컨베이어 동작 시간 초과";
+                        break;
+                    default:
+                        message = "미등록 메시지";
+                        break;
+                }
             }
             return message;
         }
